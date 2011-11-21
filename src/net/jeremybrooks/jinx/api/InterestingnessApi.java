@@ -18,10 +18,8 @@
  */
 package net.jeremybrooks.jinx.api;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+
 import net.jeremybrooks.jinx.Jinx;
 import net.jeremybrooks.jinx.JinxException;
 import net.jeremybrooks.jinx.JinxUtils;
@@ -29,7 +27,6 @@ import net.jeremybrooks.jinx.dto.Photos;
 import org.w3c.dom.Document;
 
 /**
- *
  * @author jeremyb
  */
 public class InterestingnessApi {
@@ -37,7 +34,15 @@ public class InterestingnessApi {
 
     private static InterestingnessApi instance = null;
 
+    // TODO: should be final !
+    private Jinx provider;
 
+    public InterestingnessApi(final Jinx provider) {
+        this.provider = provider;
+    }
+
+
+    @Deprecated
     private InterestingnessApi() {
     }
 
@@ -47,21 +52,22 @@ public class InterestingnessApi {
      *
      * @return instance of this class.
      */
+    @Deprecated
     public static InterestingnessApi getInstance() {
-	if (InterestingnessApi.instance == null) {
-	    InterestingnessApi.instance = new InterestingnessApi();
-	}
+        if (InterestingnessApi.instance == null) {
+            InterestingnessApi.instance = new InterestingnessApi();
+        }
 
-	return InterestingnessApi.instance;
+        return InterestingnessApi.instance;
     }
 
 
     /**
      * Returns the list of interesting photos for the most recent day or a
      * user-specified date.
-     *
+     * <p/>
      * This method does not require authentication.
-     *
+     * <p/>
      * This method is equivalent to <code>getList(null, null, 0, 0)</code>.
      *
      * @return data about the interesting photos.
@@ -69,16 +75,16 @@ public class InterestingnessApi {
      * @see http://www.flickr.com/services/api/flickr.interestingness.getList.html
      */
     public Photos getList() throws JinxException {
-	return this.getList(null, null, 0, 0);
+        return this.getList(null, null, 0, 0);
     }
 
 
     /**
      * Returns the list of interesting photos for the most recent day or a
      * user-specified date.
-     *
+     * <p/>
      * This method does not require authentication.
-     *
+     * <p/>
      * Extras:
      * You can include extras from JinxConstants.EXTRAS*
      * Currently supported fields include:
@@ -105,57 +111,73 @@ public class InterestingnessApi {
      * EXTRAS_URL_L
      * EXTRAS_URL_O
      *
-     * @param date (optional) a specific date to return interesting photos for.
-     * @param extras a list of extras to fetch for every returned record. Can be null
-     *        or empty.
-     * @param page page of results to return. If this argument is less than 1,
-     *        it defaults to 1.
+     * @param date    (optional) a specific date to return interesting photos for.
+     * @param extras  a list of extras to fetch for every returned record. Can be null
+     *                or empty.
+     * @param page    page of results to return. If this argument is less than 1,
+     *                it defaults to 1.
      * @param perPage number of photos to return per page. If this argument is
-     *        less than 1, it defaults to 100. The maximum allowed value is 500.
+     *                less than 1, it defaults to 100. The maximum allowed value is 500.
      * @return data about the interesting photos.
      * @throws JinxException if there are any errors.
      * @see http://www.flickr.com/services/api/flickr.interestingness.getList.html
      */
+    @Deprecated
     public Photos getList(Date date, List<String> extras, int page, int perPage) throws JinxException {
-	Map<String, String> params = new TreeMap<String, String>();
-	params.put("method", "flickr.interestingness.getList");
-	params.put("api_key", Jinx.getInstance().getApiKey());
-	if (date != null) {
-	    params.put("date", JinxUtils.formatDateAsYMD(date));
-	}
-	if (extras != null && extras.size() > 0) {
-	    StringBuilder sb = new StringBuilder();
-	    for (String s : extras) {
-		if (s != null && s.trim().length() > 0) {
-		    sb.append(s.trim()).append(',');
-		}
-	    }
-	    sb.deleteCharAt(sb.lastIndexOf(","));
+        Map<String, String> params = new TreeMap<String, String>();
+        params.put("method", "flickr.interestingness.getList");
+        params.put("api_key", Jinx.getInstance().getApiKey());
+        if (date != null) {
+            params.put("date", JinxUtils.formatDateAsYMD(date));
+        }
+        if (extras != null && extras.size() > 0) {
+            StringBuilder sb = new StringBuilder();
+            for (String s : extras) {
+                if (s != null && s.trim().length() > 0) {
+                    sb.append(s.trim()).append(',');
+                }
+            }
+            sb.deleteCharAt(sb.lastIndexOf(","));
 
-	    params.put("extras", sb.toString());
-	}
-	if (page > 0) {
-	    params.put("page", Integer.toString(page));
-	}
-	if (perPage > 0) {
-	    params.put("per_page", Integer.toString(perPage));
-	}
+            params.put("extras", sb.toString());
+        }
+        if (page > 0) {
+            params.put("page", Integer.toString(page));
+        }
+        if (perPage > 0) {
+            params.put("per_page", Integer.toString(perPage));
+        }
 
-	Document doc = Jinx.getInstance().callFlickr(params, false);
+        Document doc = Jinx.getInstance().callFlickr(params, false);
 
-	/*
-	<rsp stat="ok">
-	    <photos page="1" pages="5" perpage="100" total="500">
-		<photo id="5703384792" owner="26063706@N04" secret="16a4bf87aa" server="5263"
-		    farm="6" title="beyond the sands" ispublic="1" isfriend="0" isfamily="0" />
-		<photo id="5703665673" owner="31348155@N03" secret="99dd4c1090" server="2517"
-		    farm="3" title="Libby &amp; Austin | The Pub" ispublic="1" isfriend="0" isfamily="0" />
-		<photo id="5702240287" owner="14576317@N07" secret="b9004a98c4" server="5102"
-		    farm="6" title="lost light" ispublic="1" isfriend="0" isfamily="0" />
-	 *  </photos>
-	</rsp>
-	 */
+        /*
+      <rsp stat="ok">
+          <photos page="1" pages="5" perpage="100" total="500">
+          <photo id="5703384792" owner="26063706@N04" secret="16a4bf87aa" server="5263"
+              farm="6" title="beyond the sands" ispublic="1" isfriend="0" isfamily="0" />
+          <photo id="5703665673" owner="31348155@N03" secret="99dd4c1090" server="2517"
+              farm="3" title="Libby &amp; Austin | The Pub" ispublic="1" isfriend="0" isfamily="0" />
+          <photo id="5702240287" owner="14576317@N07" secret="b9004a98c4" server="5102"
+              farm="6" title="lost light" ispublic="1" isfriend="0" isfamily="0" />
+       *  </photos>
+      </rsp>
+       */
 
-	return PhotosApi.getInstance().parsePhotosXml(doc);
+        return PhotosApi.getInstance().parsePhotosXml(doc);
+    }
+
+    public Photos getList(Date date, int page, int perPage, FlickrExtra... extras) throws JinxException {
+        return getList(date, page, perPage, Arrays.asList(extras));
+    }
+
+    public Photos getList(Date date, int page, int perPage, Collection<FlickrExtra> extras) throws JinxException {
+        final List<String> strEtras = new ArrayList<String>();
+        if (extras != null) {
+            for (FlickrExtra extra : extras) {
+                strEtras.add(extra.getValue());
+            }
+        }
+
+        return getList(date, strEtras, page, perPage);
     }
 }

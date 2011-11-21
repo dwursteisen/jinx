@@ -99,6 +99,15 @@ public class Jinx {
     private Token token;
 
 
+    public Jinx(String apiKey, String apiSecret) {
+        if (instance != null) {
+            throw new RuntimeException("Oups ! Jinx already instancied. For now,with this jinx version," +
+                    " your can get only one instance.");
+        }
+
+        getInstance().init(apiKey, apiSecret);
+    }
+
     /**
      * Private constructor.
      */
@@ -111,6 +120,7 @@ public class Jinx {
      *
      * @return reference to the only instance of this class.
      */
+    @Deprecated
     public static Jinx getInstance() {
 	if (instance == null) {
 	    instance = new Jinx();
