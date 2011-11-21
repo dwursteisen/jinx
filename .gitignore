@@ -12,3 +12,5 @@ db/*.sqlite3
 test/net/jeremybrooks/jinx/secret.properties
 test_token.xml
 
+jinx.i*
+target
