@@ -18,21 +18,18 @@
 */
 package net.jeremybrooks.jinx.dto;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.util.Date;
 import java.util.Properties;
 
 /**
- * The auth token for a given frob. 
- * 
+ * The auth token for a given frob.
+ * <p/>
  * The auth token is the end result of the authentication process. Once an auth
  * token has been obtained, it can be used to sign future calls to the Flickr
  * API. The auth token is valid until the user revokes permission from their
- * account. 
- * 
+ * account.
+ * <p/>
  * Applications should save the auth token using the store method, and load it
  * using the load method to avoid having to go through the authentication
  * process every time the application is used.
@@ -52,7 +49,7 @@ public class Token implements Serializable {
      * @return the token
      */
     public String getToken() {
-	return token;
+        return token;
     }
 
 
@@ -60,7 +57,7 @@ public class Token implements Serializable {
      * @param token the token to set
      */
     public void setToken(String token) {
-	this.token = token;
+        this.token = token;
     }
 
 
@@ -68,7 +65,7 @@ public class Token implements Serializable {
      * @return the perms
      */
     public String getPerms() {
-	return perms;
+        return perms;
     }
 
 
@@ -76,7 +73,7 @@ public class Token implements Serializable {
      * @param perms the perms to set
      */
     public void setPerms(String perms) {
-	this.perms = perms;
+        this.perms = perms;
     }
 
 
@@ -84,7 +81,7 @@ public class Token implements Serializable {
      * @return the nsid
      */
     public String getNsid() {
-	return nsid;
+        return nsid;
     }
 
 
@@ -92,7 +89,7 @@ public class Token implements Serializable {
      * @param nsid the nsid to set
      */
     public void setNsid(String nsid) {
-	this.nsid = nsid;
+        this.nsid = nsid;
     }
 
 
@@ -100,7 +97,7 @@ public class Token implements Serializable {
      * @return the username
      */
     public String getUsername() {
-	return username;
+        return username;
     }
 
 
@@ -108,7 +105,7 @@ public class Token implements Serializable {
      * @param username the username to set
      */
     public void setUsername(String username) {
-	this.username = username;
+        this.username = username;
     }
 
 
@@ -116,7 +113,7 @@ public class Token implements Serializable {
      * @return the fullname
      */
     public String getFullname() {
-	return fullname;
+        return fullname;
     }
 
 
@@ -124,79 +121,95 @@ public class Token implements Serializable {
      * @param fullname the fullname to set
      */
     public void setFullname(String fullname) {
-	this.fullname = fullname;
+        this.fullname = fullname;
     }
-    
+
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("[Token: ");
+        StringBuilder sb = new StringBuilder("[Token: ");
 
-	sb.append("token=").append(token);
-	sb.append(" | perms=").append(perms);
-	sb.append(" | nsid=").append(nsid);
-	sb.append(" | username=").append(username);
-	sb.append(" | fullname=").append(fullname);
-	sb.append(" ]");
+        sb.append("token=").append(token);
+        sb.append(" | perms=").append(perms);
+        sb.append(" | nsid=").append(nsid);
+        sb.append(" | username=").append(username);
+        sb.append(" | fullname=").append(fullname);
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
-
 
 
     public void store(File file) throws Exception {
-	Properties p = new Properties();
-	p.setProperty("fullname", this.fullname);
-	p.setProperty("nsid", this.nsid);
-	p.setProperty("perms", this.perms);
-	p.setProperty("token", this.token);
-	p.setProperty("username", this.username);
-
-	FileOutputStream out = null;
-	try {
-	    out = new FileOutputStream(file);
-	    p.storeToXML(out, "Jinx token saved " + new Date());
-
-	} catch (Exception e) {
-	    throw e;
-	} finally {
-	    if (out != null) {
-		try {
-		    out.close();
-		} catch (Exception e) {
-		    // ignore
-		}
-	    }
-	}
+        FileOutputStream out = null;
+        try {
+            out = new FileOutputStream(file);
+            storeFromStream(out);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            if (out != null) {
+                try {
+                    out.close();
+                } catch (Exception e) {
+                    // ignore
+                }
+            }
+        }
     }
 
 
-    public void load(File file) throws Exception {
-	Properties p = new Properties();
-	FileInputStream in = null;
+    public void load(File file) throws IOException {
 
-	try {
-	    in = new FileInputStream(file);
-	    p.loadFromXML(in);
-
-	    this.setFullname(p.getProperty("fullname"));
-	    this.setNsid(p.getProperty("nsid"));
-	    this.setPerms(p.getProperty("perms"));
-	    this.setToken(p.getProperty("token"));
-	    this.setUsername(p.getProperty("username"));
-
-	} catch (Exception e) {
-	    throw e;
-	} finally {
-	    if (in != null) {
-		try {
-		    in.close();
-		} catch (Exception e) {
-		    // ignore
-		}
-	    }
-	}
+        FileInputStream in = null;
+        try {
+            in = new FileInputStream(file);
+            loadFromStream(in);
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (Exception e) {
+                    // ignore
+                }
+            }
+        }
     }
 
-    
+    private void loadFromStream(InputStream in) throws IOException {
+        try {
+            Properties p = new Properties();
+            p.loadFromXML(in);
+            this.setFullname(p.getProperty("fullname"));
+            this.setNsid(p.getProperty("nsid"));
+            this.setPerms(p.getProperty("perms"));
+            this.setToken(p.getProperty("token"));
+            this.setUsername(p.getProperty("username"));
+        } catch (IOException e) {
+            throw new IOException("Error during loading of your token. Please check your data", e);
+        }
+    }
+
+    private void storeFromStream(final OutputStream out) throws IOException {
+        Properties p = new Properties();
+        p.setProperty("fullname", this.fullname);
+        p.setProperty("nsid", this.nsid);
+        p.setProperty("perms", this.perms);
+        p.setProperty("token", this.token);
+        p.setProperty("username", this.username);
+        p.storeToXML(out, "Jinx token saved " + new Date());
+    }
+
+    public String serialize() throws IOException {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        storeFromStream(out);
+        return out.toString();
+    }
+
+    public void load(String result) throws IOException {
+        ByteArrayInputStream in = new ByteArrayInputStream(result.getBytes());
+        loadFromStream(in);
+
+    }
+
 }
