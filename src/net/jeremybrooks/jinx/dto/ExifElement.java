@@ -22,40 +22,51 @@ import java.io.Serializable;
 
 /**
  * A single Exif element representing a unit of Exif information.
- *
+ * <p/>
  * This calss does not contain any information that identifies the photo. The
  * photo identification should be provided by classes that include this class as
  * part of the information.
- * 
+ *
  * @author jeremyb
  */
 public class ExifElement implements Serializable {
 
-    /** Tagspace value from the returned exif element. */
+    /**
+     * Tagspace value from the returned exif element.
+     */
     private String tagspace;
 
-    /** Tagspaceid value from the returned exif element. */
+    /**
+     * Tagspaceid value from the returned exif element.
+     */
     private String tagspaceid;
 
-    /** Tag value from the returned exif element. */
+    /**
+     * Tag value from the returned exif element.
+     */
     private String tag;
 
-    /** Label value from the returned exif element. */
+    /**
+     * Label value from the returned exif element.
+     */
     private String label;
 
-    /** Raw value from the returned exif element. */
+    /**
+     * Raw value from the returned exif element.
+     */
     private String raw;
 
-    /** Clean value from the returned exif element. */
+    /**
+     * Clean value from the returned exif element.
+     */
     private String clean;
-
 
 
     /**
      * @return the tagspace
      */
     public String getTagspace() {
-	return tagspace;
+        return tagspace;
     }
 
 
@@ -63,7 +74,7 @@ public class ExifElement implements Serializable {
      * @param tagspace the tagspace to set
      */
     public void setTagspace(String tagspace) {
-	this.tagspace = tagspace;
+        this.tagspace = tagspace;
     }
 
 
@@ -71,7 +82,7 @@ public class ExifElement implements Serializable {
      * @return the tagspaceid
      */
     public String getTagspaceid() {
-	return tagspaceid;
+        return tagspaceid;
     }
 
 
@@ -79,7 +90,7 @@ public class ExifElement implements Serializable {
      * @param tagspaceid the tagspaceid to set
      */
     public void setTagspaceid(String tagspaceid) {
-	this.tagspaceid = tagspaceid;
+        this.tagspaceid = tagspaceid;
     }
 
 
@@ -87,7 +98,7 @@ public class ExifElement implements Serializable {
      * @return the tag
      */
     public String getTag() {
-	return tag;
+        return tag;
     }
 
 
@@ -95,7 +106,7 @@ public class ExifElement implements Serializable {
      * @param tag the tag to set
      */
     public void setTag(String tag) {
-	this.tag = tag;
+        this.tag = tag;
     }
 
 
@@ -103,7 +114,7 @@ public class ExifElement implements Serializable {
      * @return the label
      */
     public String getLabel() {
-	return label;
+        return label;
     }
 
 
@@ -111,7 +122,7 @@ public class ExifElement implements Serializable {
      * @param label the label to set
      */
     public void setLabel(String label) {
-	this.label = label;
+        this.label = label;
     }
 
 
@@ -119,7 +130,7 @@ public class ExifElement implements Serializable {
      * @return the raw
      */
     public String getRaw() {
-	return raw;
+        return raw;
     }
 
 
@@ -127,7 +138,7 @@ public class ExifElement implements Serializable {
      * @param raw the raw to set
      */
     public void setRaw(String raw) {
-	this.raw = raw;
+        this.raw = raw;
     }
 
 
@@ -135,7 +146,7 @@ public class ExifElement implements Serializable {
      * @return the clean
      */
     public String getClean() {
-	return clean;
+        return clean;
     }
 
 
@@ -143,21 +154,21 @@ public class ExifElement implements Serializable {
      * @param clean the clean to set
      */
     public void setClean(String clean) {
-	this.clean = clean;
+        this.clean = clean;
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("ExifElement [ ");
+        StringBuilder sb = new StringBuilder("ExifElement [ ");
 
-	sb.append("tagspace=").append(this.tagspace).append(" | ");
-	sb.append("tagspaceid=").append(this.tagspaceid).append(" | ");
-	sb.append("tag=").append(this.tag).append(" | ");
-	sb.append("label=").append(this.label).append(" | ");
-	sb.append("raw=").append(this.raw).append(" | ");
-	sb.append("clean=").append(this.clean);
+        sb.append("tagspace=").append(this.tagspace).append(" | ");
+        sb.append("tagspaceid=").append(this.tagspaceid).append(" | ");
+        sb.append("tag=").append(this.tag).append(" | ");
+        sb.append("label=").append(this.label).append(" | ");
+        sb.append("raw=").append(this.raw).append(" | ");
+        sb.append("clean=").append(this.clean);
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

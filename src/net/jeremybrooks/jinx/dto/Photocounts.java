@@ -25,7 +25,7 @@ import java.util.List;
 
 /**
  * Contains photo counts for specified date ranges.
- * 
+ *
  * @author jeremyb
  */
 public class Photocounts implements Serializable {
@@ -34,96 +34,95 @@ public class Photocounts implements Serializable {
     private List<Photocount> photocountList;
 
     public Photocounts() {
-	this.photocountList = new ArrayList<Photocount>();
+        this.photocountList = new ArrayList<Photocount>();
     }
 
 
     public void addPhotocount(int count, Date fromDate, Date toDate) {
-	Photocount p = new Photocount();
-	p.setCount(count);
-	p.setFromDate(fromDate);
-	p.setToDate(toDate);
+        Photocount p = new Photocount();
+        p.setCount(count);
+        p.setFromDate(fromDate);
+        p.setToDate(toDate);
 
-	this.photocountList.add(p);
+        this.photocountList.add(p);
     }
 
     public List<Photocount> getPhotocountList() {
-	return this.photocountList;
+        return this.photocountList;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Photocounts [ ");
+        StringBuilder sb = new StringBuilder("Photocounts [ ");
 
-	for (Photocount p : photocountList) {
-	    sb.append("< ");
-	    sb.append("count=").append(p.getCount()).append(" | ");
-	    sb.append("fromDate=").append(p.getFromDate()).append(" | ");
-	    sb.append("toDate=").append(p.getToDate());
-	    sb.append(" >");
-	}
+        for (Photocount p : photocountList) {
+            sb.append("< ");
+            sb.append("count=").append(p.getCount()).append(" | ");
+            sb.append("fromDate=").append(p.getFromDate()).append(" | ");
+            sb.append("toDate=").append(p.getToDate());
+            sb.append(" >");
+        }
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 
     public class Photocount {
-	private int count;
-	private Date fromDate;
-	private Date toDate;
+        private int count;
+        private Date fromDate;
+        private Date toDate;
 
 
-	/**
-	 * @return the count
-	 */
-	public int getCount() {
-	    return count;
-	}
+        /**
+         * @return the count
+         */
+        public int getCount() {
+            return count;
+        }
 
 
-	/**
-	 * @param count the count to set
-	 */
-	public void setCount(int count) {
-	    this.count = count;
-	}
+        /**
+         * @param count the count to set
+         */
+        public void setCount(int count) {
+            this.count = count;
+        }
 
 
-	/**
-	 * @return the fromDate
-	 */
-	public Date getFromDate() {
-	    return fromDate;
-	}
+        /**
+         * @return the fromDate
+         */
+        public Date getFromDate() {
+            return fromDate;
+        }
 
 
-	/**
-	 * @param fromDate the fromDate to set
-	 */
-	public void setFromDate(Date fromDate) {
-	    this.fromDate = fromDate;
-	}
+        /**
+         * @param fromDate the fromDate to set
+         */
+        public void setFromDate(Date fromDate) {
+            this.fromDate = fromDate;
+        }
 
 
-	/**
-	 * @return the toDate
-	 */
-	public Date getToDate() {
-	    return toDate;
-	}
+        /**
+         * @return the toDate
+         */
+        public Date getToDate() {
+            return toDate;
+        }
 
 
-	/**
-	 * @param toDate the toDate to set
-	 */
-	public void setToDate(Date toDate) {
-	    this.toDate = toDate;
-	}
+        /**
+         * @param toDate the toDate to set
+         */
+        public void setToDate(Date toDate) {
+            this.toDate = toDate;
+        }
 
     }
-
 
 
 }

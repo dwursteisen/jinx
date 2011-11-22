@@ -18,13 +18,13 @@
  */
 package net.jeremybrooks.jinx.api;
 
-import java.util.*;
-
 import net.jeremybrooks.jinx.Jinx;
 import net.jeremybrooks.jinx.JinxException;
 import net.jeremybrooks.jinx.JinxUtils;
 import net.jeremybrooks.jinx.dto.Photos;
 import org.w3c.dom.Document;
+
+import java.util.*;
 
 /**
  * @author jeremyb
@@ -43,7 +43,7 @@ public class InterestingnessApi {
      *
      * @return instance of this class.
      */
-   public static InterestingnessApi getInstance() {
+    public static InterestingnessApi getInstance() {
         if (InterestingnessApi.instance == null) {
             InterestingnessApi.instance = new InterestingnessApi();
         }
@@ -111,7 +111,6 @@ public class InterestingnessApi {
      * @return data about the interesting photos.
      * @throws JinxException if there are any errors.
      * @see http://www.flickr.com/services/api/flickr.interestingness.getList.html
-     *
      */
     @Deprecated
     public Photos getList(Date date, List<String> extras, int page, int perPage) throws JinxException {

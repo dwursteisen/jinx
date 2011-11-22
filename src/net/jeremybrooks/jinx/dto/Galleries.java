@@ -20,24 +20,23 @@ package net.jeremybrooks.jinx.dto;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
  * @author jeremyb
  */
 public class Galleries implements Serializable {
-/*
-<?xml version="1.0" encoding="utf-8" ?>
-<rsp stat="ok">
-    <galleries total="6" page="1" pages="1" per_page="100" user_id="85853333@N00">
-	<gallery id="4956757-72157625363950230" url="http://www.flickr.com/photos/jeremybrooks/galleries/72157625363950230" owner="85853333@N00" primary_photo_id="3928411827" date_create="1289512766" date_update="1289513364" count_photos="12" count_videos="0" primary_photo_server="3003" primary_photo_farm="4" primary_photo_secret="6f707a6e6c">
-	    <title>leesure</title>
-	    <description>Some of my favorite photos from leesure's photostream.</description>
-	</gallery>
-    </galleries>
- </rsp>
- */
+    /*
+   <?xml version="1.0" encoding="utf-8" ?>
+   <rsp stat="ok">
+       <galleries total="6" page="1" pages="1" per_page="100" user_id="85853333@N00">
+       <gallery id="4956757-72157625363950230" url="http://www.flickr.com/photos/jeremybrooks/galleries/72157625363950230" owner="85853333@N00" primary_photo_id="3928411827" date_create="1289512766" date_update="1289513364" count_photos="12" count_videos="0" primary_photo_server="3003" primary_photo_farm="4" primary_photo_secret="6f707a6e6c">
+           <title>leesure</title>
+           <description>Some of my favorite photos from leesure's photostream.</description>
+       </gallery>
+       </galleries>
+    </rsp>
+    */
     private int total;
     private int page;
     private int pages;
@@ -46,18 +45,15 @@ public class Galleries implements Serializable {
     private List<Gallery> galleryList;
 
     public Galleries() {
-	this.galleryList = new ArrayList<Gallery>();
+        this.galleryList = new ArrayList<Gallery>();
     }
-
-
-    
 
 
     /**
      * @return the total
      */
     public int getTotal() {
-	return total;
+        return total;
     }
 
 
@@ -65,7 +61,7 @@ public class Galleries implements Serializable {
      * @param total the total to set
      */
     public void setTotal(int total) {
-	this.total = total;
+        this.total = total;
     }
 
 
@@ -73,7 +69,7 @@ public class Galleries implements Serializable {
      * @return the page
      */
     public int getPage() {
-	return page;
+        return page;
     }
 
 
@@ -81,7 +77,7 @@ public class Galleries implements Serializable {
      * @param page the page to set
      */
     public void setPage(int page) {
-	this.page = page;
+        this.page = page;
     }
 
 
@@ -89,7 +85,7 @@ public class Galleries implements Serializable {
      * @return the pages
      */
     public int getPages() {
-	return pages;
+        return pages;
     }
 
 
@@ -97,7 +93,7 @@ public class Galleries implements Serializable {
      * @param pages the pages to set
      */
     public void setPages(int pages) {
-	this.pages = pages;
+        this.pages = pages;
     }
 
 
@@ -105,7 +101,7 @@ public class Galleries implements Serializable {
      * @return the perPage
      */
     public int getPerPage() {
-	return perPage;
+        return perPage;
     }
 
 
@@ -113,7 +109,7 @@ public class Galleries implements Serializable {
      * @param perPage the perPage to set
      */
     public void setPerPage(int perPage) {
-	this.perPage = perPage;
+        this.perPage = perPage;
     }
 
 
@@ -121,7 +117,7 @@ public class Galleries implements Serializable {
      * @return the userId
      */
     public String getUserId() {
-	return userId;
+        return userId;
     }
 
 
@@ -129,7 +125,7 @@ public class Galleries implements Serializable {
      * @param userId the userId to set
      */
     public void setUserId(String userId) {
-	this.userId = userId;
+        this.userId = userId;
     }
 
 
@@ -137,7 +133,7 @@ public class Galleries implements Serializable {
      * @return the galleryList
      */
     public List<Gallery> getGalleryList() {
-	return galleryList;
+        return galleryList;
     }
 
 
@@ -145,36 +141,37 @@ public class Galleries implements Serializable {
      * @param galleryList the galleryList to set
      */
     public void setGalleryList(List<Gallery> galleryList) {
-	this.galleryList = galleryList;
+        this.galleryList = galleryList;
     }
 
     /**
      * Add a gallery to the list.
+     *
      * @param gallery the gallery to add to the list.
      */
     public void addGallery(Gallery gallery) {
-	this.galleryList.add(gallery);
+        this.galleryList.add(gallery);
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("total=").append(this.getTotal()).append(" | ");
-	sb.append("page=").append(this.getPage()).append(" | ");
-	sb.append("pages=").append(this.getPages()).append(" | ");
-	sb.append("perPage=").append(this.getPerPage()).append(" | ");
-	sb.append("userId=").append(this.getUserId()).append(" | ");
-	sb.append("galleryList=");
-	if (this.getGalleryList() != null) {
-	    for (Gallery g : this.getGalleryList()) {
-		sb.append('<').append(g.toString()).append('>');
-	    }
-	}
+        sb.append(" [ ");
+        sb.append("total=").append(this.getTotal()).append(" | ");
+        sb.append("page=").append(this.getPage()).append(" | ");
+        sb.append("pages=").append(this.getPages()).append(" | ");
+        sb.append("perPage=").append(this.getPerPage()).append(" | ");
+        sb.append("userId=").append(this.getUserId()).append(" | ");
+        sb.append("galleryList=");
+        if (this.getGalleryList() != null) {
+            for (Gallery g : this.getGalleryList()) {
+                sb.append('<').append(g.toString()).append('>');
+            }
+        }
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

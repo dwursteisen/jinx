@@ -20,11 +20,11 @@ package net.jeremybrooks.jinx.logger;
 
 /**
  * Defines the interface that Jinx uses to log messages.
- *
+ * <p/>
  * By default, Jinx will not log anything. If you wish to see Jinx log output,
  * you can implement this class and then tell Jinx what class to use for logging
  * by calling <code>JinxLogger.setLogger(your class instance)</code>.
- * 
+ *
  * @author jeremyb
  */
 public interface LogInterface {
@@ -41,8 +41,8 @@ public interface LogInterface {
      * Log a message along with an Exception.
      *
      * @param message the message.
-     * @param t the cause of the error.
+     * @param t       the cause of the error.
      */
     public void log(String message, Throwable t);
-    
+
 }

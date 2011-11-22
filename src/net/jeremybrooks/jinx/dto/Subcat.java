@@ -19,7 +19,6 @@
 package net.jeremybrooks.jinx.dto;
 
 /**
- *
  * @author jeremyb
  */
 public class Subcat {
@@ -32,7 +31,7 @@ public class Subcat {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -40,7 +39,7 @@ public class Subcat {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -48,7 +47,7 @@ public class Subcat {
      * @return the name
      */
     public String getName() {
-	return name;
+        return name;
     }
 
 
@@ -56,7 +55,7 @@ public class Subcat {
      * @param name the name to set
      */
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
 
@@ -64,7 +63,7 @@ public class Subcat {
      * @return the count
      */
     public String getCount() {
-	return count;
+        return count;
     }
 
 
@@ -72,20 +71,20 @@ public class Subcat {
      * @param count the count to set
      */
     public void setCount(String count) {
-	this.count = count;
+        this.count = count;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("id=").append(this.getId()).append(" | ");
-	sb.append("name=").append(this.getName()).append(" | ");
-	sb.append("count=").append(this.getCount());
+        sb.append(" [ ");
+        sb.append("id=").append(this.getId()).append(" | ");
+        sb.append("name=").append(this.getName()).append(" | ");
+        sb.append("count=").append(this.getCount());
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

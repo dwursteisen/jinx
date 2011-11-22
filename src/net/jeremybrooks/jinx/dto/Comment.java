@@ -40,7 +40,7 @@ public class Comment implements Serializable {
      * @return the commentId
      */
     public String getCommentId() {
-	return commentId;
+        return commentId;
     }
 
 
@@ -48,7 +48,7 @@ public class Comment implements Serializable {
      * @param commentId the commentId to set
      */
     public void setCommentId(String commentId) {
-	this.commentId = commentId;
+        this.commentId = commentId;
     }
 
 
@@ -56,7 +56,7 @@ public class Comment implements Serializable {
      * @return the author
      */
     public String getAuthor() {
-	return author;
+        return author;
     }
 
 
@@ -64,7 +64,7 @@ public class Comment implements Serializable {
      * @param author the author to set
      */
     public void setAuthor(String author) {
-	this.author = author;
+        this.author = author;
     }
 
 
@@ -72,7 +72,7 @@ public class Comment implements Serializable {
      * @return the authorName
      */
     public String getAuthorName() {
-	return authorName;
+        return authorName;
     }
 
 
@@ -80,7 +80,7 @@ public class Comment implements Serializable {
      * @param authorName the authorName to set
      */
     public void setAuthorName(String authorName) {
-	this.authorName = authorName;
+        this.authorName = authorName;
     }
 
 
@@ -88,7 +88,7 @@ public class Comment implements Serializable {
      * @return the dateCreate
      */
     public Date getDateCreate() {
-	return dateCreate;
+        return dateCreate;
     }
 
 
@@ -96,7 +96,7 @@ public class Comment implements Serializable {
      * @param dateCreate the dateCreate to set
      */
     public void setDateCreate(Date dateCreate) {
-	this.dateCreate = dateCreate;
+        this.dateCreate = dateCreate;
     }
 
 
@@ -104,7 +104,7 @@ public class Comment implements Serializable {
      * @return the permalink
      */
     public String getPermalink() {
-	return permalink;
+        return permalink;
     }
 
 
@@ -112,7 +112,7 @@ public class Comment implements Serializable {
      * @param permalink the permalink to set
      */
     public void setPermalink(String permalink) {
-	this.permalink = permalink;
+        this.permalink = permalink;
     }
 
 
@@ -120,7 +120,7 @@ public class Comment implements Serializable {
      * @return the comment
      */
     public String getComment() {
-	return comment;
+        return comment;
     }
 
 
@@ -128,7 +128,7 @@ public class Comment implements Serializable {
      * @param comment the comment to set
      */
     public void setComment(String comment) {
-	this.comment = comment;
+        this.comment = comment;
     }
 
 
@@ -136,7 +136,7 @@ public class Comment implements Serializable {
      * @return the iconServer
      */
     public String getIconServer() {
-	return iconServer;
+        return iconServer;
     }
 
 
@@ -144,7 +144,7 @@ public class Comment implements Serializable {
      * @param iconServer the iconServer to set
      */
     public void setIconServer(String iconServer) {
-	this.iconServer = iconServer;
+        this.iconServer = iconServer;
     }
 
 
@@ -152,7 +152,7 @@ public class Comment implements Serializable {
      * @return the iconFarm
      */
     public String getIconFarm() {
-	return iconFarm;
+        return iconFarm;
     }
 
 
@@ -160,28 +160,27 @@ public class Comment implements Serializable {
      * @param iconFarm the iconFarm to set
      */
     public void setIconFarm(String iconFarm) {
-	this.iconFarm = iconFarm;
+        this.iconFarm = iconFarm;
     }
 
-    
+
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("commentId=").append(this.commentId).append(" | ");
-	sb.append("author=").append(this.author).append(" | ");
-	sb.append("authorName=").append(this.authorName).append(" | ");
-	sb.append("dateCreate=").append(this.dateCreate).append(" | ");
-	sb.append("iconServer=").append(this.iconServer).append(" | ");
-	sb.append("iconFarm=").append(this.iconFarm).append(" | ");
-	sb.append("permalink=").append(this.permalink).append(" | ");
-	sb.append("comment=").append(this.comment);
+        sb.append(" [ ");
+        sb.append("commentId=").append(this.commentId).append(" | ");
+        sb.append("author=").append(this.author).append(" | ");
+        sb.append("authorName=").append(this.authorName).append(" | ");
+        sb.append("dateCreate=").append(this.dateCreate).append(" | ");
+        sb.append("iconServer=").append(this.iconServer).append(" | ");
+        sb.append("iconFarm=").append(this.iconFarm).append(" | ");
+        sb.append("permalink=").append(this.permalink).append(" | ");
+        sb.append("comment=").append(this.comment);
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 
 
-    
 }

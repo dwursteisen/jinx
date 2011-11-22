@@ -22,11 +22,11 @@ import java.io.Serializable;
 
 /**
  * This class represents a Location.
- * 
+ *
  * @author jeremyb
  */
 public class Location implements Serializable {
-    
+
 
     private String photoId;
     private float latitude;
@@ -53,7 +53,7 @@ public class Location implements Serializable {
      * @return the photoId
      */
     public String getPhotoId() {
-	return photoId;
+        return photoId;
     }
 
 
@@ -61,7 +61,7 @@ public class Location implements Serializable {
      * @param photoId the photoId to set
      */
     public void setPhotoId(String photoId) {
-	this.photoId = photoId;
+        this.photoId = photoId;
     }
 
 
@@ -69,7 +69,7 @@ public class Location implements Serializable {
      * @return the latitude
      */
     public float getLatitude() {
-	return latitude;
+        return latitude;
     }
 
 
@@ -77,7 +77,7 @@ public class Location implements Serializable {
      * @param latitude the latitude to set
      */
     public void setLatitude(float latitude) {
-	this.latitude = latitude;
+        this.latitude = latitude;
     }
 
 
@@ -85,7 +85,7 @@ public class Location implements Serializable {
      * @return the longitude
      */
     public float getLongitude() {
-	return longitude;
+        return longitude;
     }
 
 
@@ -93,7 +93,7 @@ public class Location implements Serializable {
      * @param longitude the longitude to set
      */
     public void setLongitude(float longitude) {
-	this.longitude = longitude;
+        this.longitude = longitude;
     }
 
 
@@ -101,7 +101,7 @@ public class Location implements Serializable {
      * @return the accuracy
      */
     public int getAccuracy() {
-	return accuracy;
+        return accuracy;
     }
 
 
@@ -109,7 +109,7 @@ public class Location implements Serializable {
      * @param accuracy the accuracy to set
      */
     public void setAccuracy(int accuracy) {
-	this.accuracy = accuracy;
+        this.accuracy = accuracy;
     }
 
 
@@ -117,7 +117,7 @@ public class Location implements Serializable {
      * @return the context
      */
     public int getContext() {
-	return context;
+        return context;
     }
 
 
@@ -125,7 +125,7 @@ public class Location implements Serializable {
      * @param context the context to set
      */
     public void setContext(int context) {
-	this.context = context;
+        this.context = context;
     }
 
 
@@ -133,7 +133,7 @@ public class Location implements Serializable {
      * @return the placeId
      */
     public String getPlaceId() {
-	return placeId;
+        return placeId;
     }
 
 
@@ -141,7 +141,7 @@ public class Location implements Serializable {
      * @param placeId the placeId to set
      */
     public void setPlaceId(String placeId) {
-	this.placeId = placeId;
+        this.placeId = placeId;
     }
 
 
@@ -149,7 +149,7 @@ public class Location implements Serializable {
      * @return the woeId
      */
     public String getWoeId() {
-	return woeId;
+        return woeId;
     }
 
 
@@ -157,7 +157,7 @@ public class Location implements Serializable {
      * @param woeId the woeId to set
      */
     public void setWoeId(String woeId) {
-	this.woeId = woeId;
+        this.woeId = woeId;
     }
 
 
@@ -165,7 +165,7 @@ public class Location implements Serializable {
      * @return the localityPlaceId
      */
     public String getLocalityPlaceId() {
-	return localityPlaceId;
+        return localityPlaceId;
     }
 
 
@@ -173,7 +173,7 @@ public class Location implements Serializable {
      * @param localityPlaceId the localityPlaceId to set
      */
     public void setLocalityPlaceId(String localityPlaceId) {
-	this.localityPlaceId = localityPlaceId;
+        this.localityPlaceId = localityPlaceId;
     }
 
 
@@ -181,7 +181,7 @@ public class Location implements Serializable {
      * @return the localityWoeId
      */
     public String getLocalityWoeId() {
-	return localityWoeId;
+        return localityWoeId;
     }
 
 
@@ -189,7 +189,7 @@ public class Location implements Serializable {
      * @param localityWoeId the localityWoeId to set
      */
     public void setLocalityWoeId(String localityWoeId) {
-	this.localityWoeId = localityWoeId;
+        this.localityWoeId = localityWoeId;
     }
 
 
@@ -197,7 +197,7 @@ public class Location implements Serializable {
      * @return the locality
      */
     public String getLocality() {
-	return locality;
+        return locality;
     }
 
 
@@ -205,7 +205,7 @@ public class Location implements Serializable {
      * @param locality the locality to set
      */
     public void setLocality(String locality) {
-	this.locality = locality;
+        this.locality = locality;
     }
 
 
@@ -213,7 +213,7 @@ public class Location implements Serializable {
      * @return the countyPlaceId
      */
     public String getCountyPlaceId() {
-	return countyPlaceId;
+        return countyPlaceId;
     }
 
 
@@ -221,7 +221,7 @@ public class Location implements Serializable {
      * @param countyPlaceId the countyPlaceId to set
      */
     public void setCountyPlaceId(String countyPlaceId) {
-	this.countyPlaceId = countyPlaceId;
+        this.countyPlaceId = countyPlaceId;
     }
 
 
@@ -229,7 +229,7 @@ public class Location implements Serializable {
      * @return the countyWoeId
      */
     public String getCountyWoeId() {
-	return countyWoeId;
+        return countyWoeId;
     }
 
 
@@ -237,7 +237,7 @@ public class Location implements Serializable {
      * @param countyWoeId the countyWoeId to set
      */
     public void setCountyWoeId(String countyWoeId) {
-	this.countyWoeId = countyWoeId;
+        this.countyWoeId = countyWoeId;
     }
 
 
@@ -245,7 +245,7 @@ public class Location implements Serializable {
      * @return the county
      */
     public String getCounty() {
-	return county;
+        return county;
     }
 
 
@@ -253,7 +253,7 @@ public class Location implements Serializable {
      * @param county the county to set
      */
     public void setCounty(String county) {
-	this.county = county;
+        this.county = county;
     }
 
 
@@ -261,7 +261,7 @@ public class Location implements Serializable {
      * @return the regionPlaceId
      */
     public String getRegionPlaceId() {
-	return regionPlaceId;
+        return regionPlaceId;
     }
 
 
@@ -269,7 +269,7 @@ public class Location implements Serializable {
      * @param regionPlaceId the regionPlaceId to set
      */
     public void setRegionPlaceId(String regionPlaceId) {
-	this.regionPlaceId = regionPlaceId;
+        this.regionPlaceId = regionPlaceId;
     }
 
 
@@ -277,7 +277,7 @@ public class Location implements Serializable {
      * @return the regionWoeId
      */
     public String getRegionWoeId() {
-	return regionWoeId;
+        return regionWoeId;
     }
 
 
@@ -285,7 +285,7 @@ public class Location implements Serializable {
      * @param regionWoeId the regionWoeId to set
      */
     public void setRegionWoeId(String regionWoeId) {
-	this.regionWoeId = regionWoeId;
+        this.regionWoeId = regionWoeId;
     }
 
 
@@ -293,7 +293,7 @@ public class Location implements Serializable {
      * @return the region
      */
     public String getRegion() {
-	return region;
+        return region;
     }
 
 
@@ -301,7 +301,7 @@ public class Location implements Serializable {
      * @param region the region to set
      */
     public void setRegion(String region) {
-	this.region = region;
+        this.region = region;
     }
 
 
@@ -309,7 +309,7 @@ public class Location implements Serializable {
      * @return the countryPlaceId
      */
     public String getCountryPlaceId() {
-	return countryPlaceId;
+        return countryPlaceId;
     }
 
 
@@ -317,7 +317,7 @@ public class Location implements Serializable {
      * @param countryPlaceId the countryPlaceId to set
      */
     public void setCountryPlaceId(String countryPlaceId) {
-	this.countryPlaceId = countryPlaceId;
+        this.countryPlaceId = countryPlaceId;
     }
 
 
@@ -325,7 +325,7 @@ public class Location implements Serializable {
      * @return the countryWoeId
      */
     public String getCountryWoeId() {
-	return countryWoeId;
+        return countryWoeId;
     }
 
 
@@ -333,7 +333,7 @@ public class Location implements Serializable {
      * @param countryWoeId the countryWoeId to set
      */
     public void setCountryWoeId(String countryWoeId) {
-	this.countryWoeId = countryWoeId;
+        this.countryWoeId = countryWoeId;
     }
 
 
@@ -341,7 +341,7 @@ public class Location implements Serializable {
      * @return the country
      */
     public String getCountry() {
-	return country;
+        return country;
     }
 
 
@@ -349,36 +349,36 @@ public class Location implements Serializable {
      * @param country the country to set
      */
     public void setCountry(String country) {
-	this.country = country;
+        this.country = country;
     }
 
-    
+
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("photoId=").append(this.getPhotoId()).append(" | ");
-	sb.append("latitude=").append(this.getLatitude()).append(" | ");
-	sb.append("longitude=").append(this.getLongitude()).append(" | ");
-	sb.append("accuracy=").append(this.getAccuracy()).append(" | ");
-	sb.append("context=").append(this.getContext()).append(" | ");
-	sb.append("placeId=").append(this.getPlaceId()).append(" | ");
-	sb.append("woeId=").append(this.getWoeId()).append(" | ");
-	sb.append("localityPlaceId=").append(this.getLocalityPlaceId()).append(" | ");
-	sb.append("localityWoeId=").append(this.getLocalityWoeId()).append(" | ");
-	sb.append("locality=").append(this.getLocality()).append(" | ");
-	sb.append("countyPlaceId=").append(this.getCountyPlaceId()).append(" | ");
-	sb.append("countyWoeId=").append(this.getCountyWoeId()).append(" | ");
-	sb.append("county=").append(this.getCounty()).append(" | ");
-	sb.append("regionPlaceId=").append(this.getRegionPlaceId()).append(" | ");
-	sb.append("regionWoeId=").append(this.getRegionWoeId()).append(" | ");
-	sb.append("region=").append(this.getRegion()).append(" | ");
-	sb.append("countryPlaceId=").append(this.getCountryPlaceId()).append(" | ");
-	sb.append("countryWoeId=").append(this.getCountryWoeId()).append(" | ");
-	sb.append("country=").append(this.getCountry());
+        sb.append(" [ ");
+        sb.append("photoId=").append(this.getPhotoId()).append(" | ");
+        sb.append("latitude=").append(this.getLatitude()).append(" | ");
+        sb.append("longitude=").append(this.getLongitude()).append(" | ");
+        sb.append("accuracy=").append(this.getAccuracy()).append(" | ");
+        sb.append("context=").append(this.getContext()).append(" | ");
+        sb.append("placeId=").append(this.getPlaceId()).append(" | ");
+        sb.append("woeId=").append(this.getWoeId()).append(" | ");
+        sb.append("localityPlaceId=").append(this.getLocalityPlaceId()).append(" | ");
+        sb.append("localityWoeId=").append(this.getLocalityWoeId()).append(" | ");
+        sb.append("locality=").append(this.getLocality()).append(" | ");
+        sb.append("countyPlaceId=").append(this.getCountyPlaceId()).append(" | ");
+        sb.append("countyWoeId=").append(this.getCountyWoeId()).append(" | ");
+        sb.append("county=").append(this.getCounty()).append(" | ");
+        sb.append("regionPlaceId=").append(this.getRegionPlaceId()).append(" | ");
+        sb.append("regionWoeId=").append(this.getRegionWoeId()).append(" | ");
+        sb.append("region=").append(this.getRegion()).append(" | ");
+        sb.append("countryPlaceId=").append(this.getCountryPlaceId()).append(" | ");
+        sb.append("countryWoeId=").append(this.getCountryWoeId()).append(" | ");
+        sb.append("country=").append(this.getCountry());
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

@@ -22,7 +22,7 @@ import java.io.Serializable;
 
 /**
  * Represents a set of photos on Flickr.
- * 
+ *
  * @author jeremyb
  */
 public class Photoset implements Serializable {
@@ -32,7 +32,7 @@ public class Photoset implements Serializable {
     private String secret;
     private String server;
     private int photos;
-    private int	videos;
+    private int videos;
     private String farm;
     private String title;
     private String description;
@@ -42,7 +42,7 @@ public class Photoset implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -50,7 +50,7 @@ public class Photoset implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -58,7 +58,7 @@ public class Photoset implements Serializable {
      * @return the primary
      */
     public String getPrimary() {
-	return primary;
+        return primary;
     }
 
 
@@ -66,7 +66,7 @@ public class Photoset implements Serializable {
      * @param primary the primary to set
      */
     public void setPrimary(String primary) {
-	this.primary = primary;
+        this.primary = primary;
     }
 
 
@@ -74,7 +74,7 @@ public class Photoset implements Serializable {
      * @return the secret
      */
     public String getSecret() {
-	return secret;
+        return secret;
     }
 
 
@@ -82,7 +82,7 @@ public class Photoset implements Serializable {
      * @param secret the secret to set
      */
     public void setSecret(String secret) {
-	this.secret = secret;
+        this.secret = secret;
     }
 
 
@@ -90,7 +90,7 @@ public class Photoset implements Serializable {
      * @return the server
      */
     public String getServer() {
-	return server;
+        return server;
     }
 
 
@@ -98,7 +98,7 @@ public class Photoset implements Serializable {
      * @param server the server to set
      */
     public void setServer(String server) {
-	this.server = server;
+        this.server = server;
     }
 
 
@@ -106,7 +106,7 @@ public class Photoset implements Serializable {
      * @return the photos
      */
     public int getPhotos() {
-	return photos;
+        return photos;
     }
 
 
@@ -114,7 +114,7 @@ public class Photoset implements Serializable {
      * @param photos the photos to set
      */
     public void setPhotos(int photos) {
-	this.photos = photos;
+        this.photos = photos;
     }
 
 
@@ -122,7 +122,7 @@ public class Photoset implements Serializable {
      * @return the farm
      */
     public String getFarm() {
-	return farm;
+        return farm;
     }
 
 
@@ -130,7 +130,7 @@ public class Photoset implements Serializable {
      * @param farm the farm to set
      */
     public void setFarm(String farm) {
-	this.farm = farm;
+        this.farm = farm;
     }
 
 
@@ -138,7 +138,7 @@ public class Photoset implements Serializable {
      * @return the title
      */
     public String getTitle() {
-	return title;
+        return title;
     }
 
 
@@ -146,7 +146,7 @@ public class Photoset implements Serializable {
      * @param title the title to set
      */
     public void setTitle(String title) {
-	this.title = title;
+        this.title = title;
     }
 
 
@@ -154,7 +154,7 @@ public class Photoset implements Serializable {
      * @return the description
      */
     public String getDescription() {
-	return description;
+        return description;
     }
 
 
@@ -162,7 +162,7 @@ public class Photoset implements Serializable {
      * @param description the description to set
      */
     public void setDescription(String description) {
-	this.description = description;
+        this.description = description;
     }
 
 
@@ -170,7 +170,7 @@ public class Photoset implements Serializable {
      * @return the url
      */
     public String getUrl() {
-	return url;
+        return url;
     }
 
 
@@ -178,7 +178,7 @@ public class Photoset implements Serializable {
      * @param url the url to set
      */
     public void setUrl(String url) {
-	this.url = url;
+        this.url = url;
     }
 
 
@@ -186,7 +186,7 @@ public class Photoset implements Serializable {
      * @return the videos
      */
     public int getVideos() {
-	return videos;
+        return videos;
     }
 
 
@@ -194,28 +194,28 @@ public class Photoset implements Serializable {
      * @param videos the videos to set
      */
     public void setVideos(int videos) {
-	this.videos = videos;
+        this.videos = videos;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Photoset [ ");
+        StringBuilder sb = new StringBuilder("Photoset [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("primary=").append(this.primary).append(" | ");
-	sb.append("secret=").append(this.secret).append(" | ");
-	sb.append("server=").append(this.server).append(" | ");
-	sb.append("farm=").append(this.farm).append(" | ");
-	sb.append("photos=").append(this.photos).append(" | ");
-	sb.append("videos=").append(this.videos).append(" | ");
-	sb.append("title=").append(this.title).append(" | ");
-	sb.append("description=").append(this.description).append(" | ");
-	sb.append("url=").append(this.getUrl());
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("primary=").append(this.primary).append(" | ");
+        sb.append("secret=").append(this.secret).append(" | ");
+        sb.append("server=").append(this.server).append(" | ");
+        sb.append("farm=").append(this.farm).append(" | ");
+        sb.append("photos=").append(this.photos).append(" | ");
+        sb.append("videos=").append(this.videos).append(" | ");
+        sb.append("title=").append(this.title).append(" | ");
+        sb.append("description=").append(this.description).append(" | ");
+        sb.append("url=").append(this.getUrl());
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 
 }

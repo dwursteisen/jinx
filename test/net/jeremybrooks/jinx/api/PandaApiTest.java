@@ -18,24 +18,19 @@
  */
 package net.jeremybrooks.jinx.api;
 
-import net.jeremybrooks.jinx.dto.Photo;
 import net.jeremybrooks.jinx.JinxConstants;
-import java.util.ArrayList;
-import net.jeremybrooks.jinx.dto.Panda;
 import net.jeremybrooks.jinx.Setup;
-import java.util.List;
+import net.jeremybrooks.jinx.dto.Panda;
+import net.jeremybrooks.jinx.dto.Photo;
 import net.jeremybrooks.jinx.dto.Photos;
-import net.jeremybrooks.jinx.logger.JinxLogger;
-import net.jeremybrooks.jinx.logger.StdoutLogger;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
- *
  * @author jeremyb
  */
 public class PandaApiTest {
@@ -46,7 +41,7 @@ public class PandaApiTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-	Setup.doSetup();
+        Setup.doSetup();
     }
 
 
@@ -68,9 +63,9 @@ public class PandaApiTest {
      */
     @Test
     public void testGetInstance() {
-	System.out.println("getInstance");
-	PandaApi result = PandaApi.getInstance();
-	assertNotNull(result);
+        System.out.println("getInstance");
+        PandaApi result = PandaApi.getInstance();
+        assertNotNull(result);
     }
 
 
@@ -78,16 +73,16 @@ public class PandaApiTest {
      * Test of getList method, of class PandaApi.
      * There should be three pandas:
      * <panda>ling ling</panda>
-	<panda>hsing hsing</panda>
-	<panda>wang wang</panda>
+     * <panda>hsing hsing</panda>
+     * <panda>wang wang</panda>
      */
     @Test
     public void testGetList() throws Exception {
-	System.out.println("getList");
-	PandaApi instance = PandaApi.getInstance();
-	List<Panda> result = instance.getList();
-	assertNotNull(result);
-	assertEquals(3, result.size());
+        System.out.println("getList");
+        PandaApi instance = PandaApi.getInstance();
+        List<Panda> result = instance.getList();
+        assertNotNull(result);
+        assertEquals(3, result.size());
     }
 
 
@@ -96,12 +91,12 @@ public class PandaApiTest {
      */
     @Test
     public void testGetPhotos_Panda() throws Exception {
-	System.out.println("getPhotos");
-	PandaApi instance = PandaApi.getInstance();
-	List<Panda> list = instance.getList();
-	Photos result = instance.getPhotos(list.get(0));
-	assertNotNull(result);
-	assertTrue(result.getPhotos().size() > 0);
+        System.out.println("getPhotos");
+        PandaApi instance = PandaApi.getInstance();
+        List<Panda> list = instance.getList();
+        Photos result = instance.getPhotos(list.get(0));
+        assertNotNull(result);
+        assertTrue(result.getPhotos().size() > 0);
     }
 
 
@@ -110,35 +105,34 @@ public class PandaApiTest {
      */
     @Test
     public void testGetPhotos_4args() throws Exception {
-	System.out.println("getPhotos");
-	Panda panda = null;
-	List<String> extras = null;
-	int page = 0;
-	int perPage = 0;
-	PandaApi instance = PandaApi.getInstance();
-	List<Panda> list = instance.getList();
+        System.out.println("getPhotos");
+        Panda panda = null;
+        List<String> extras = null;
+        int page = 0;
+        int perPage = 0;
+        PandaApi instance = PandaApi.getInstance();
+        List<Panda> list = instance.getList();
 
-	panda = list.get(0);
+        panda = list.get(0);
 
-	Photos result = instance.getPhotos(panda, extras, page, perPage);
-	assertNotNull(result);
-	assertTrue(result.getPhotos().size() > 0);
+        Photos result = instance.getPhotos(panda, extras, page, perPage);
+        assertNotNull(result);
+        assertTrue(result.getPhotos().size() > 0);
 
-	panda = list.get(1);
-	extras = new ArrayList<String>();
-	extras.add(JinxConstants.EXTRAS_DESCRIPTION);
-	extras.add(JinxConstants.EXTRAS_DATE_UPLOAD);
-	extras.add(JinxConstants.EXTRAS_DATE_TAKEN);
-	perPage = 10;
-	result = instance.getPhotos(panda, extras, page, perPage);
-	assertNotNull(result);
-	assertEquals(perPage, result.getPhotos().size());
-	for (Photo photo : result.getPhotos()) {
-	    System.out.println(photo.toString());
-	    assertNotNull(photo.getDateUploaded());
-	}
+        panda = list.get(1);
+        extras = new ArrayList<String>();
+        extras.add(JinxConstants.EXTRAS_DESCRIPTION);
+        extras.add(JinxConstants.EXTRAS_DATE_UPLOAD);
+        extras.add(JinxConstants.EXTRAS_DATE_TAKEN);
+        perPage = 10;
+        result = instance.getPhotos(panda, extras, page, perPage);
+        assertNotNull(result);
+        assertEquals(perPage, result.getPhotos().size());
+        for (Photo photo : result.getPhotos()) {
+            System.out.println(photo.toString());
+            assertNotNull(photo.getDateUploaded());
+        }
     }
-
 
 
 }

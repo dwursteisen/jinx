@@ -6,17 +6,15 @@
 package net.jeremybrooks.jinx.api;
 
 import net.jeremybrooks.jinx.Setup;
-import java.util.List;
 import net.jeremybrooks.jinx.dto.License;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.*;
+
+import java.util.List;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
- *
  * @author jeremyb
  */
 public class PhotosLicensesApiTest {
@@ -27,7 +25,7 @@ public class PhotosLicensesApiTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-	Setup.doSetup();
+        Setup.doSetup();
     }
 
 
@@ -49,9 +47,9 @@ public class PhotosLicensesApiTest {
      */
     @Test
     public void testGetInstance() {
-	System.out.println("getInstance");
-	PhotosLicensesApi result = PhotosLicensesApi.getInstance();
-	assertNotNull(result);
+        System.out.println("getInstance");
+        PhotosLicensesApi result = PhotosLicensesApi.getInstance();
+        assertNotNull(result);
     }
 
 
@@ -60,11 +58,11 @@ public class PhotosLicensesApiTest {
      */
     @Test
     public void testGetInfo() throws Exception {
-	System.out.println("getInfo");
-	PhotosLicensesApi instance = PhotosLicensesApi.getInstance();
-	List<License> result = instance.getInfo();
-	assertNotNull(result);
-	assertTrue(result.size() > 0);
+        System.out.println("getInfo");
+        PhotosLicensesApi instance = PhotosLicensesApi.getInstance();
+        List<License> result = instance.getInfo();
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
     }
 
 
@@ -73,12 +71,12 @@ public class PhotosLicensesApiTest {
      */
     @Test
     public void testSetLicense() throws Exception {
-	System.out.println("setLicense");
-	String photoId = "257059699";	    // old photo, good for testing
-	String licenseId = "0";	// change from type 2; probably should run test a second time and change back
+        System.out.println("setLicense");
+        String photoId = "257059699";        // old photo, good for testing
+        String licenseId = "0";    // change from type 2; probably should run test a second time and change back
 
-	PhotosLicensesApi instance = PhotosLicensesApi.getInstance();
-	instance.setLicense(photoId, licenseId);
+        PhotosLicensesApi instance = PhotosLicensesApi.getInstance();
+        instance.setLicense(photoId, licenseId);
 
     }
 

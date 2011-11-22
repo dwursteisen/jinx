@@ -19,7 +19,6 @@
 package net.jeremybrooks.jinx.logger;
 
 /**
- *
  * @author jeremyb
  */
 public class JinxLogger {
@@ -31,7 +30,7 @@ public class JinxLogger {
      * @return the logger
      */
     public static LogInterface getLogger() {
-	return logger;
+        return logger;
     }
 
 
@@ -39,13 +38,12 @@ public class JinxLogger {
      * @param logger the logger to set
      */
     public static void setLogger(LogInterface logger) {
-	if (logger == null) {
-	    JinxLogger.logger = new DefaultLogger();
-	} else {
-	    JinxLogger.logger = logger;
-	}
+        if (logger == null) {
+            JinxLogger.logger = new DefaultLogger();
+        } else {
+            JinxLogger.logger = logger;
+        }
     }
-
 
 
 }

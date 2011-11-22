@@ -18,25 +18,18 @@
 */
 package net.jeremybrooks.jinx.api;
 
-import net.jeremybrooks.jinx.dto.Photo;
+import net.jeremybrooks.jinx.JinxConstants;
+import net.jeremybrooks.jinx.Setup;
+import net.jeremybrooks.jinx.dto.*;
+import org.junit.*;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import net.jeremybrooks.jinx.JinxConstants;
-import net.jeremybrooks.jinx.Setup;
-import net.jeremybrooks.jinx.dto.Groups;
-import net.jeremybrooks.jinx.dto.Person;
-import net.jeremybrooks.jinx.dto.Photos;
-import net.jeremybrooks.jinx.dto.User;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
- *
  * @author jeremyb
  */
 public class PeopleApiTest {
@@ -50,7 +43,7 @@ public class PeopleApiTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-	Setup.doSetup();
+        Setup.doSetup();
     }
 
 
@@ -72,9 +65,9 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetInstance() {
-	System.out.println("getInstance");
-	PeopleApi result = PeopleApi.getInstance();
-	assertNotNull(result);
+        System.out.println("getInstance");
+        PeopleApi result = PeopleApi.getInstance();
+        assertNotNull(result);
     }
 
 
@@ -83,13 +76,13 @@ public class PeopleApiTest {
      */
     @Test
     public void testFindByEmail() throws Exception {
-	System.out.println("findByEmail");
-	String email = "whirljackk@yahoo.com";
-	PeopleApi instance = PeopleApi.getInstance();
-	User result = instance.findByEmail(email);
-	assertNotNull(result);
-	assertEquals(username, result.getUsername());
-	assertEquals(nsid, result.getNsid());
+        System.out.println("findByEmail");
+        String email = "whirljackk@yahoo.com";
+        PeopleApi instance = PeopleApi.getInstance();
+        User result = instance.findByEmail(email);
+        assertNotNull(result);
+        assertEquals(username, result.getUsername());
+        assertEquals(nsid, result.getNsid());
     }
 
 
@@ -98,12 +91,12 @@ public class PeopleApiTest {
      */
     @Test
     public void testFindByUsername() throws Exception {
-	System.out.println("findByUsername");
-	PeopleApi instance = PeopleApi.getInstance();
-	User result = instance.findByUsername(username);
-	assertNotNull(result);
-	assertEquals(username, result.getUsername());
-	assertEquals(nsid, result.getNsid());
+        System.out.println("findByUsername");
+        PeopleApi instance = PeopleApi.getInstance();
+        User result = instance.findByUsername(username);
+        assertNotNull(result);
+        assertEquals(username, result.getUsername());
+        assertEquals(nsid, result.getNsid());
     }
 
 
@@ -112,12 +105,12 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetInfo() throws Exception {
-	System.out.println("getInfo");
-	String userId = "51035555243@N01";  // Thomas Hawk
-	PeopleApi instance = PeopleApi.getInstance();
-	Person result = instance.getInfo(userId);
-	assertNotNull(result);
-	assertEquals("Thomas Hawk", result.getUsername());
+        System.out.println("getInfo");
+        String userId = "51035555243@N01";  // Thomas Hawk
+        PeopleApi instance = PeopleApi.getInstance();
+        Person result = instance.getInfo(userId);
+        assertNotNull(result);
+        assertEquals("Thomas Hawk", result.getUsername());
     }
 
 
@@ -126,11 +119,11 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetPhotos_String() throws Exception {
-	System.out.println("getPhotos");
-	PeopleApi instance = PeopleApi.getInstance();
-	Photos result = instance.getPhotos(nsid);
-	assertNotNull(result);
-	assertTrue(result.getPhotos().size() > 0);
+        System.out.println("getPhotos");
+        PeopleApi instance = PeopleApi.getInstance();
+        Photos result = instance.getPhotos(nsid);
+        assertNotNull(result);
+        assertTrue(result.getPhotos().size() > 0);
     }
 
 
@@ -139,28 +132,28 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetPhotos_11args() throws Exception {
-	System.out.println("getPhotos");
-	String userId = nsid;
-	String safeSearch = JinxConstants.SAFE_SEARCH_SAFE;
-	Date minUploadDate = null;
-	Date maxUploadDate = null;
-	Date minTakenDate = null;
-	Date maxTakenDate = null;
-	String contentType = "";
-	String privacyFilter = "";
-	List<String> extras = new ArrayList<String>();
-	extras.add(JinxConstants.EXTRAS_DESCRIPTION);
-	extras.add(JinxConstants.EXTRAS_DATE_UPLOAD);
-	extras.add(JinxConstants.EXTRAS_DATE_TAKEN);
-	int perPage = 10;
-	int page = 0;
-	PeopleApi instance = PeopleApi.getInstance();
-	Photos result = instance.getPhotos(userId, safeSearch, minUploadDate, maxUploadDate, minTakenDate, maxTakenDate, contentType, privacyFilter, extras, perPage, page);
-	assertNotNull(result);
-	assertEquals(perPage, result.getPhotos().size());
-	for (Photo photo : result.getPhotos()) {
-	    assertNotNull(photo.getDateUploaded());
-	}
+        System.out.println("getPhotos");
+        String userId = nsid;
+        String safeSearch = JinxConstants.SAFE_SEARCH_SAFE;
+        Date minUploadDate = null;
+        Date maxUploadDate = null;
+        Date minTakenDate = null;
+        Date maxTakenDate = null;
+        String contentType = "";
+        String privacyFilter = "";
+        List<String> extras = new ArrayList<String>();
+        extras.add(JinxConstants.EXTRAS_DESCRIPTION);
+        extras.add(JinxConstants.EXTRAS_DATE_UPLOAD);
+        extras.add(JinxConstants.EXTRAS_DATE_TAKEN);
+        int perPage = 10;
+        int page = 0;
+        PeopleApi instance = PeopleApi.getInstance();
+        Photos result = instance.getPhotos(userId, safeSearch, minUploadDate, maxUploadDate, minTakenDate, maxTakenDate, contentType, privacyFilter, extras, perPage, page);
+        assertNotNull(result);
+        assertEquals(perPage, result.getPhotos().size());
+        for (Photo photo : result.getPhotos()) {
+            assertNotNull(photo.getDateUploaded());
+        }
     }
 
 
@@ -169,12 +162,12 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetPhotosOf_String() throws Exception {
-	System.out.println("getPhotosOf");
-	String userId = nsid;
-	PeopleApi instance = PeopleApi.getInstance();
-	Photos result = instance.getPhotosOf(userId);
-	assertNotNull(result);
-	assertTrue(result.getPhotos().size() > 0);
+        System.out.println("getPhotosOf");
+        String userId = nsid;
+        PeopleApi instance = PeopleApi.getInstance();
+        Photos result = instance.getPhotosOf(userId);
+        assertNotNull(result);
+        assertTrue(result.getPhotos().size() > 0);
     }
 
 
@@ -183,22 +176,22 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetPhotosOf_5args() throws Exception {
-	System.out.println("getPhotosOf");
-	String userId = nsid;
-	String ownerId = "";
-	List<String> extras = new ArrayList<String>();
-	extras.add(JinxConstants.EXTRAS_DESCRIPTION);
-	extras.add(JinxConstants.EXTRAS_DATE_UPLOAD);
-	extras.add(JinxConstants.EXTRAS_DATE_TAKEN);
-	int perPage = 10;
-	int page = 0;
-	PeopleApi instance = PeopleApi.getInstance();
-	Photos result = instance.getPhotosOf(userId, ownerId, extras, perPage, page);
-	assertNotNull(result);
-	assertEquals(perPage, result.getPhotos().size());
-	for (Photo photo : result.getPhotos()) {
-	    assertNotNull(photo.getDateUploaded());
-	}
+        System.out.println("getPhotosOf");
+        String userId = nsid;
+        String ownerId = "";
+        List<String> extras = new ArrayList<String>();
+        extras.add(JinxConstants.EXTRAS_DESCRIPTION);
+        extras.add(JinxConstants.EXTRAS_DATE_UPLOAD);
+        extras.add(JinxConstants.EXTRAS_DATE_TAKEN);
+        int perPage = 10;
+        int page = 0;
+        PeopleApi instance = PeopleApi.getInstance();
+        Photos result = instance.getPhotosOf(userId, ownerId, extras, perPage, page);
+        assertNotNull(result);
+        assertEquals(perPage, result.getPhotos().size());
+        for (Photo photo : result.getPhotos()) {
+            assertNotNull(photo.getDateUploaded());
+        }
     }
 
 
@@ -207,12 +200,12 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetPublicGroups() throws Exception {
-	System.out.println("getPublicGroups");
-	String userId = nsid;
-	PeopleApi instance = PeopleApi.getInstance();
-	Groups result = instance.getPublicGroups(userId);
-	assertNotNull(result);
-	assertTrue(result.getGroups().size() > 0);
+        System.out.println("getPublicGroups");
+        String userId = nsid;
+        PeopleApi instance = PeopleApi.getInstance();
+        Groups result = instance.getPublicGroups(userId);
+        assertNotNull(result);
+        assertTrue(result.getGroups().size() > 0);
     }
 
 
@@ -221,12 +214,12 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetPublicPhotos_String() throws Exception {
-	System.out.println("getPublicPhotos");
-	String userId = nsid;
-	PeopleApi instance = PeopleApi.getInstance();
-	Photos result = instance.getPublicPhotos(userId);
-	assertNotNull(result);
-	assertTrue(result.getPhotos().size() > 0);
+        System.out.println("getPublicPhotos");
+        String userId = nsid;
+        PeopleApi instance = PeopleApi.getInstance();
+        Photos result = instance.getPublicPhotos(userId);
+        assertNotNull(result);
+        assertTrue(result.getPhotos().size() > 0);
     }
 
 
@@ -235,22 +228,22 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetPublicPhotos_5args() throws Exception {
-	System.out.println("getPublicPhotos");
-	String userId = nsid;
-	String safeSearch = "";
-	List<String> extras = new ArrayList<String>();
-	extras.add(JinxConstants.EXTRAS_DESCRIPTION);
-	extras.add(JinxConstants.EXTRAS_DATE_UPLOAD);
-	extras.add(JinxConstants.EXTRAS_DATE_TAKEN);
-	int perPage = 10;
-	int page = 0;
-	PeopleApi instance = PeopleApi.getInstance();
-	Photos result = instance.getPublicPhotos(userId, safeSearch, extras, perPage, page);
-	assertNotNull(result);
-	assertEquals(perPage, result.getPhotos().size());
-	for (Photo photo : result.getPhotos()) {
-	    assertNotNull(photo.getDateUploaded());
-	}
+        System.out.println("getPublicPhotos");
+        String userId = nsid;
+        String safeSearch = "";
+        List<String> extras = new ArrayList<String>();
+        extras.add(JinxConstants.EXTRAS_DESCRIPTION);
+        extras.add(JinxConstants.EXTRAS_DATE_UPLOAD);
+        extras.add(JinxConstants.EXTRAS_DATE_TAKEN);
+        int perPage = 10;
+        int page = 0;
+        PeopleApi instance = PeopleApi.getInstance();
+        Photos result = instance.getPublicPhotos(userId, safeSearch, extras, perPage, page);
+        assertNotNull(result);
+        assertEquals(perPage, result.getPhotos().size());
+        for (Photo photo : result.getPhotos()) {
+            assertNotNull(photo.getDateUploaded());
+        }
     }
 
 
@@ -259,10 +252,10 @@ public class PeopleApiTest {
      */
     @Test
     public void testGetUploadStatus() throws Exception {
-	System.out.println("getUploadStatus");
-	PeopleApi instance = PeopleApi.getInstance();
-	User result = instance.getUploadStatus();
-	assertNotNull(result);
+        System.out.println("getUploadStatus");
+        PeopleApi instance = PeopleApi.getInstance();
+        User result = instance.getUploadStatus();
+        assertNotNull(result);
     }
 
 }

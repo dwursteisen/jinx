@@ -35,6 +35,7 @@ import java.io.Serializable;
  * <li>thumb</li>
  * <li>media</li>     *
  * </ul>
+ *
  * @author jeremyb
  */
 public class Context implements Serializable {
@@ -50,7 +51,7 @@ public class Context implements Serializable {
      * @return the count
      */
     public int getCount() {
-	return count;
+        return count;
     }
 
 
@@ -58,7 +59,7 @@ public class Context implements Serializable {
      * @param count the count to set
      */
     public void setCount(int count) {
-	this.count = count;
+        this.count = count;
     }
 
 
@@ -66,7 +67,7 @@ public class Context implements Serializable {
      * @return the previousPhoto
      */
     public Photo getPreviousPhoto() {
-	return previousPhoto;
+        return previousPhoto;
     }
 
 
@@ -74,7 +75,7 @@ public class Context implements Serializable {
      * @param previousPhoto the previousPhoto to set
      */
     public void setPreviousPhoto(Photo previousPhoto) {
-	this.previousPhoto = previousPhoto;
+        this.previousPhoto = previousPhoto;
     }
 
 
@@ -82,7 +83,7 @@ public class Context implements Serializable {
      * @return the nextPhoto
      */
     public Photo getNextPhoto() {
-	return nextPhoto;
+        return nextPhoto;
     }
 
 
@@ -90,31 +91,31 @@ public class Context implements Serializable {
      * @param nextPhoto the nextPhoto to set
      */
     public void setNextPhoto(Photo nextPhoto) {
-	this.nextPhoto = nextPhoto;
+        this.nextPhoto = nextPhoto;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Context [ ");
+        StringBuilder sb = new StringBuilder("Context [ ");
 
-	sb.append("count=").append(this.count).append(" | ");
+        sb.append("count=").append(this.count).append(" | ");
 
-	sb.append("previousPhoto=");
-	if (this.previousPhoto == null) {
-	    sb.append("null");
-	} else {
-	    sb.append(this.previousPhoto.toString());
-	}
-	sb.append(" | nextPhoto=");
-	if (this.nextPhoto == null) {
-	    sb.append("null");
-	} else {
-	    sb.append(this.nextPhoto.toString());
-	}
+        sb.append("previousPhoto=");
+        if (this.previousPhoto == null) {
+            sb.append("null");
+        } else {
+            sb.append(this.previousPhoto.toString());
+        }
+        sb.append(" | nextPhoto=");
+        if (this.nextPhoto == null) {
+            sb.append("null");
+        } else {
+            sb.append(this.nextPhoto.toString());
+        }
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 }

@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author jeremyb
  */
 public class Members {
@@ -34,7 +33,7 @@ public class Members {
     private List<Member> members;
 
     public Members() {
-	this.members = new ArrayList<Member>();
+        this.members = new ArrayList<Member>();
     }
 
 
@@ -42,7 +41,7 @@ public class Members {
      * @return the page
      */
     public int getPage() {
-	return page;
+        return page;
     }
 
 
@@ -50,7 +49,7 @@ public class Members {
      * @param page the page to set
      */
     public void setPage(int page) {
-	this.page = page;
+        this.page = page;
     }
 
 
@@ -58,7 +57,7 @@ public class Members {
      * @return the perPage
      */
     public int getPerPage() {
-	return perPage;
+        return perPage;
     }
 
 
@@ -66,7 +65,7 @@ public class Members {
      * @param perPage the perPage to set
      */
     public void setPerPage(int perPage) {
-	this.perPage = perPage;
+        this.perPage = perPage;
     }
 
 
@@ -74,7 +73,7 @@ public class Members {
      * @return the pages
      */
     public int getPages() {
-	return pages;
+        return pages;
     }
 
 
@@ -82,7 +81,7 @@ public class Members {
      * @param pages the pages to set
      */
     public void setPages(int pages) {
-	this.pages = pages;
+        this.pages = pages;
     }
 
 
@@ -90,7 +89,7 @@ public class Members {
      * @return the total
      */
     public int getTotal() {
-	return total;
+        return total;
     }
 
 
@@ -98,7 +97,7 @@ public class Members {
      * @param total the total to set
      */
     public void setTotal(int total) {
-	this.total = total;
+        this.total = total;
     }
 
 
@@ -106,7 +105,7 @@ public class Members {
      * @return the members
      */
     public List<Member> getMembers() {
-	return members;
+        return members;
     }
 
 
@@ -114,24 +113,24 @@ public class Members {
      * @param member member to add to the list.
      */
     public void addMember(Member member) {
-	this.members.add(member);
+        this.members.add(member);
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("page=").append(this.getPage()).append(" | ");
-	sb.append("pages=").append(this.getPages()).append(" | ");
-	sb.append("perPage=").append(this.getPerPage()).append(" | ");
-	sb.append("total=").append(this.getTotal()).append(" | ");
-	sb.append("member list count=").append(this.members.size()).append(" < ");
-	for (Member m : this.getMembers()) {
-	    sb.append(m.toString());
-	}
-	sb.append(" > ");
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" [ ");
+        sb.append("page=").append(this.getPage()).append(" | ");
+        sb.append("pages=").append(this.getPages()).append(" | ");
+        sb.append("perPage=").append(this.getPerPage()).append(" | ");
+        sb.append("total=").append(this.getTotal()).append(" | ");
+        sb.append("member list count=").append(this.members.size()).append(" < ");
+        for (Member m : this.getMembers()) {
+            sb.append(m.toString());
+        }
+        sb.append(" > ");
+        sb.append(" ]");
+        return sb.toString();
     }
 }

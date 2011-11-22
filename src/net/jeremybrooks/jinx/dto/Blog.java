@@ -22,11 +22,11 @@ import java.io.Serializable;
 
 /**
  * This class represents a blog as returned by the BlogsAPI.getList method.
- *
+ * <p/>
  * This class implements its own version of equals() and hashCode(). If the
  * id's of two instances of this class are the same, the classes are considered
  * equal.
- * 
+ *
  * @author jeremyb
  */
 public class Blog implements Serializable {
@@ -41,7 +41,7 @@ public class Blog implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -49,7 +49,7 @@ public class Blog implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -57,7 +57,7 @@ public class Blog implements Serializable {
      * @return the name
      */
     public String getName() {
-	return name;
+        return name;
     }
 
 
@@ -65,7 +65,7 @@ public class Blog implements Serializable {
      * @param name the name to set
      */
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
 
@@ -73,7 +73,7 @@ public class Blog implements Serializable {
      * @return the service
      */
     public String getService() {
-	return service;
+        return service;
     }
 
 
@@ -81,7 +81,7 @@ public class Blog implements Serializable {
      * @param service the service to set
      */
     public void setService(String service) {
-	this.service = service;
+        this.service = service;
     }
 
 
@@ -89,7 +89,7 @@ public class Blog implements Serializable {
      * @return the needsPassword
      */
     public boolean isNeedsPassword() {
-	return needsPassword;
+        return needsPassword;
     }
 
 
@@ -97,7 +97,7 @@ public class Blog implements Serializable {
      * @param needsPassword the needsPassword to set
      */
     public void setNeedsPassword(boolean needsPassword) {
-	this.needsPassword = needsPassword;
+        this.needsPassword = needsPassword;
     }
 
 
@@ -105,7 +105,7 @@ public class Blog implements Serializable {
      * @return the url
      */
     public String getUrl() {
-	return url;
+        return url;
     }
 
 
@@ -113,46 +113,45 @@ public class Blog implements Serializable {
      * @param url the url to set
      */
     public void setUrl(String url) {
-	this.url = url;
+        this.url = url;
     }
 
 
     @Override
     public boolean equals(Object obj) {
-	if (obj == null) {
-	    return false;
-	}
-	if (getClass() != obj.getClass()) {
-	    return false;
-	}
-	final Blog other = (Blog) obj;
-	if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id)) {
-	    return false;
-	}
-	return true;
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Blog other = (Blog) obj;
+        if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id)) {
+            return false;
+        }
+        return true;
     }
 
 
     @Override
     public int hashCode() {
-	int hash = 7;
-	hash = 41 * hash + (this.id != null ? this.id.hashCode() : 0);
-	return hash;
+        int hash = 7;
+        hash = 41 * hash + (this.id != null ? this.id.hashCode() : 0);
+        return hash;
     }
-
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Blog [ ");
+        StringBuilder sb = new StringBuilder("Blog [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("name=").append(this.name).append(" | ");
-	sb.append("service=").append(this.service).append(" | ");
-	sb.append("needsPassword=").append(this.needsPassword).append(" | ");
-	sb.append("url=").append(this.url);
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("name=").append(this.name).append(" | ");
+        sb.append("service=").append(this.service).append(" | ");
+        sb.append("needsPassword=").append(this.needsPassword).append(" | ");
+        sb.append("url=").append(this.url);
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

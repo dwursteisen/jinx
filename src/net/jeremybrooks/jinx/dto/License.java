@@ -19,7 +19,6 @@
 package net.jeremybrooks.jinx.dto;
 
 /**
- *
  * @author jeremyb
  */
 public class License {
@@ -29,14 +28,12 @@ public class License {
     private String name;
     private String url;
 
-   
-
 
     /**
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -44,7 +41,7 @@ public class License {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -52,7 +49,7 @@ public class License {
      * @return the name
      */
     public String getName() {
-	return name;
+        return name;
     }
 
 
@@ -60,7 +57,7 @@ public class License {
      * @param name the name to set
      */
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
 
@@ -68,7 +65,7 @@ public class License {
      * @return the url
      */
     public String getUrl() {
-	return url;
+        return url;
     }
 
 
@@ -76,20 +73,20 @@ public class License {
      * @param url the url to set
      */
     public void setUrl(String url) {
-	this.url = url;
+        this.url = url;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("id=").append(this.getId()).append(" | ");
-	sb.append("name=").append(this.getName()).append(" | ");
-	sb.append("url=").append(this.getUrl());
+        sb.append(" [ ");
+        sb.append("id=").append(this.getId()).append(" | ");
+        sb.append("name=").append(this.getName()).append(" | ");
+        sb.append("url=").append(this.getUrl());
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

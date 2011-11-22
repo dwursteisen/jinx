@@ -38,7 +38,7 @@ public class AllContexts implements Serializable {
      * @return the sets
      */
     public List<Photoset> getSets() {
-	return sets;
+        return sets;
     }
 
 
@@ -46,7 +46,7 @@ public class AllContexts implements Serializable {
      * @param sets the sets to set
      */
     public void setSets(List<Photoset> sets) {
-	this.sets = sets;
+        this.sets = sets;
     }
 
 
@@ -54,7 +54,7 @@ public class AllContexts implements Serializable {
      * @return the pools
      */
     public List<Pool> getPools() {
-	return pools;
+        return pools;
     }
 
 
@@ -62,7 +62,7 @@ public class AllContexts implements Serializable {
      * @param pools the pools to set
      */
     public void setPools(List<Pool> pools) {
-	this.pools = pools;
+        this.pools = pools;
     }
 
 
@@ -70,7 +70,7 @@ public class AllContexts implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -78,31 +78,31 @@ public class AllContexts implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("AllContexts [ ");
+        StringBuilder sb = new StringBuilder("AllContexts [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("photosets=");
-	if (this.sets == null) {
-	    sb.append("null");
-	} else {
-	    sb.append(this.sets.size()).append(" elements");
-	}
-	sb.append(" | ");
-	sb.append("pools=");
-	if (this.pools == null) {
-	    sb.append("null");
-	} else {
-	    sb.append(this.pools.size()).append(" elements");
-	}
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("photosets=");
+        if (this.sets == null) {
+            sb.append("null");
+        } else {
+            sb.append(this.sets.size()).append(" elements");
+        }
+        sb.append(" | ");
+        sb.append("pools=");
+        if (this.pools == null) {
+            sb.append("null");
+        } else {
+            sb.append(this.pools.size()).append(" elements");
+        }
 
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 }

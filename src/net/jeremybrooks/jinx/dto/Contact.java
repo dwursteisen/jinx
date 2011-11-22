@@ -23,10 +23,10 @@ import java.io.Serializable;
 /**
  * This class represents a contact element, as returned by the Contact API
  * methods.
- *
+ * <p/>
  * Some of the fields may or may not be populated, depending on the method
  * that was called.
- * 
+ *
  * @author jeremyb
  */
 public class Contact implements Serializable {
@@ -40,14 +40,14 @@ public class Contact implements Serializable {
     private boolean family = false;
     private String pathAlias;
     private String location;
-    
+
     private int photosUploaded;
 
     /**
      * @return the nsid
      */
     public String getNsid() {
-	return nsid;
+        return nsid;
     }
 
 
@@ -55,7 +55,7 @@ public class Contact implements Serializable {
      * @param nsid the nsid to set
      */
     public void setNsid(String nsid) {
-	this.nsid = nsid;
+        this.nsid = nsid;
     }
 
 
@@ -63,7 +63,7 @@ public class Contact implements Serializable {
      * @return the username
      */
     public String getUsername() {
-	return username;
+        return username;
     }
 
 
@@ -71,7 +71,7 @@ public class Contact implements Serializable {
      * @param username the username to set
      */
     public void setUsername(String username) {
-	this.username = username;
+        this.username = username;
     }
 
 
@@ -79,7 +79,7 @@ public class Contact implements Serializable {
      * @return the iconServer
      */
     public String getIconServer() {
-	return iconServer;
+        return iconServer;
     }
 
 
@@ -87,7 +87,7 @@ public class Contact implements Serializable {
      * @param iconServer the iconServer to set
      */
     public void setIconServer(String iconServer) {
-	this.iconServer = iconServer;
+        this.iconServer = iconServer;
     }
 
 
@@ -95,7 +95,7 @@ public class Contact implements Serializable {
      * @return the iconFarm
      */
     public String getIconFarm() {
-	return iconFarm;
+        return iconFarm;
     }
 
 
@@ -103,7 +103,7 @@ public class Contact implements Serializable {
      * @param iconFarm the iconFarm to set
      */
     public void setIconFarm(String iconFarm) {
-	this.iconFarm = iconFarm;
+        this.iconFarm = iconFarm;
     }
 
 
@@ -111,7 +111,7 @@ public class Contact implements Serializable {
      * @return the ignored
      */
     public boolean isIgnored() {
-	return ignored;
+        return ignored;
     }
 
 
@@ -119,7 +119,7 @@ public class Contact implements Serializable {
      * @param ignored the ignored to set
      */
     public void setIgnored(boolean ignored) {
-	this.ignored = ignored;
+        this.ignored = ignored;
     }
 
 
@@ -127,7 +127,7 @@ public class Contact implements Serializable {
      * @return the realName
      */
     public String getRealName() {
-	return realName;
+        return realName;
     }
 
 
@@ -135,7 +135,7 @@ public class Contact implements Serializable {
      * @param realName the realName to set
      */
     public void setRealName(String realName) {
-	this.realName = realName;
+        this.realName = realName;
     }
 
 
@@ -143,7 +143,7 @@ public class Contact implements Serializable {
      * @return the friend
      */
     public boolean isFriend() {
-	return friend;
+        return friend;
     }
 
 
@@ -151,7 +151,7 @@ public class Contact implements Serializable {
      * @param friend the friend to set
      */
     public void setFriend(boolean friend) {
-	this.friend = friend;
+        this.friend = friend;
     }
 
 
@@ -159,7 +159,7 @@ public class Contact implements Serializable {
      * @return the family
      */
     public boolean isFamily() {
-	return family;
+        return family;
     }
 
 
@@ -167,7 +167,7 @@ public class Contact implements Serializable {
      * @param family the family to set
      */
     public void setFamily(boolean family) {
-	this.family = family;
+        this.family = family;
     }
 
 
@@ -175,7 +175,7 @@ public class Contact implements Serializable {
      * @return the pathAlias
      */
     public String getPathAlias() {
-	return pathAlias;
+        return pathAlias;
     }
 
 
@@ -183,7 +183,7 @@ public class Contact implements Serializable {
      * @param pathAlias the pathAlias to set
      */
     public void setPathAlias(String pathAlias) {
-	this.pathAlias = pathAlias;
+        this.pathAlias = pathAlias;
     }
 
 
@@ -191,7 +191,7 @@ public class Contact implements Serializable {
      * @return the location
      */
     public String getLocation() {
-	return location;
+        return location;
     }
 
 
@@ -199,29 +199,29 @@ public class Contact implements Serializable {
      * @param location the location to set
      */
     public void setLocation(String location) {
-	this.location = location;
+        this.location = location;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("nsid=").append(this.nsid).append(" | ");
-	sb.append("username=").append(this.username).append(" | ");
-	sb.append("iconServer=").append(this.iconServer).append(" | ");
-	sb.append("iconFarm=").append(this.iconFarm).append(" | ");
-	sb.append("ignored=").append(this.ignored).append(" | ");
-	sb.append("realName=").append(this.realName).append(" | ");
-	sb.append("friend=").append(this.friend).append(" | ");
-	sb.append("family=").append(this.family).append(" | ");
-	sb.append("pathAlias=").append(this.pathAlias).append(" | ");
-	sb.append("location=").append(this.location).append(" | ");
-	sb.append("photosUploaded=").append(this.getPhotosUploaded());
+        sb.append(" [ ");
+        sb.append("nsid=").append(this.nsid).append(" | ");
+        sb.append("username=").append(this.username).append(" | ");
+        sb.append("iconServer=").append(this.iconServer).append(" | ");
+        sb.append("iconFarm=").append(this.iconFarm).append(" | ");
+        sb.append("ignored=").append(this.ignored).append(" | ");
+        sb.append("realName=").append(this.realName).append(" | ");
+        sb.append("friend=").append(this.friend).append(" | ");
+        sb.append("family=").append(this.family).append(" | ");
+        sb.append("pathAlias=").append(this.pathAlias).append(" | ");
+        sb.append("location=").append(this.location).append(" | ");
+        sb.append("photosUploaded=").append(this.getPhotosUploaded());
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 
 
@@ -229,7 +229,7 @@ public class Contact implements Serializable {
      * @return the photosUploaded
      */
     public int getPhotosUploaded() {
-	return photosUploaded;
+        return photosUploaded;
     }
 
 
@@ -237,6 +237,6 @@ public class Contact implements Serializable {
      * @param photosUploaded the photosUploaded to set
      */
     public void setPhotosUploaded(int photosUploaded) {
-	this.photosUploaded = photosUploaded;
+        this.photosUploaded = photosUploaded;
     }
 }

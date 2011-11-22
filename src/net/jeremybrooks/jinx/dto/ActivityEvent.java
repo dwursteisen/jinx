@@ -23,8 +23,8 @@ import java.util.Date;
 
 /**
  * NOTE: This class name may be changed in the future if other API's can use
- *       it.
- * 
+ * it.
+ *
  * @author jeremyb
  */
 public class ActivityEvent implements Serializable {
@@ -40,7 +40,7 @@ public class ActivityEvent implements Serializable {
      * @return the type
      */
     public String getType() {
-	return type;
+        return type;
     }
 
 
@@ -48,7 +48,7 @@ public class ActivityEvent implements Serializable {
      * @param type the type to set
      */
     public void setType(String type) {
-	this.type = type;
+        this.type = type;
     }
 
 
@@ -56,7 +56,7 @@ public class ActivityEvent implements Serializable {
      * @return the user
      */
     public String getUser() {
-	return user;
+        return user;
     }
 
 
@@ -64,7 +64,7 @@ public class ActivityEvent implements Serializable {
      * @param user the user to set
      */
     public void setUser(String user) {
-	this.user = user;
+        this.user = user;
     }
 
 
@@ -72,7 +72,7 @@ public class ActivityEvent implements Serializable {
      * @return the userName
      */
     public String getUserName() {
-	return userName;
+        return userName;
     }
 
 
@@ -80,7 +80,7 @@ public class ActivityEvent implements Serializable {
      * @param userName the userName to set
      */
     public void setUserName(String userName) {
-	this.userName = userName;
+        this.userName = userName;
     }
 
 
@@ -88,7 +88,7 @@ public class ActivityEvent implements Serializable {
      * @return the dateAdded
      */
     public Date getDateAdded() {
-	return dateAdded;
+        return dateAdded;
     }
 
 
@@ -96,7 +96,7 @@ public class ActivityEvent implements Serializable {
      * @param dateAdded the dateAdded to set
      */
     public void setDateAdded(Date dateAdded) {
-	this.dateAdded = dateAdded;
+        this.dateAdded = dateAdded;
     }
 
 
@@ -104,7 +104,7 @@ public class ActivityEvent implements Serializable {
      * @return the commentId
      */
     public String getCommentId() {
-	return commentId;
+        return commentId;
     }
 
 
@@ -112,7 +112,7 @@ public class ActivityEvent implements Serializable {
      * @param commentId the commentId to set
      */
     public void setCommentId(String commentId) {
-	this.commentId = commentId;
+        this.commentId = commentId;
     }
 
 
@@ -120,7 +120,7 @@ public class ActivityEvent implements Serializable {
      * @return the eventText
      */
     public String getEventText() {
-	return eventText;
+        return eventText;
     }
 
 
@@ -128,22 +128,22 @@ public class ActivityEvent implements Serializable {
      * @param eventText the eventText to set
      */
     public void setEventText(String eventText) {
-	this.eventText = eventText;
+        this.eventText = eventText;
     }
 
-    
+
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
-	sb.append(":[ ");
-	
-	sb.append("type=").append(this.type).append(" | ");
-	sb.append("user=").append(this.user).append(" | ");
-	sb.append("userName=").append(this.userName).append(" | ");
-	sb.append("dateAdded=").append(this.dateAdded).append(" | ");
-	sb.append("commentId=").append(this.commentId).append(" | ");
-	sb.append("eventText=").append(this.eventText);
-	sb.append(" ]");
-	return sb.toString();
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
+        sb.append(":[ ");
+
+        sb.append("type=").append(this.type).append(" | ");
+        sb.append("user=").append(this.user).append(" | ");
+        sb.append("userName=").append(this.userName).append(" | ");
+        sb.append("dateAdded=").append(this.dateAdded).append(" | ");
+        sb.append("commentId=").append(this.commentId).append(" | ");
+        sb.append("eventText=").append(this.eventText);
+        sb.append(" ]");
+        return sb.toString();
     }
 }

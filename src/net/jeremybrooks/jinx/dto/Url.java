@@ -22,7 +22,7 @@ import java.io.Serializable;
 
 /**
  * Represents a URL for a photo.
- * 
+ *
  * @author jeremyb
  */
 public class Url implements Serializable {
@@ -35,7 +35,7 @@ public class Url implements Serializable {
      * @return the type
      */
     public String getType() {
-	return type;
+        return type;
     }
 
 
@@ -43,7 +43,7 @@ public class Url implements Serializable {
      * @param type the type to set
      */
     public void setType(String type) {
-	this.type = type;
+        this.type = type;
     }
 
 
@@ -51,7 +51,7 @@ public class Url implements Serializable {
      * @return the url
      */
     public String getUrl() {
-	return url;
+        return url;
     }
 
 
@@ -59,19 +59,19 @@ public class Url implements Serializable {
      * @param url the url to set
      */
     public void setUrl(String url) {
-	this.url = url;
+        this.url = url;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Url [ ");
+        StringBuilder sb = new StringBuilder("Url [ ");
 
-	sb.append("type=").append(this.type).append(" | ");
-	sb.append("url=").append(this.url);
+        sb.append("type=").append(this.type).append(" | ");
+        sb.append("url=").append(this.url);
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
-    
+
 }

@@ -27,7 +27,7 @@ import java.io.Serializable;
  */
 public class PhotoId implements Serializable {
 
-    
+
     private String id;
     private String secret;
     private String originalSecret;
@@ -37,7 +37,7 @@ public class PhotoId implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -45,7 +45,7 @@ public class PhotoId implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -53,7 +53,7 @@ public class PhotoId implements Serializable {
      * @return the secret
      */
     public String getSecret() {
-	return secret;
+        return secret;
     }
 
 
@@ -61,7 +61,7 @@ public class PhotoId implements Serializable {
      * @param secret the secret to set
      */
     public void setSecret(String secret) {
-	this.secret = secret;
+        this.secret = secret;
     }
 
 
@@ -69,7 +69,7 @@ public class PhotoId implements Serializable {
      * @return the originalSecret
      */
     public String getOriginalSecret() {
-	return originalSecret;
+        return originalSecret;
     }
 
 
@@ -77,7 +77,7 @@ public class PhotoId implements Serializable {
      * @param originalSecret the originalSecret to set
      */
     public void setOriginalSecret(String originalSecret) {
-	this.originalSecret = originalSecret;
+        this.originalSecret = originalSecret;
     }
 
 

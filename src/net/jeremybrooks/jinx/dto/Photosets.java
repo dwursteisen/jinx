@@ -22,7 +22,6 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- *
  * @author jeremyb
  */
 public class Photosets implements Serializable {
@@ -34,7 +33,7 @@ public class Photosets implements Serializable {
      * @return the canCreate
      */
     public boolean isCanCreate() {
-	return canCreate;
+        return canCreate;
     }
 
 
@@ -42,7 +41,7 @@ public class Photosets implements Serializable {
      * @param canCreate the canCreate to set
      */
     public void setCanCreate(boolean canCreate) {
-	this.canCreate = canCreate;
+        this.canCreate = canCreate;
     }
 
 
@@ -50,7 +49,7 @@ public class Photosets implements Serializable {
      * @return the photosetList
      */
     public List<Photoset> getPhotosetList() {
-	return photosetList;
+        return photosetList;
     }
 
 
@@ -58,7 +57,7 @@ public class Photosets implements Serializable {
      * @param photosetList the photosetList to set
      */
     public void setPhotosetList(List<Photoset> photosetList) {
-	this.photosetList = photosetList;
+        this.photosetList = photosetList;
     }
 
 }

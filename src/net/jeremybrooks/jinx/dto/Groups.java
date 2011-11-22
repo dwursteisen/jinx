@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author jeremyb
  */
 public class Groups {
@@ -35,14 +34,14 @@ public class Groups {
 
 
     public Groups() {
-	this.groups = new ArrayList<Group>();
+        this.groups = new ArrayList<Group>();
     }
 
     /**
      * @return the page
      */
     public int getPage() {
-	return page;
+        return page;
     }
 
 
@@ -50,7 +49,7 @@ public class Groups {
      * @param page the page to set
      */
     public void setPage(int page) {
-	this.page = page;
+        this.page = page;
     }
 
 
@@ -58,7 +57,7 @@ public class Groups {
      * @return the pages
      */
     public int getPages() {
-	return pages;
+        return pages;
     }
 
 
@@ -66,7 +65,7 @@ public class Groups {
      * @param pages the pages to set
      */
     public void setPages(int pages) {
-	this.pages = pages;
+        this.pages = pages;
     }
 
 
@@ -74,7 +73,7 @@ public class Groups {
      * @return the perPage
      */
     public int getPerPage() {
-	return perPage;
+        return perPage;
     }
 
 
@@ -82,7 +81,7 @@ public class Groups {
      * @param perPage the perPage to set
      */
     public void setPerPage(int perPage) {
-	this.perPage = perPage;
+        this.perPage = perPage;
     }
 
 
@@ -90,7 +89,7 @@ public class Groups {
      * @return the total
      */
     public int getTotal() {
-	return total;
+        return total;
     }
 
 
@@ -98,7 +97,7 @@ public class Groups {
      * @param total the total to set
      */
     public void setTotal(int total) {
-	this.total = total;
+        this.total = total;
     }
 
 
@@ -106,7 +105,7 @@ public class Groups {
      * @return the groups
      */
     public List<Group> getGroups() {
-	return groups;
+        return groups;
     }
 
 
@@ -114,25 +113,25 @@ public class Groups {
      * @param add a group to the list
      */
     public void addGroup(Group group) {
-	this.groups.add(group);
+        this.groups.add(group);
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("page=").append(this.getPage()).append(" | ");
-	sb.append("pages=").append(this.getPages()).append(" | ");
-	sb.append("perPage=").append(this.getPerPage()).append(" | ");
-	sb.append("total=").append(this.getTotal()).append(" | ");
-	sb.append("group count=").append(this.groups.size()).append(" < ");
-	for (Group g : this.getGroups()) {
-	    sb.append(g.toString());
-	}
-	sb.append(" > ");
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" [ ");
+        sb.append("page=").append(this.getPage()).append(" | ");
+        sb.append("pages=").append(this.getPages()).append(" | ");
+        sb.append("perPage=").append(this.getPerPage()).append(" | ");
+        sb.append("total=").append(this.getTotal()).append(" | ");
+        sb.append("group count=").append(this.groups.size()).append(" < ");
+        for (Group g : this.getGroups()) {
+            sb.append(g.toString());
+        }
+        sb.append(" > ");
+        sb.append(" ]");
+        return sb.toString();
     }
 }

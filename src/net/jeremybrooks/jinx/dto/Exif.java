@@ -23,26 +23,35 @@ import java.util.List;
 
 
 /**
- * 
  * A list of EXIF/TIFF/GPS tags for a given photo.
  *
  * @author jeremyb
  */
 public class Exif implements Serializable {
 
-    /** The id of the photo. */
+    /**
+     * The id of the photo.
+     */
     private String id;
 
-    /** The secret of the photo. */
+    /**
+     * The secret of the photo.
+     */
     private String secret;
 
-    /** The server. */
+    /**
+     * The server.
+     */
     private String server;
 
-    /** The farm. */
+    /**
+     * The farm.
+     */
     private String farm;
 
-    /** List of ExifElements for the photo. */
+    /**
+     * List of ExifElements for the photo.
+     */
     private List<ExifElement> exifList;
 
 
@@ -50,7 +59,7 @@ public class Exif implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -58,7 +67,7 @@ public class Exif implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -66,7 +75,7 @@ public class Exif implements Serializable {
      * @return the secret
      */
     public String getSecret() {
-	return secret;
+        return secret;
     }
 
 
@@ -74,7 +83,7 @@ public class Exif implements Serializable {
      * @param secret the secret to set
      */
     public void setSecret(String secret) {
-	this.secret = secret;
+        this.secret = secret;
     }
 
 
@@ -82,7 +91,7 @@ public class Exif implements Serializable {
      * @return the server
      */
     public String getServer() {
-	return server;
+        return server;
     }
 
 
@@ -90,7 +99,7 @@ public class Exif implements Serializable {
      * @param server the server to set
      */
     public void setServer(String server) {
-	this.server = server;
+        this.server = server;
     }
 
 
@@ -98,7 +107,7 @@ public class Exif implements Serializable {
      * @return the farm
      */
     public String getFarm() {
-	return farm;
+        return farm;
     }
 
 
@@ -106,7 +115,7 @@ public class Exif implements Serializable {
      * @param farm the farm to set
      */
     public void setFarm(String farm) {
-	this.farm = farm;
+        this.farm = farm;
     }
 
 
@@ -114,7 +123,7 @@ public class Exif implements Serializable {
      * @return the exifList
      */
     public List<ExifElement> getExifList() {
-	return exifList;
+        return exifList;
     }
 
 
@@ -122,27 +131,27 @@ public class Exif implements Serializable {
      * @param exifList the exifList to set
      */
     public void setExifList(List<ExifElement> exifList) {
-	this.exifList = exifList;
+        this.exifList = exifList;
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Exif [ ");
+        StringBuilder sb = new StringBuilder("Exif [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("secret=").append(this.secret).append(" | ");
-	sb.append("server=").append(this.server).append(" | ");
-	sb.append("farm=").append(this.farm).append(" | ");
-	sb.append("exifList=");
-	if (this.exifList == null) {
-	    sb.append("null");
-	} else {
-	    for (ExifElement ee : this.exifList) {
-		sb.append('<').append(ee.toString()).append('>');
-	    }
-	}
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("secret=").append(this.secret).append(" | ");
+        sb.append("server=").append(this.server).append(" | ");
+        sb.append("farm=").append(this.farm).append(" | ");
+        sb.append("exifList=");
+        if (this.exifList == null) {
+            sb.append("null");
+        } else {
+            for (ExifElement ee : this.exifList) {
+                sb.append('<').append(ee.toString()).append('>');
+            }
+        }
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

@@ -23,7 +23,7 @@ import java.util.List;
 
 /**
  * NOTE: This class name may be changed in the future if other API's can use
- *       it.
+ * it.
  *
  * @author jeremyb
  */
@@ -42,14 +42,14 @@ public class ActivityItem implements Serializable {
     private int faves;
     private String title;
 
-    private  List<ActivityEvent> eventList;
+    private List<ActivityEvent> eventList;
 
 
     /**
      * @return the type
      */
     public String getType() {
-	return type;
+        return type;
     }
 
 
@@ -57,7 +57,7 @@ public class ActivityItem implements Serializable {
      * @param type the type to set
      */
     public void setType(String type) {
-	this.type = type;
+        this.type = type;
     }
 
 
@@ -65,7 +65,7 @@ public class ActivityItem implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -73,7 +73,7 @@ public class ActivityItem implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -81,7 +81,7 @@ public class ActivityItem implements Serializable {
      * @return the owner
      */
     public String getOwner() {
-	return owner;
+        return owner;
     }
 
 
@@ -89,7 +89,7 @@ public class ActivityItem implements Serializable {
      * @param owner the owner to set
      */
     public void setOwner(String owner) {
-	this.owner = owner;
+        this.owner = owner;
     }
 
 
@@ -97,7 +97,7 @@ public class ActivityItem implements Serializable {
      * @return the ownerName
      */
     public String getOwnerName() {
-	return ownerName;
+        return ownerName;
     }
 
 
@@ -105,7 +105,7 @@ public class ActivityItem implements Serializable {
      * @param ownerName the ownerName to set
      */
     public void setOwnerName(String ownerName) {
-	this.ownerName = ownerName;
+        this.ownerName = ownerName;
     }
 
 
@@ -113,7 +113,7 @@ public class ActivityItem implements Serializable {
      * @return the secret
      */
     public String getSecret() {
-	return secret;
+        return secret;
     }
 
 
@@ -121,7 +121,7 @@ public class ActivityItem implements Serializable {
      * @param secret the secret to set
      */
     public void setSecret(String secret) {
-	this.secret = secret;
+        this.secret = secret;
     }
 
 
@@ -129,7 +129,7 @@ public class ActivityItem implements Serializable {
      * @return the server
      */
     public String getServer() {
-	return server;
+        return server;
     }
 
 
@@ -137,7 +137,7 @@ public class ActivityItem implements Serializable {
      * @param server the server to set
      */
     public void setServer(String server) {
-	this.server = server;
+        this.server = server;
     }
 
 
@@ -145,7 +145,7 @@ public class ActivityItem implements Serializable {
      * @return the farm
      */
     public String getFarm() {
-	return farm;
+        return farm;
     }
 
 
@@ -153,7 +153,7 @@ public class ActivityItem implements Serializable {
      * @param farm the farm to set
      */
     public void setFarm(String farm) {
-	this.farm = farm;
+        this.farm = farm;
     }
 
 
@@ -161,7 +161,7 @@ public class ActivityItem implements Serializable {
      * @return the comments
      */
     public int getComments() {
-	return comments;
+        return comments;
     }
 
 
@@ -169,7 +169,7 @@ public class ActivityItem implements Serializable {
      * @param comments the comments to set
      */
     public void setComments(int comments) {
-	this.comments = comments;
+        this.comments = comments;
     }
 
 
@@ -177,7 +177,7 @@ public class ActivityItem implements Serializable {
      * @return the notes
      */
     public int getNotes() {
-	return notes;
+        return notes;
     }
 
 
@@ -185,7 +185,7 @@ public class ActivityItem implements Serializable {
      * @param notes the notes to set
      */
     public void setNotes(int notes) {
-	this.notes = notes;
+        this.notes = notes;
     }
 
 
@@ -193,7 +193,7 @@ public class ActivityItem implements Serializable {
      * @return the views
      */
     public int getViews() {
-	return views;
+        return views;
     }
 
 
@@ -201,7 +201,7 @@ public class ActivityItem implements Serializable {
      * @param views the views to set
      */
     public void setViews(int views) {
-	this.views = views;
+        this.views = views;
     }
 
 
@@ -209,7 +209,7 @@ public class ActivityItem implements Serializable {
      * @return the faves
      */
     public int getFaves() {
-	return faves;
+        return faves;
     }
 
 
@@ -217,7 +217,7 @@ public class ActivityItem implements Serializable {
      * @param faves the faves to set
      */
     public void setFaves(int faves) {
-	this.faves = faves;
+        this.faves = faves;
     }
 
 
@@ -225,7 +225,7 @@ public class ActivityItem implements Serializable {
      * @return the title
      */
     public String getTitle() {
-	return title;
+        return title;
     }
 
 
@@ -233,7 +233,7 @@ public class ActivityItem implements Serializable {
      * @param title the title to set
      */
     public void setTitle(String title) {
-	this.title = title;
+        this.title = title;
     }
 
 
@@ -241,7 +241,7 @@ public class ActivityItem implements Serializable {
      * @return the eventList
      */
     public List<ActivityEvent> getEventList() {
-	return eventList;
+        return eventList;
     }
 
 
@@ -249,37 +249,37 @@ public class ActivityItem implements Serializable {
      * @param eventList the eventList to set
      */
     public void setEventList(List<ActivityEvent> eventList) {
-	this.eventList = eventList;
+        this.eventList = eventList;
     }
 
-    
+
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
-	sb.append(":[ ");
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
+        sb.append(":[ ");
 
-	sb.append("type=").append(this.type).append(" | ");
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("owner=").append(this.owner).append(" | ");
-	sb.append("ownerName=").append(this.ownerName).append(" | ");
-	sb.append("secret=").append(this.secret).append(" | ");
-	sb.append("server=").append(this.server).append(" | ");
-	sb.append("farm=").append(this.farm).append(" | ");
-	sb.append("comments=").append(this.comments).append(" | ");
-	sb.append("notes=").append(this.notes).append(" | ");
-	sb.append("views=").append(this.views).append(" | ");
-	sb.append("faves=").append(this.faves).append(" | ");
-	sb.append("title=").append(this.title).append(" | ");
-	sb.append("eventList=");
-	if (this.eventList == null) {
-	    sb.append("null");
-	} else {
-	    for (ActivityEvent event : this.eventList) {
-		sb.append("<").append(event.toString()).append(">");
-	    }
-	}
-	sb.append(" ]");
-	return sb.toString();
+        sb.append("type=").append(this.type).append(" | ");
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("owner=").append(this.owner).append(" | ");
+        sb.append("ownerName=").append(this.ownerName).append(" | ");
+        sb.append("secret=").append(this.secret).append(" | ");
+        sb.append("server=").append(this.server).append(" | ");
+        sb.append("farm=").append(this.farm).append(" | ");
+        sb.append("comments=").append(this.comments).append(" | ");
+        sb.append("notes=").append(this.notes).append(" | ");
+        sb.append("views=").append(this.views).append(" | ");
+        sb.append("faves=").append(this.faves).append(" | ");
+        sb.append("title=").append(this.title).append(" | ");
+        sb.append("eventList=");
+        if (this.eventList == null) {
+            sb.append("null");
+        } else {
+            for (ActivityEvent event : this.eventList) {
+                sb.append("<").append(event.toString()).append(">");
+            }
+        }
+        sb.append(" ]");
+        return sb.toString();
     }
 
 }

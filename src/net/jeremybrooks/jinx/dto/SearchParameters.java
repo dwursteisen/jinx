@@ -25,22 +25,20 @@ import java.util.List;
 
 /**
  * This class defines the parameters for a search.
- *
+ * <p/>
  * Many of the values that define parameters are in the JinxConstants class.
- * 
+ *
  * @author jeremyb
  */
 public class SearchParameters implements Serializable {
 
-    
 
-    
     /*
-     * The NSID of the user who's photo to search.
-     * If this parameter isn't passed then everybody's public photos will be
-     * searched. A value of "me" will search against the calling user's photos
-     * for authenticated calls.
-     */
+    * The NSID of the user who's photo to search.
+    * If this parameter isn't passed then everybody's public photos will be
+    * searched. A value of "me" will search against the calling user's photos
+    * for authenticated calls.
+    */
     private String userId;
 
 
@@ -373,34 +371,33 @@ public class SearchParameters implements Serializable {
     private boolean isGetty;
 
 
-    
     /*
-     * A comma-delimited list of extra information to fetch for each returned
-     * record. Currently supported fields are:
-     *
-     * <ul>
-     * <li>EXTRAS_DESCRIPTION</li>
-     * <li>EXTRAS_LICENSE</li>
-     * <li>EXTRAS_DATE_UPLOAD</li>
-     * <li>EXTRAS_DATE_TAKEN</li>
-     * <li>EXTRAS_OWNER_NAME</li>
-     * <li>EXTRAS_ICON_SERVER</li>
-     * <li>EXTRAS_ORIGINAL_FORMAT</li>
-     * <li>EXTRAS_LAST_UPDATE</li>
-     * <li>EXTRAS_GEO</li>
-     * <li>EXTRAS_TAGS</li>
-     * <li>EXTRAS_MACHINE_TAGS</li>
-     * <li>EXTRAS_O_DIMS</li>
-     * <li>EXTRAS_VIEWS</li>
-     * <li>EXTRAS_MEDIA</li>
-     * <li>EXTRAS_PATH_ALIAS</li>
-     * <li>EXTRAS_URL_SQ</li>
-     * <li>EXTRAS_URL_T</li>
-     * <li>EXTRAS_URL_S</li>
-     * <li>EXTRAS_URL_M</li>
-     * <li>EXTRAS_URL_O</li>
-     * </ul>
-     */
+    * A comma-delimited list of extra information to fetch for each returned
+    * record. Currently supported fields are:
+    *
+    * <ul>
+    * <li>EXTRAS_DESCRIPTION</li>
+    * <li>EXTRAS_LICENSE</li>
+    * <li>EXTRAS_DATE_UPLOAD</li>
+    * <li>EXTRAS_DATE_TAKEN</li>
+    * <li>EXTRAS_OWNER_NAME</li>
+    * <li>EXTRAS_ICON_SERVER</li>
+    * <li>EXTRAS_ORIGINAL_FORMAT</li>
+    * <li>EXTRAS_LAST_UPDATE</li>
+    * <li>EXTRAS_GEO</li>
+    * <li>EXTRAS_TAGS</li>
+    * <li>EXTRAS_MACHINE_TAGS</li>
+    * <li>EXTRAS_O_DIMS</li>
+    * <li>EXTRAS_VIEWS</li>
+    * <li>EXTRAS_MEDIA</li>
+    * <li>EXTRAS_PATH_ALIAS</li>
+    * <li>EXTRAS_URL_SQ</li>
+    * <li>EXTRAS_URL_T</li>
+    * <li>EXTRAS_URL_S</li>
+    * <li>EXTRAS_URL_M</li>
+    * <li>EXTRAS_URL_O</li>
+    * </ul>
+    */
     private String extras;
 
     /*
@@ -417,9 +414,6 @@ public class SearchParameters implements Serializable {
     private int page;
 
 
-
-
-
     /**
      * Create a new search parameters object.
      */
@@ -432,63 +426,60 @@ public class SearchParameters implements Serializable {
      * @param token indicates which users photos will be searched.
      */
     public SearchParameters(Token token) {
-	this.userId = token.getNsid();
+        this.userId = token.getNsid();
     }
 
 
-
     /*
-     * This is the response with no extras:
-     <?xml version="1.0" encoding="utf-8" ?>
-     <rsp stat="ok">
-       <photos page="1" pages="1" perpage="100" total="1">
-         <photo id="4566081682" owner="85853333@N00"
-                secret="e8b4c41f48" server="3475" farm="4"
-                title="Can't Slow Down Even If We Try" ispublic="1"
-                isfriend="0" isfamily="0" />
-       </photos>
-     </rsp>
-     *
-     * This is the response with all extras:
-     <?xml version="1.0" encoding="utf-8" ?>
-     <rsp stat="ok">
-	<photos page="1" pages="1" perpage="100" total="1">
-	    <photo id="4566081682" owner="85853333@N00" secret="e8b4c41f48"
-		   server="3475" farm="4" title="Can't Slow Down Even If We Try"
-		   ispublic="1" isfriend="0" isfamily="0" datetaken="2010-03-12 17:52:49"
-		   datetakengranularity="0" dateupload="1272645529" latitude="0" longitude="0"
-		   accuracy="0" iconserver="128" iconfarm="1" lastupdate="1274307055" license="2"
-		   machine_tags="" media="photo" media_status="ready" originalsecret="61b309de7d"
-		   originalformat="jpg" ownername="Jeremy Brooks"
-		   o_width="5061" o_height="3374"
-		   pathalias="jeremybrooks" tags="sanfrancisco california food usa coconut testimage bakery photowalk missiondistrict themission sanfranciscocounty photowalking dspw032010"
-		   url_m="http://farm4.static.flickr.com/3475/4566081682_e8b4c41f48.jpg"
-		   height_m="333" width_m="500"
-		   url_o="http://farm4.static.flickr.com/3475/4566081682_61b309de7d_o.jpg"
-		   height_o="3374" width_o="5061"
-		   url_s="http://farm4.static.flickr.com/3475/4566081682_e8b4c41f48_m.jpg"
-		   height_s="160" width_s="240"
-		   url_sq="http://farm4.static.flickr.com/3475/4566081682_e8b4c41f48_s.jpg"
-		   height_sq="75" width_sq="75"
-		   url_t="http://farm4.static.flickr.com/3475/4566081682_e8b4c41f48_t.jpg"
-		   height_t="67" width_t="100" views="27">
-		<description>Coconut goodies in a bakery window in the Mission.</description>
-	    </photo>
-	</photos>
-     </rsp>
+    * This is the response with no extras:
+    <?xml version="1.0" encoding="utf-8" ?>
+    <rsp stat="ok">
+      <photos page="1" pages="1" perpage="100" total="1">
+        <photo id="4566081682" owner="85853333@N00"
+               secret="e8b4c41f48" server="3475" farm="4"
+               title="Can't Slow Down Even If We Try" ispublic="1"
+               isfriend="0" isfamily="0" />
+      </photos>
+    </rsp>
+    *
+    * This is the response with all extras:
+    <?xml version="1.0" encoding="utf-8" ?>
+    <rsp stat="ok">
+   <photos page="1" pages="1" perpage="100" total="1">
+       <photo id="4566081682" owner="85853333@N00" secret="e8b4c41f48"
+          server="3475" farm="4" title="Can't Slow Down Even If We Try"
+          ispublic="1" isfriend="0" isfamily="0" datetaken="2010-03-12 17:52:49"
+          datetakengranularity="0" dateupload="1272645529" latitude="0" longitude="0"
+          accuracy="0" iconserver="128" iconfarm="1" lastupdate="1274307055" license="2"
+          machine_tags="" media="photo" media_status="ready" originalsecret="61b309de7d"
+          originalformat="jpg" ownername="Jeremy Brooks"
+          o_width="5061" o_height="3374"
+          pathalias="jeremybrooks" tags="sanfrancisco california food usa coconut testimage bakery photowalk missiondistrict themission sanfranciscocounty photowalking dspw032010"
+          url_m="http://farm4.static.flickr.com/3475/4566081682_e8b4c41f48.jpg"
+          height_m="333" width_m="500"
+          url_o="http://farm4.static.flickr.com/3475/4566081682_61b309de7d_o.jpg"
+          height_o="3374" width_o="5061"
+          url_s="http://farm4.static.flickr.com/3475/4566081682_e8b4c41f48_m.jpg"
+          height_s="160" width_s="240"
+          url_sq="http://farm4.static.flickr.com/3475/4566081682_e8b4c41f48_s.jpg"
+          height_sq="75" width_sq="75"
+          url_t="http://farm4.static.flickr.com/3475/4566081682_e8b4c41f48_t.jpg"
+          height_t="67" width_t="100" views="27">
+       <description>Coconut goodies in a bakery window in the Mission.</description>
+       </photo>
+   </photos>
+    </rsp>
 
 
 
-     */
-    
-
+    */
 
 
     /**
      * @return the userId
      */
     public String getUserId() {
-	return userId;
+        return userId;
     }
 
 
@@ -496,7 +487,7 @@ public class SearchParameters implements Serializable {
      * @param userId the userId to set
      */
     public void setUserId(String userId) {
-	this.userId = userId;
+        this.userId = userId;
     }
 
 
@@ -504,7 +495,7 @@ public class SearchParameters implements Serializable {
      * @return the tags
      */
     public String getTags() {
-	return tags;
+        return tags;
     }
 
 
@@ -512,7 +503,7 @@ public class SearchParameters implements Serializable {
      * @param tags comma delimited list of tags for this search.
      */
     public void setTags(String tags) {
-	this.tags = tags;
+        this.tags = tags;
     }
 
 
@@ -521,19 +512,19 @@ public class SearchParameters implements Serializable {
      *
      * @param tags list of tags for this search.
      */
-    public void	setTags(List<String> tags) {
-	StringBuilder sb = new StringBuilder();
-	if (tags != null) {
-	    for (String tag : tags) {
-		sb.append(tag.trim()).append(',');
-	    }
+    public void setTags(List<String> tags) {
+        StringBuilder sb = new StringBuilder();
+        if (tags != null) {
+            for (String tag : tags) {
+                sb.append(tag.trim()).append(',');
+            }
 
-	    if (sb.length() > 0) {
-		sb.deleteCharAt(sb.length() - 1);
-	    }
-	}
+            if (sb.length() > 0) {
+                sb.deleteCharAt(sb.length() - 1);
+            }
+        }
 
-	this.tags = sb.toString();
+        this.tags = sb.toString();
     }
 
 
@@ -541,7 +532,7 @@ public class SearchParameters implements Serializable {
      * @return the tagMode
      */
     public String getTagMode() {
-	return tagMode;
+        return tagMode;
     }
 
 
@@ -549,7 +540,7 @@ public class SearchParameters implements Serializable {
      * @param tagMode the tagMode to set
      */
     public void setTagMode(String tagMode) {
-	this.tagMode = tagMode;
+        this.tagMode = tagMode;
     }
 
 
@@ -557,7 +548,7 @@ public class SearchParameters implements Serializable {
      * @return the text
      */
     public String getText() {
-	return text;
+        return text;
     }
 
 
@@ -565,7 +556,7 @@ public class SearchParameters implements Serializable {
      * @param text the text to set
      */
     public void setText(String text) {
-	this.text = text;
+        this.text = text;
     }
 
 
@@ -573,7 +564,7 @@ public class SearchParameters implements Serializable {
      * @return the minUploadDate
      */
     public Date getMinUploadDate() {
-	return minUploadDate;
+        return minUploadDate;
     }
 
 
@@ -581,7 +572,7 @@ public class SearchParameters implements Serializable {
      * @param minUploadDate the minUploadDate to set
      */
     public void setMinUploadDate(Date minUploadDate) {
-	this.minUploadDate = minUploadDate;
+        this.minUploadDate = minUploadDate;
     }
 
 
@@ -589,7 +580,7 @@ public class SearchParameters implements Serializable {
      * @return the maxUploadDate
      */
     public Date getMaxUploadDate() {
-	return maxUploadDate;
+        return maxUploadDate;
     }
 
 
@@ -597,7 +588,7 @@ public class SearchParameters implements Serializable {
      * @param maxUploadDate the maxUploadDate to set
      */
     public void setMaxUploadDate(Date maxUploadDate) {
-	this.maxUploadDate = maxUploadDate;
+        this.maxUploadDate = maxUploadDate;
     }
 
 
@@ -605,7 +596,7 @@ public class SearchParameters implements Serializable {
      * @return the minTakenDate
      */
     public Date getMinTakenDate() {
-	return minTakenDate;
+        return minTakenDate;
     }
 
 
@@ -613,7 +604,7 @@ public class SearchParameters implements Serializable {
      * @param minTakenDate the minTakenDate to set
      */
     public void setMinTakenDate(Date minTakenDate) {
-	this.minTakenDate = minTakenDate;
+        this.minTakenDate = minTakenDate;
     }
 
 
@@ -621,7 +612,7 @@ public class SearchParameters implements Serializable {
      * @return the maxTakenDate
      */
     public Date getMaxTakenDate() {
-	return maxTakenDate;
+        return maxTakenDate;
     }
 
 
@@ -629,7 +620,7 @@ public class SearchParameters implements Serializable {
      * @param maxTakenDate the maxTakenDate to set
      */
     public void setMaxTakenDate(Date maxTakenDate) {
-	this.maxTakenDate = maxTakenDate;
+        this.maxTakenDate = maxTakenDate;
     }
 
 
@@ -637,7 +628,7 @@ public class SearchParameters implements Serializable {
      * @return the license
      */
     public String getLicense() {
-	return license;
+        return license;
     }
 
 
@@ -645,7 +636,7 @@ public class SearchParameters implements Serializable {
      * @param license the license to set
      */
     public void setLicense(String license) {
-	this.license = license;
+        this.license = license;
     }
 
 
@@ -653,13 +644,13 @@ public class SearchParameters implements Serializable {
      * @return the sort
      */
     public String getSort() {
-	return sort;
+        return sort;
     }
 
-    
+
     /**
      * Set sort order for the returned results.
-     *
+     * <p/>
      * Possible values are:
      * <ul>
      * <li>JinxConstants.SORT_DATE_POSTED_ASC</li>
@@ -670,10 +661,11 @@ public class SearchParameters implements Serializable {
      * <li>JinxConstants.SORT_INTERESTINGNESS_DESC</li>
      * <li>JinxConstants.SORT_RELEVANCE</li>
      * </ul>
+     *
      * @param sort the sort to set
      */
     public void setSort(String sort) {
-	this.sort = sort;
+        this.sort = sort;
     }
 
 
@@ -681,13 +673,13 @@ public class SearchParameters implements Serializable {
      * @return the privacyFilter
      */
     public String getPrivacyFilter() {
-	return privacyFilter;
+        return privacyFilter;
     }
 
 
     /**
      * Set the privacy level of photos to be returned.
-     *
+     * <p/>
      * Possible values are:
      * <ul>
      * <li>JinxConstants.PRIVACY_PUBLIC - public photos</li>
@@ -696,10 +688,11 @@ public class SearchParameters implements Serializable {
      * <li>JinxConstants.PRIVACY_FRIENDS_FAMILY - private photos visible to friends & family</li>
      * <li>JinxConstants.PRIVACY_PRIVATE - completely private photos</li>
      * </ul>
+     *
      * @param privacyFilter the privacyFilter to set
      */
     public void setPrivacyFilter(String privacyFilter) {
-	this.privacyFilter = privacyFilter;
+        this.privacyFilter = privacyFilter;
     }
 
 
@@ -707,7 +700,7 @@ public class SearchParameters implements Serializable {
      * @return the bbox
      */
     public String getBbox() {
-	return bbox;
+        return bbox;
     }
 
 
@@ -715,7 +708,7 @@ public class SearchParameters implements Serializable {
      * @param bbox the bbox to set
      */
     public void setBbox(String bbox) {
-	this.bbox = bbox;
+        this.bbox = bbox;
     }
 
 
@@ -723,7 +716,7 @@ public class SearchParameters implements Serializable {
      * @return the accuracy
      */
     public String getAccuracy() {
-	return accuracy;
+        return accuracy;
     }
 
 
@@ -731,7 +724,7 @@ public class SearchParameters implements Serializable {
      * @param accuracy the accuracy to set
      */
     public void setAccuracy(String accuracy) {
-	this.accuracy = accuracy;
+        this.accuracy = accuracy;
     }
 
 
@@ -739,30 +732,30 @@ public class SearchParameters implements Serializable {
      * @return the safeSearch
      */
     public String getSafeSearch() {
-	return safeSearch;
+        return safeSearch;
     }
 
 
     /**
      * Safe search setting.
-     *
+     * <p/>
      * Possible values are:
      * <ul>
      * <li>JinxConstants.SAFE_SEARCH_SAFE for safe.</li>
      * <li>JinxConstants.SAFE_SEARCH_MODERATE for moderate.</li>
      * <li>JinxConstants.SAFE_SEARCH_RESTRICTED for restricted.</li>
      * </ul>
-     *
+     * <p/>
      * (Please note: Un-authed calls can only see Safe content.)
-     *
+     * <p/>
      * NOTE: There is a bug in the Flickr API; this setting seems to be
-     *       ignored. Reported here:
-     *       http://www.flickr.com/groups/api/discuss/72157624206809677/?search=safe_search
-     * 
+     * ignored. Reported here:
+     * http://www.flickr.com/groups/api/discuss/72157624206809677/?search=safe_search
+     *
      * @param safeSearch the safeSearch to set
      */
     public void setSafeSearch(String safeSearch) {
-	this.safeSearch = safeSearch;
+        this.safeSearch = safeSearch;
     }
 
 
@@ -770,7 +763,7 @@ public class SearchParameters implements Serializable {
      * @return the contentType
      */
     public String getContentType() {
-	return contentType;
+        return contentType;
     }
 
 
@@ -778,7 +771,7 @@ public class SearchParameters implements Serializable {
      * @param contentType the contentType to set
      */
     public void setContentType(String contentType) {
-	this.contentType = contentType;
+        this.contentType = contentType;
     }
 
 
@@ -786,7 +779,7 @@ public class SearchParameters implements Serializable {
      * @return the machineTags
      */
     public String getMachineTags() {
-	return machineTags;
+        return machineTags;
     }
 
 
@@ -794,7 +787,7 @@ public class SearchParameters implements Serializable {
      * @param machineTags the machineTags to set
      */
     public void setMachineTags(String machineTags) {
-	this.machineTags = machineTags;
+        this.machineTags = machineTags;
     }
 
 
@@ -802,7 +795,7 @@ public class SearchParameters implements Serializable {
      * @return the machineTagMode
      */
     public String getMachineTagMode() {
-	return machineTagMode;
+        return machineTagMode;
     }
 
 
@@ -810,7 +803,7 @@ public class SearchParameters implements Serializable {
      * @param machineTagMode the machineTagMode to set
      */
     public void setMachineTagMode(String machineTagMode) {
-	this.machineTagMode = machineTagMode;
+        this.machineTagMode = machineTagMode;
     }
 
 
@@ -818,7 +811,7 @@ public class SearchParameters implements Serializable {
      * @return the groupId
      */
     public String getGroupId() {
-	return groupId;
+        return groupId;
     }
 
 
@@ -826,7 +819,7 @@ public class SearchParameters implements Serializable {
      * @param groupId the groupId to set
      */
     public void setGroupId(String groupId) {
-	this.groupId = groupId;
+        this.groupId = groupId;
     }
 
 
@@ -834,7 +827,7 @@ public class SearchParameters implements Serializable {
      * @return the contacts
      */
     public String getContacts() {
-	return contacts;
+        return contacts;
     }
 
 
@@ -842,7 +835,7 @@ public class SearchParameters implements Serializable {
      * @param contacts the contacts to set
      */
     public void setContacts(String contacts) {
-	this.contacts = contacts;
+        this.contacts = contacts;
     }
 
 
@@ -850,7 +843,7 @@ public class SearchParameters implements Serializable {
      * @return the woeId
      */
     public String getWoeId() {
-	return woeId;
+        return woeId;
     }
 
 
@@ -858,7 +851,7 @@ public class SearchParameters implements Serializable {
      * @param woeId the woeId to set
      */
     public void setWoeId(String woeId) {
-	this.woeId = woeId;
+        this.woeId = woeId;
     }
 
 
@@ -866,7 +859,7 @@ public class SearchParameters implements Serializable {
      * @return the placeId
      */
     public String getPlaceId() {
-	return placeId;
+        return placeId;
     }
 
 
@@ -874,7 +867,7 @@ public class SearchParameters implements Serializable {
      * @param placeId the placeId to set
      */
     public void setPlaceId(String placeId) {
-	this.placeId = placeId;
+        this.placeId = placeId;
     }
 
 
@@ -882,7 +875,7 @@ public class SearchParameters implements Serializable {
      * @return the media
      */
     public String getMedia() {
-	return media;
+        return media;
     }
 
 
@@ -890,7 +883,7 @@ public class SearchParameters implements Serializable {
      * @param media the media to set
      */
     public void setMedia(String media) {
-	this.media = media;
+        this.media = media;
     }
 
 
@@ -898,7 +891,7 @@ public class SearchParameters implements Serializable {
      * @return the hasGeo
      */
     public String getHasGeo() {
-	return hasGeo;
+        return hasGeo;
     }
 
 
@@ -906,7 +899,7 @@ public class SearchParameters implements Serializable {
      * @param hasGeo the hasGeo to set
      */
     public void setHasGeo(String hasGeo) {
-	this.hasGeo = hasGeo;
+        this.hasGeo = hasGeo;
     }
 
 
@@ -914,7 +907,7 @@ public class SearchParameters implements Serializable {
      * @return the geoContext
      */
     public String getGeoContext() {
-	return geoContext;
+        return geoContext;
     }
 
 
@@ -922,7 +915,7 @@ public class SearchParameters implements Serializable {
      * @param geoContext the geoContext to set
      */
     public void setGeoContext(String geoContext) {
-	this.geoContext = geoContext;
+        this.geoContext = geoContext;
     }
 
 
@@ -930,7 +923,7 @@ public class SearchParameters implements Serializable {
      * @return the lat
      */
     public String getLat() {
-	return lat;
+        return lat;
     }
 
 
@@ -938,7 +931,7 @@ public class SearchParameters implements Serializable {
      * @param lat the lat to set
      */
     public void setLat(String lat) {
-	this.lat = lat;
+        this.lat = lat;
     }
 
 
@@ -946,7 +939,7 @@ public class SearchParameters implements Serializable {
      * @return the lon
      */
     public String getLon() {
-	return lon;
+        return lon;
     }
 
 
@@ -954,7 +947,7 @@ public class SearchParameters implements Serializable {
      * @param lon the lon to set
      */
     public void setLon(String lon) {
-	this.lon = lon;
+        this.lon = lon;
     }
 
 
@@ -962,7 +955,7 @@ public class SearchParameters implements Serializable {
      * @return the radius
      */
     public String getRadius() {
-	return radius;
+        return radius;
     }
 
 
@@ -970,7 +963,7 @@ public class SearchParameters implements Serializable {
      * @param radius the radius to set
      */
     public void setRadius(String radius) {
-	this.radius = radius;
+        this.radius = radius;
     }
 
 
@@ -978,7 +971,7 @@ public class SearchParameters implements Serializable {
      * @return the radiusUnits
      */
     public String getRadiusUnits() {
-	return radiusUnits;
+        return radiusUnits;
     }
 
 
@@ -986,7 +979,7 @@ public class SearchParameters implements Serializable {
      * @param radiusUnits the radiusUnits to set
      */
     public void setRadiusUnits(String radiusUnits) {
-	this.radiusUnits = radiusUnits;
+        this.radiusUnits = radiusUnits;
     }
 
 
@@ -994,19 +987,20 @@ public class SearchParameters implements Serializable {
      * @return the isCommons
      */
     public boolean isIsCommons() {
-	return isCommons;
+        return isCommons;
     }
 
 
     /**
      * Note: If you do not include some additional parameters, such as tags,
-     *       searches using this parameter may return incorrect results, such
-     *       as an entire photoset. Bug reported to Flickr here:
-     *       http://www.flickr.com/groups/api/discuss/72157613093793775/?search=is_commons
+     * searches using this parameter may return incorrect results, such
+     * as an entire photoset. Bug reported to Flickr here:
+     * http://www.flickr.com/groups/api/discuss/72157613093793775/?search=is_commons
+     *
      * @param isCommons the isCommons to set
      */
     public void setIsCommons(boolean isCommons) {
-	this.isCommons = isCommons;
+        this.isCommons = isCommons;
     }
 
 
@@ -1014,7 +1008,7 @@ public class SearchParameters implements Serializable {
      * @return the inGallery
      */
     public boolean isInGallery() {
-	return inGallery;
+        return inGallery;
     }
 
 
@@ -1022,7 +1016,7 @@ public class SearchParameters implements Serializable {
      * @param inGallery the inGallery to set
      */
     public void setInGallery(boolean inGallery) {
-	this.inGallery = inGallery;
+        this.inGallery = inGallery;
     }
 
 
@@ -1030,20 +1024,20 @@ public class SearchParameters implements Serializable {
      * @return the isGetty
      */
     public boolean isIsGetty() {
-	return isGetty;
+        return isGetty;
     }
 
 
     /**
      * Note: If you do not include some additional parameters, such as tags,
-     *       searches using this parameter may return incorrect results, such
-     *       as an entire photoset. Bug reported to Flickr here:
-     *       http://www.flickr.com/groups/api/discuss/72157622692290730/?search=is_getty
-     * 
+     * searches using this parameter may return incorrect results, such
+     * as an entire photoset. Bug reported to Flickr here:
+     * http://www.flickr.com/groups/api/discuss/72157622692290730/?search=is_getty
+     *
      * @param isGetty the isGetty to set
      */
     public void setIsGetty(boolean isGetty) {
-	this.isGetty = isGetty;
+        this.isGetty = isGetty;
     }
 
 
@@ -1051,7 +1045,7 @@ public class SearchParameters implements Serializable {
      * @return the extras
      */
     public String getExtras() {
-	return extras;
+        return extras;
     }
 
 
@@ -1059,7 +1053,7 @@ public class SearchParameters implements Serializable {
      * @param extras the extras to set
      */
     public void setExtras(String extras) {
-	this.extras = extras;
+        this.extras = extras;
     }
 
 
@@ -1067,7 +1061,7 @@ public class SearchParameters implements Serializable {
      * @return the perPage
      */
     public int getPerPage() {
-	return perPage;
+        return perPage;
     }
 
 
@@ -1075,7 +1069,7 @@ public class SearchParameters implements Serializable {
      * @param perPage the perPage to set
      */
     public void setPerPage(int perPage) {
-	this.perPage = perPage;
+        this.perPage = perPage;
     }
 
 
@@ -1083,7 +1077,7 @@ public class SearchParameters implements Serializable {
      * @return the page
      */
     public int getPage() {
-	return page;
+        return page;
     }
 
 
@@ -1091,7 +1085,7 @@ public class SearchParameters implements Serializable {
      * @param page the page to set
      */
     public void setPage(int page) {
-	this.page = page;
+        this.page = page;
     }
 
 }

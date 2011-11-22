@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author jeremyb
  */
 public class Category {
@@ -34,16 +33,16 @@ public class Category {
 
 
     public Category() {
-	this.subcats = new ArrayList<Subcat>();
-	this.groups = new ArrayList<Group>();
+        this.subcats = new ArrayList<Subcat>();
+        this.groups = new ArrayList<Group>();
     }
 
-    
+
     /**
      * @return the name
      */
     public String getName() {
-	return name;
+        return name;
     }
 
 
@@ -51,7 +50,7 @@ public class Category {
      * @param name the name to set
      */
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
 
@@ -59,7 +58,7 @@ public class Category {
      * @return the path
      */
     public String getPath() {
-	return path;
+        return path;
     }
 
 
@@ -67,7 +66,7 @@ public class Category {
      * @param path the path to set
      */
     public void setPath(String path) {
-	this.path = path;
+        this.path = path;
     }
 
 
@@ -75,7 +74,7 @@ public class Category {
      * @return the pathId
      */
     public String getPathId() {
-	return pathId;
+        return pathId;
     }
 
 
@@ -83,7 +82,7 @@ public class Category {
      * @param pathId the pathId to set
      */
     public void setPathId(String pathId) {
-	this.pathId = pathId;
+        this.pathId = pathId;
     }
 
 
@@ -91,57 +90,55 @@ public class Category {
      * @return the subcats
      */
     public List<Subcat> getSubcats() {
-	return subcats;
+        return subcats;
     }
 
 
     /**
-     *
      * @param subcat subcat to add
      */
     public void addSubcat(Subcat subcat) {
-	if (subcat != null) {
-	    this.subcats.add(subcat);
-	}
+        if (subcat != null) {
+            this.subcats.add(subcat);
+        }
     }
 
     /**
      * @return the groups
      */
     public List<Group> getGroups() {
-	return groups;
+        return groups;
     }
 
     /**
-     *
      * @param group the group to add
      */
     public void addGroup(Group group) {
-	if (group != null) {
-	    this.groups.add(group);
-	}
+        if (group != null) {
+            this.groups.add(group);
+        }
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("name=").append(this.getName()).append(" | ");
-	sb.append("path=").append(this.getPath()).append(" | ");
+        sb.append(" [ ");
+        sb.append("name=").append(this.getName()).append(" | ");
+        sb.append("path=").append(this.getPath()).append(" | ");
 
-	sb.append("pathId=").append(this.getPathId()).append(" | ");
+        sb.append("pathId=").append(this.getPathId()).append(" | ");
 
-	sb.append("subcat count=").append(this.getSubcats().size()).append(":");
-	for (Subcat subcat : this.getSubcats()) {
-	    sb.append(subcat.toString());
-	}
-	sb.append(" | groups count=").append(this.getGroups().size()).append(":");
-	for (Group group : this.getGroups()) {
-	    sb.append(group.toString());
-	}
-		
-	sb.append(" ]");
-	return sb.toString();
+        sb.append("subcat count=").append(this.getSubcats().size()).append(":");
+        for (Subcat subcat : this.getSubcats()) {
+            sb.append(subcat.toString());
+        }
+        sb.append(" | groups count=").append(this.getGroups().size()).append(":");
+        for (Group group : this.getGroups()) {
+            sb.append(group.toString());
+        }
+
+        sb.append(" ]");
+        return sb.toString();
     }
 }

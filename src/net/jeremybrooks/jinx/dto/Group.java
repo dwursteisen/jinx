@@ -19,7 +19,6 @@
 package net.jeremybrooks.jinx.dto;
 
 /**
- *
  * @author jeremyb
  */
 public class Group {
@@ -47,7 +46,7 @@ public class Group {
      * @return the nsid
      */
     public String getNsid() {
-	return nsid;
+        return nsid;
     }
 
 
@@ -55,7 +54,7 @@ public class Group {
      * @param nsid the nsid to set
      */
     public void setNsid(String nsid) {
-	this.nsid = nsid;
+        this.nsid = nsid;
     }
 
 
@@ -63,7 +62,7 @@ public class Group {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -71,7 +70,7 @@ public class Group {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -79,7 +78,7 @@ public class Group {
      * @return the iconserver
      */
     public String getIconserver() {
-	return iconserver;
+        return iconserver;
     }
 
 
@@ -87,7 +86,7 @@ public class Group {
      * @param iconserver the iconserver to set
      */
     public void setIconserver(String iconserver) {
-	this.iconserver = iconserver;
+        this.iconserver = iconserver;
     }
 
 
@@ -95,7 +94,7 @@ public class Group {
      * @return the lang
      */
     public String getLang() {
-	return lang;
+        return lang;
     }
 
 
@@ -103,7 +102,7 @@ public class Group {
      * @param lang the lang to set
      */
     public void setLang(String lang) {
-	this.lang = lang;
+        this.lang = lang;
     }
 
 
@@ -111,7 +110,7 @@ public class Group {
      * @return the poolModerated
      */
     public boolean isPoolModerated() {
-	return poolModerated;
+        return poolModerated;
     }
 
 
@@ -119,7 +118,7 @@ public class Group {
      * @param poolModerated the poolModerated to set
      */
     public void setPoolModerated(boolean poolModerated) {
-	this.poolModerated = poolModerated;
+        this.poolModerated = poolModerated;
     }
 
 
@@ -127,7 +126,7 @@ public class Group {
      * @return the name
      */
     public String getName() {
-	return name;
+        return name;
     }
 
 
@@ -135,7 +134,7 @@ public class Group {
      * @param name the name to set
      */
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
 
@@ -143,7 +142,7 @@ public class Group {
      * @return the description
      */
     public String getDescription() {
-	return description;
+        return description;
     }
 
 
@@ -151,7 +150,7 @@ public class Group {
      * @param description the description to set
      */
     public void setDescription(String description) {
-	this.description = description;
+        this.description = description;
     }
 
 
@@ -159,7 +158,7 @@ public class Group {
      * @return the members
      */
     public int getMembers() {
-	return members;
+        return members;
     }
 
 
@@ -167,14 +166,14 @@ public class Group {
      * @param members the members to set
      */
     public void setMembers(int members) {
-	this.members = members;
+        this.members = members;
     }
 
     /**
      * @return the photos
      */
     public int getPhotos() {
-	return photos;
+        return photos;
     }
 
 
@@ -182,7 +181,7 @@ public class Group {
      * @param photos the photos to set
      */
     public void setPhotos(int photos) {
-	this.photos = photos;
+        this.photos = photos;
     }
 
 
@@ -190,7 +189,7 @@ public class Group {
      * @return the online
      */
     public String getOnline() {
-	return online;
+        return online;
     }
 
 
@@ -198,7 +197,7 @@ public class Group {
      * @param online the online to set
      */
     public void setOnline(String online) {
-	this.online = online;
+        this.online = online;
     }
 
 
@@ -206,7 +205,7 @@ public class Group {
      * @return the chatnsid
      */
     public String getChatnsid() {
-	return chatnsid;
+        return chatnsid;
     }
 
 
@@ -214,7 +213,7 @@ public class Group {
      * @param chatnsid the chatnsid to set
      */
     public void setChatnsid(String chatnsid) {
-	this.chatnsid = chatnsid;
+        this.chatnsid = chatnsid;
     }
 
 
@@ -222,7 +221,7 @@ public class Group {
      * @return the inchat
      */
     public String getInchat() {
-	return inchat;
+        return inchat;
     }
 
 
@@ -230,7 +229,7 @@ public class Group {
      * @param inchat the inchat to set
      */
     public void setInchat(String inchat) {
-	this.inchat = inchat;
+        this.inchat = inchat;
     }
 
 
@@ -238,7 +237,7 @@ public class Group {
      * @return the privacy
      */
     public String getPrivacy() {
-	return privacy;
+        return privacy;
     }
 
 
@@ -246,14 +245,14 @@ public class Group {
      * @param privacy the privacy to set
      */
     public void setPrivacy(String privacy) {
-	this.privacy = privacy;
+        this.privacy = privacy;
     }
 
     /**
      * @return the iconfarm
      */
     public String getIconfarm() {
-	return iconfarm;
+        return iconfarm;
     }
 
 
@@ -261,7 +260,7 @@ public class Group {
      * @param iconfarm the iconfarm to set
      */
     public void setIconfarm(String iconfarm) {
-	this.iconfarm = iconfarm;
+        this.iconfarm = iconfarm;
     }
 
 
@@ -269,7 +268,7 @@ public class Group {
      * @return the blast
      */
     public Blast getBlast() {
-	return blast;
+        return blast;
     }
 
 
@@ -277,7 +276,7 @@ public class Group {
      * @param blast the blast to set
      */
     public void setBlast(Blast blast) {
-	this.blast = blast;
+        this.blast = blast;
     }
 
 
@@ -285,7 +284,7 @@ public class Group {
      * @return the throttle
      */
     public Throttle getThrottle() {
-	return throttle;
+        return throttle;
     }
 
 
@@ -293,7 +292,7 @@ public class Group {
      * @param throttle the throttle to set
      */
     public void setThrottle(Throttle throttle) {
-	this.throttle = throttle;
+        this.throttle = throttle;
     }
 
 
@@ -301,7 +300,7 @@ public class Group {
      * @return the restrictions
      */
     public Restrictions getRestrictions() {
-	return restrictions;
+        return restrictions;
     }
 
 
@@ -309,14 +308,14 @@ public class Group {
      * @param restrictions the restrictions to set
      */
     public void setRestrictions(Restrictions restrictions) {
-	this.restrictions = restrictions;
+        this.restrictions = restrictions;
     }
 
     /**
      * @return the eighteenPlus
      */
     public boolean isEighteenPlus() {
-	return eighteenPlus;
+        return eighteenPlus;
     }
 
 
@@ -324,7 +323,7 @@ public class Group {
      * @param eighteenPlus the eighteenPlus to set
      */
     public void setEighteenPlus(boolean eighteenPlus) {
-	this.eighteenPlus = eighteenPlus;
+        this.eighteenPlus = eighteenPlus;
     }
 
 
@@ -332,7 +331,7 @@ public class Group {
      * @return the admin
      */
     public boolean isAdmin() {
-	return admin;
+        return admin;
     }
 
 
@@ -340,37 +339,37 @@ public class Group {
      * @param admin the admin to set
      */
     public void setAdmin(boolean admin) {
-	this.admin = admin;
+        this.admin = admin;
     }
 
-    
+
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("nsid=").append(this.getNsid()).append(" | ");
-	sb.append("id=").append(this.getId()).append(" | ");
-	sb.append("iconserver=").append(this.getIconserver()).append(" | ");
-	sb.append("iconfarm=").append(this.getIconfarm()).append(" | ");
-	sb.append("lang=").append(this.getLang()).append(" | ");
-	sb.append("isPoolModerated=").append(this.isPoolModerated()).append(" | ");
-	sb.append("name=").append(this.getName()).append(" | ");
-	sb.append("description=").append(this.getDescription()).append(" | ");
-	sb.append("members=").append(this.getMembers()).append(" | ");
-	sb.append("photos=").append(this.getPhotos()).append(" | ");
-	sb.append("online=").append(this.getOnline()).append(" | ");
-	sb.append("chatnsid=").append(this.getChatnsid()).append(" | ");
-	sb.append("inchat=").append(this.getInchat()).append(" | ");
-	sb.append("privacy=").append(this.getPrivacy()).append(" | ");
-	sb.append("blast=").append(this.getBlast()).append(" | ");
-	sb.append("throttle=").append(this.getThrottle()).append(" | ");
-	sb.append("restrictions=").append(this.getRestrictions()).append(" | ");
-	sb.append("eighteenPlus=").append(this.isEighteenPlus()).append(" | ");
-	sb.append("admin=").append(this.isAdmin());
+        sb.append(" [ ");
+        sb.append("nsid=").append(this.getNsid()).append(" | ");
+        sb.append("id=").append(this.getId()).append(" | ");
+        sb.append("iconserver=").append(this.getIconserver()).append(" | ");
+        sb.append("iconfarm=").append(this.getIconfarm()).append(" | ");
+        sb.append("lang=").append(this.getLang()).append(" | ");
+        sb.append("isPoolModerated=").append(this.isPoolModerated()).append(" | ");
+        sb.append("name=").append(this.getName()).append(" | ");
+        sb.append("description=").append(this.getDescription()).append(" | ");
+        sb.append("members=").append(this.getMembers()).append(" | ");
+        sb.append("photos=").append(this.getPhotos()).append(" | ");
+        sb.append("online=").append(this.getOnline()).append(" | ");
+        sb.append("chatnsid=").append(this.getChatnsid()).append(" | ");
+        sb.append("inchat=").append(this.getInchat()).append(" | ");
+        sb.append("privacy=").append(this.getPrivacy()).append(" | ");
+        sb.append("blast=").append(this.getBlast()).append(" | ");
+        sb.append("throttle=").append(this.getThrottle()).append(" | ");
+        sb.append("restrictions=").append(this.getRestrictions()).append(" | ");
+        sb.append("eighteenPlus=").append(this.isEighteenPlus()).append(" | ");
+        sb.append("admin=").append(this.isAdmin());
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 
 

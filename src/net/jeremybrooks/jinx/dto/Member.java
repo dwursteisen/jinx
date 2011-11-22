@@ -21,7 +21,6 @@ package net.jeremybrooks.jinx.dto;
 import net.jeremybrooks.jinx.JinxConstants.GroupMemberType;
 
 /**
- *
  * @author jeremyb
  */
 public class Member {
@@ -40,7 +39,7 @@ public class Member {
      * @return the nsid
      */
     public String getNsid() {
-	return nsid;
+        return nsid;
     }
 
 
@@ -48,7 +47,7 @@ public class Member {
      * @param nsid the nsid to set
      */
     public void setNsid(String nsid) {
-	this.nsid = nsid;
+        this.nsid = nsid;
     }
 
 
@@ -56,7 +55,7 @@ public class Member {
      * @return the username
      */
     public String getUsername() {
-	return username;
+        return username;
     }
 
 
@@ -64,7 +63,7 @@ public class Member {
      * @param username the username to set
      */
     public void setUsername(String username) {
-	this.username = username;
+        this.username = username;
     }
 
 
@@ -72,7 +71,7 @@ public class Member {
      * @return the iconserver
      */
     public String getIconserver() {
-	return iconserver;
+        return iconserver;
     }
 
 
@@ -80,7 +79,7 @@ public class Member {
      * @param iconserver the iconserver to set
      */
     public void setIconserver(String iconserver) {
-	this.iconserver = iconserver;
+        this.iconserver = iconserver;
     }
 
 
@@ -88,7 +87,7 @@ public class Member {
      * @return the iconfarm
      */
     public String getIconfarm() {
-	return iconfarm;
+        return iconfarm;
     }
 
 
@@ -96,7 +95,7 @@ public class Member {
      * @param iconfarm the iconfarm to set
      */
     public void setIconfarm(String iconfarm) {
-	this.iconfarm = iconfarm;
+        this.iconfarm = iconfarm;
     }
 
 
@@ -104,7 +103,7 @@ public class Member {
      * @return the memberType
      */
     public GroupMemberType getMemberType() {
-	return memberType;
+        return memberType;
     }
 
 
@@ -112,37 +111,37 @@ public class Member {
      * @param memberType the memberType to set
      */
     public void setMemberType(GroupMemberType memberType) {
-	this.memberType = memberType;
+        this.memberType = memberType;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("nsid=").append(this.getNsid()).append(" | ");
-	sb.append("username=").append(this.getUsername()).append(" | ");
-	sb.append("iconserver=").append(this.getIconserver()).append(" | ");
-	sb.append("iconfarm=").append(this.getIconfarm()).append(" | ");
-	sb.append("memberType=").append(this.getMemberType());
-	sb.append("(");
-	switch (this.memberType) {
-	    case member:
-		sb.append("2");
-		break;
-	    case moderator:
-		sb.append("3");
-		break;
-	    case admin:
-		sb.append("4");
-		break;
-	    default:
-		sb.append("?");
-		break;
-	}
-	sb.append(")");
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" [ ");
+        sb.append("nsid=").append(this.getNsid()).append(" | ");
+        sb.append("username=").append(this.getUsername()).append(" | ");
+        sb.append("iconserver=").append(this.getIconserver()).append(" | ");
+        sb.append("iconfarm=").append(this.getIconfarm()).append(" | ");
+        sb.append("memberType=").append(this.getMemberType());
+        sb.append("(");
+        switch (this.memberType) {
+            case member:
+                sb.append("2");
+                break;
+            case moderator:
+                sb.append("3");
+                break;
+            case admin:
+                sb.append("4");
+                break;
+            default:
+                sb.append("?");
+                break;
+        }
+        sb.append(")");
+        sb.append(" ]");
+        return sb.toString();
     }
 }

@@ -27,24 +27,24 @@ import java.io.Serializable;
  * @author jeremyb
  */
 public class BlogService implements Serializable {
-/*
-	 <?xml version="1.0" encoding="utf-8" ?>
-	 <rsp stat="ok">
-	    <services>
-		<service id="beta.blogger.com">Blogger</service>
-		<service id="Typepad">Typepad</service>
-		<service id="MovableType">Movable Type</service>
-		<service id="LiveJournal">LiveJournal</service>
-		<service id="MetaWeblogAPI">Wordpress</service>
-		<service id="MetaWeblogAPI">MetaWeblogAPI</service>
-		<service id="Manila">Manila</service>
-		<service id="AtomAPI">AtomAPI</service>
-		<service id="BloggerAPI">BloggerAPI</service>
-		<service id="Vox">Vox</service>
-		<service id="Twitter">Twitter</service>
-	    </services>
-	 </rsp>
-	 */
+    /*
+      <?xml version="1.0" encoding="utf-8" ?>
+      <rsp stat="ok">
+         <services>
+         <service id="beta.blogger.com">Blogger</service>
+         <service id="Typepad">Typepad</service>
+         <service id="MovableType">Movable Type</service>
+         <service id="LiveJournal">LiveJournal</service>
+         <service id="MetaWeblogAPI">Wordpress</service>
+         <service id="MetaWeblogAPI">MetaWeblogAPI</service>
+         <service id="Manila">Manila</service>
+         <service id="AtomAPI">AtomAPI</service>
+         <service id="BloggerAPI">BloggerAPI</service>
+         <service id="Vox">Vox</service>
+         <service id="Twitter">Twitter</service>
+         </services>
+      </rsp>
+      */
     private String id;
     private String description;
 
@@ -53,7 +53,7 @@ public class BlogService implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -61,7 +61,7 @@ public class BlogService implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -69,7 +69,7 @@ public class BlogService implements Serializable {
      * @return the description
      */
     public String getDescription() {
-	return description;
+        return description;
     }
 
 
@@ -77,17 +77,17 @@ public class BlogService implements Serializable {
      * @param description the description to set
      */
     public void setDescription(String description) {
-	this.description = description;
+        this.description = description;
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("BlogService [ ");
+        StringBuilder sb = new StringBuilder("BlogService [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("description=").append(this.description);
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("description=").append(this.description);
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

@@ -28,7 +28,7 @@ import java.util.Date;
  */
 public class Person implements Serializable {
 
-    
+
     private String id;
     private String nsid;
     private boolean pro;
@@ -59,7 +59,7 @@ public class Person implements Serializable {
      * @return the nsid
      */
     public String getNsid() {
-	return nsid;
+        return nsid;
     }
 
 
@@ -67,7 +67,7 @@ public class Person implements Serializable {
      * @param nsid the nsid to set
      */
     public void setNsid(String nsid) {
-	this.nsid = nsid;
+        this.nsid = nsid;
     }
 
 
@@ -75,7 +75,7 @@ public class Person implements Serializable {
      * @return the username
      */
     public String getUsername() {
-	return username;
+        return username;
     }
 
 
@@ -83,7 +83,7 @@ public class Person implements Serializable {
      * @param username the username to set
      */
     public void setUsername(String username) {
-	this.username = username;
+        this.username = username;
     }
 
 
@@ -91,7 +91,7 @@ public class Person implements Serializable {
      * @return the faveDate
      */
     public Date getFaveDate() {
-	return faveDate;
+        return faveDate;
     }
 
 
@@ -99,16 +99,15 @@ public class Person implements Serializable {
      * @param faveDate the faveDate to set
      */
     public void setFaveDate(Date faveDate) {
-	this.faveDate = faveDate;
+        this.faveDate = faveDate;
     }
 
 
-    
     /**
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -116,7 +115,7 @@ public class Person implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -124,7 +123,7 @@ public class Person implements Serializable {
      * @return the pro
      */
     public boolean isPro() {
-	return pro;
+        return pro;
     }
 
 
@@ -132,7 +131,7 @@ public class Person implements Serializable {
      * @param pro the pro to set
      */
     public void setPro(boolean pro) {
-	this.pro = pro;
+        this.pro = pro;
     }
 
 
@@ -140,7 +139,7 @@ public class Person implements Serializable {
      * @return the iconServer
      */
     public String getIconServer() {
-	return iconServer;
+        return iconServer;
     }
 
 
@@ -148,7 +147,7 @@ public class Person implements Serializable {
      * @param iconServer the iconServer to set
      */
     public void setIconServer(String iconServer) {
-	this.iconServer = iconServer;
+        this.iconServer = iconServer;
     }
 
 
@@ -156,7 +155,7 @@ public class Person implements Serializable {
      * @return the iconFarm
      */
     public String getIconFarm() {
-	return iconFarm;
+        return iconFarm;
     }
 
 
@@ -164,7 +163,7 @@ public class Person implements Serializable {
      * @param iconFarm the iconFarm to set
      */
     public void setIconFarm(String iconFarm) {
-	this.iconFarm = iconFarm;
+        this.iconFarm = iconFarm;
     }
 
 
@@ -172,7 +171,7 @@ public class Person implements Serializable {
      * @return the pathAlias
      */
     public String getPathAlias() {
-	return pathAlias;
+        return pathAlias;
     }
 
 
@@ -180,7 +179,7 @@ public class Person implements Serializable {
      * @param pathAlias the pathAlias to set
      */
     public void setPathAlias(String pathAlias) {
-	this.pathAlias = pathAlias;
+        this.pathAlias = pathAlias;
     }
 
 
@@ -188,7 +187,7 @@ public class Person implements Serializable {
      * @return the gender
      */
     public String getGender() {
-	return gender;
+        return gender;
     }
 
 
@@ -196,7 +195,7 @@ public class Person implements Serializable {
      * @param gender the gender to set
      */
     public void setGender(String gender) {
-	this.gender = gender;
+        this.gender = gender;
     }
 
 
@@ -204,7 +203,7 @@ public class Person implements Serializable {
      * @return the ignored
      */
     public boolean isIgnored() {
-	return ignored;
+        return ignored;
     }
 
 
@@ -212,7 +211,7 @@ public class Person implements Serializable {
      * @param ignored the ignored to set
      */
     public void setIgnored(boolean ignored) {
-	this.ignored = ignored;
+        this.ignored = ignored;
     }
 
 
@@ -220,7 +219,7 @@ public class Person implements Serializable {
      * @return the contact
      */
     public boolean isContact() {
-	return contact;
+        return contact;
     }
 
 
@@ -228,7 +227,7 @@ public class Person implements Serializable {
      * @param contact the contact to set
      */
     public void setContact(boolean contact) {
-	this.contact = contact;
+        this.contact = contact;
     }
 
 
@@ -236,7 +235,7 @@ public class Person implements Serializable {
      * @return the friend
      */
     public boolean isFriend() {
-	return friend;
+        return friend;
     }
 
 
@@ -244,7 +243,7 @@ public class Person implements Serializable {
      * @param friend the friend to set
      */
     public void setFriend(boolean friend) {
-	this.friend = friend;
+        this.friend = friend;
     }
 
 
@@ -252,7 +251,7 @@ public class Person implements Serializable {
      * @return the family
      */
     public boolean isFamily() {
-	return family;
+        return family;
     }
 
 
@@ -260,7 +259,7 @@ public class Person implements Serializable {
      * @param family the family to set
      */
     public void setFamily(boolean family) {
-	this.family = family;
+        this.family = family;
     }
 
 
@@ -268,7 +267,7 @@ public class Person implements Serializable {
      * @return the revContact
      */
     public boolean isRevContact() {
-	return revContact;
+        return revContact;
     }
 
 
@@ -276,7 +275,7 @@ public class Person implements Serializable {
      * @param revContact the revContact to set
      */
     public void setRevContact(boolean revContact) {
-	this.revContact = revContact;
+        this.revContact = revContact;
     }
 
 
@@ -284,7 +283,7 @@ public class Person implements Serializable {
      * @return the revFriend
      */
     public boolean isRevFriend() {
-	return revFriend;
+        return revFriend;
     }
 
 
@@ -292,7 +291,7 @@ public class Person implements Serializable {
      * @param revFriend the revFriend to set
      */
     public void setRevFriend(boolean revFriend) {
-	this.revFriend = revFriend;
+        this.revFriend = revFriend;
     }
 
 
@@ -300,7 +299,7 @@ public class Person implements Serializable {
      * @return the revFamily
      */
     public boolean isRevFamily() {
-	return revFamily;
+        return revFamily;
     }
 
 
@@ -308,7 +307,7 @@ public class Person implements Serializable {
      * @param revFamily the revFamily to set
      */
     public void setRevFamily(boolean revFamily) {
-	this.revFamily = revFamily;
+        this.revFamily = revFamily;
     }
 
 
@@ -316,7 +315,7 @@ public class Person implements Serializable {
      * @return the realname
      */
     public String getRealname() {
-	return realname;
+        return realname;
     }
 
 
@@ -324,7 +323,7 @@ public class Person implements Serializable {
      * @param realname the realname to set
      */
     public void setRealname(String realname) {
-	this.realname = realname;
+        this.realname = realname;
     }
 
 
@@ -332,7 +331,7 @@ public class Person implements Serializable {
      * @return the location
      */
     public String getLocation() {
-	return location;
+        return location;
     }
 
 
@@ -340,7 +339,7 @@ public class Person implements Serializable {
      * @param location the location to set
      */
     public void setLocation(String location) {
-	this.location = location;
+        this.location = location;
     }
 
 
@@ -348,7 +347,7 @@ public class Person implements Serializable {
      * @return the photosUrl
      */
     public String getPhotosUrl() {
-	return photosUrl;
+        return photosUrl;
     }
 
 
@@ -356,7 +355,7 @@ public class Person implements Serializable {
      * @param photosUrl the photosUrl to set
      */
     public void setPhotosUrl(String photosUrl) {
-	this.photosUrl = photosUrl;
+        this.photosUrl = photosUrl;
     }
 
 
@@ -364,7 +363,7 @@ public class Person implements Serializable {
      * @return the profileUrl
      */
     public String getProfileUrl() {
-	return profileUrl;
+        return profileUrl;
     }
 
 
@@ -372,7 +371,7 @@ public class Person implements Serializable {
      * @param profileUrl the profileUrl to set
      */
     public void setProfileUrl(String profileUrl) {
-	this.profileUrl = profileUrl;
+        this.profileUrl = profileUrl;
     }
 
 
@@ -380,7 +379,7 @@ public class Person implements Serializable {
      * @return the mobileUrl
      */
     public String getMobileUrl() {
-	return mobileUrl;
+        return mobileUrl;
     }
 
 
@@ -388,7 +387,7 @@ public class Person implements Serializable {
      * @param mobileUrl the mobileUrl to set
      */
     public void setMobileUrl(String mobileUrl) {
-	this.mobileUrl = mobileUrl;
+        this.mobileUrl = mobileUrl;
     }
 
 
@@ -396,7 +395,7 @@ public class Person implements Serializable {
      * @return the firstDateTaken
      */
     public Date getFirstDateTaken() {
-	return firstDateTaken;
+        return firstDateTaken;
     }
 
 
@@ -404,7 +403,7 @@ public class Person implements Serializable {
      * @param firstDateTaken the firstDateTaken to set
      */
     public void setFirstDateTaken(Date firstDateTaken) {
-	this.firstDateTaken = firstDateTaken;
+        this.firstDateTaken = firstDateTaken;
     }
 
 
@@ -412,7 +411,7 @@ public class Person implements Serializable {
      * @return the firstDate
      */
     public Date getFirstDate() {
-	return firstDate;
+        return firstDate;
     }
 
 
@@ -420,7 +419,7 @@ public class Person implements Serializable {
      * @param firstDate the firstDate to set
      */
     public void setFirstDate(Date firstDate) {
-	this.firstDate = firstDate;
+        this.firstDate = firstDate;
     }
 
 
@@ -428,7 +427,7 @@ public class Person implements Serializable {
      * @return the count
      */
     public int getCount() {
-	return count;
+        return count;
     }
 
 
@@ -436,42 +435,42 @@ public class Person implements Serializable {
      * @param count the count to set
      */
     public void setCount(int count) {
-	this.count = count;
+        this.count = count;
     }
 
-    
+
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Person [ ");
+        StringBuilder sb = new StringBuilder("Person [ ");
 
-	sb.append("id=").append(this.getId()).append(" | ");
-	sb.append("nsid=").append(this.getNsid()).append(" | ");
-	sb.append("pro=").append(this.isPro()).append(" | ");
-	sb.append("iconServer=").append(this.getIconServer()).append(" | ");
-	sb.append("iconFarm=").append(this.getIconFarm()).append(" | ");
-	sb.append("pathAlias=").append(this.getPathAlias()).append(" | ");
-	sb.append("gender=").append(this.getGender()).append(" | ");
-	sb.append("ignored=").append(this.isIgnored()).append(" | ");
-	sb.append("contact=").append(this.isContact()).append(" | ");
-	sb.append("friend=").append(this.isFriend()).append(" | ");
-	sb.append("family=").append(this.isFamily()).append(" | ");
-	sb.append("revContact=").append(this.isRevContact()).append(" | ");
-	sb.append("revFriend=").append(this.isRevFriend()).append(" | ");
-	sb.append("revFamily=").append(this.isRevFamily()).append(" | ");
-	sb.append("username=").append(this.getUsername()).append(" | ");
-	sb.append("realname=").append(this.getRealname()).append(" | ");
-	sb.append("location=").append(this.getLocation()).append(" | ");
-	sb.append("photosUrl=").append(this.getPhotosUrl()).append(" | ");
-	sb.append("profileUrl=").append(this.getProfileUrl()).append(" | ");
-	sb.append("mobileUrl=").append(this.getMobileUrl()).append(" | ");
-	sb.append("firstDateTaken=").append(this.getFirstDateTaken()).append(" | ");
-	sb.append("firstDate=").append(this.getFirstDate()).append(" | ");
-	sb.append("count=").append(this.getCount()).append(" | ");
-	sb.append("faveDate=").append(this.getFaveDate());
+        sb.append("id=").append(this.getId()).append(" | ");
+        sb.append("nsid=").append(this.getNsid()).append(" | ");
+        sb.append("pro=").append(this.isPro()).append(" | ");
+        sb.append("iconServer=").append(this.getIconServer()).append(" | ");
+        sb.append("iconFarm=").append(this.getIconFarm()).append(" | ");
+        sb.append("pathAlias=").append(this.getPathAlias()).append(" | ");
+        sb.append("gender=").append(this.getGender()).append(" | ");
+        sb.append("ignored=").append(this.isIgnored()).append(" | ");
+        sb.append("contact=").append(this.isContact()).append(" | ");
+        sb.append("friend=").append(this.isFriend()).append(" | ");
+        sb.append("family=").append(this.isFamily()).append(" | ");
+        sb.append("revContact=").append(this.isRevContact()).append(" | ");
+        sb.append("revFriend=").append(this.isRevFriend()).append(" | ");
+        sb.append("revFamily=").append(this.isRevFamily()).append(" | ");
+        sb.append("username=").append(this.getUsername()).append(" | ");
+        sb.append("realname=").append(this.getRealname()).append(" | ");
+        sb.append("location=").append(this.getLocation()).append(" | ");
+        sb.append("photosUrl=").append(this.getPhotosUrl()).append(" | ");
+        sb.append("profileUrl=").append(this.getProfileUrl()).append(" | ");
+        sb.append("mobileUrl=").append(this.getMobileUrl()).append(" | ");
+        sb.append("firstDateTaken=").append(this.getFirstDateTaken()).append(" | ");
+        sb.append("firstDate=").append(this.getFirstDate()).append(" | ");
+        sb.append("count=").append(this.getCount()).append(" | ");
+        sb.append("faveDate=").append(this.getFaveDate());
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 
 

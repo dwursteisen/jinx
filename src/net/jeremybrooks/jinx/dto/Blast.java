@@ -19,7 +19,6 @@
 package net.jeremybrooks.jinx.dto;
 
 /**
- *
  * @author jeremyb
  */
 public class Blast {
@@ -33,7 +32,7 @@ public class Blast {
      * @return the dateBlastAdded
      */
     public String getDateBlastAdded() {
-	return dateBlastAdded;
+        return dateBlastAdded;
     }
 
 
@@ -41,7 +40,7 @@ public class Blast {
      * @param dateBlastAdded the dateBlastAdded to set
      */
     public void setDateBlastAdded(String dateBlastAdded) {
-	this.dateBlastAdded = dateBlastAdded;
+        this.dateBlastAdded = dateBlastAdded;
     }
 
 
@@ -49,7 +48,7 @@ public class Blast {
      * @return the userId
      */
     public String getUserId() {
-	return userId;
+        return userId;
     }
 
 
@@ -57,7 +56,7 @@ public class Blast {
      * @param userId the userId to set
      */
     public void setUserId(String userId) {
-	this.userId = userId;
+        this.userId = userId;
     }
 
 
@@ -65,7 +64,7 @@ public class Blast {
      * @return the text
      */
     public String getText() {
-	return text;
+        return text;
     }
 
 
@@ -73,19 +72,19 @@ public class Blast {
      * @param text the text to set
      */
     public void setText(String text) {
-	this.text = text;
+        this.text = text;
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("dateBlastAdded=").append(this.getDateBlastAdded()).append(" | ");
-	sb.append("userId=").append(this.getUserId()).append(" | ");
-	sb.append("text=").append(this.getText());
+        sb.append(" [ ");
+        sb.append("dateBlastAdded=").append(this.getDateBlastAdded()).append(" | ");
+        sb.append("userId=").append(this.getUserId()).append(" | ");
+        sb.append("text=").append(this.getText());
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }

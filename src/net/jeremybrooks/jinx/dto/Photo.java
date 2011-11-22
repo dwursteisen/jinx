@@ -18,22 +18,22 @@
 */
 package net.jeremybrooks.jinx.dto;
 
-import java.io.Serializable;
-import java.util.Date;
 import net.jeremybrooks.jinx.Jinx;
 import net.jeremybrooks.jinx.JinxUtils;
 
+import java.io.Serializable;
+
 /**
  * Information about a photo.
- *
+ * <p/>
  * Many of the values are represented as constants in the JinxConstants
  * class.
- *
+ * <p/>
  * Instances of this class are returned by many of the API methods. The populated
  * fields depend on the method and the arguments that are supplied to the
  * method. Do not count on all these fields being populated just because you
  * have an instance of this class.
- * 
+ *
  * @author jeremyb
  */
 public class Photo extends PhotoBase implements Serializable {
@@ -83,7 +83,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the iconServer
      */
     public String getIconServer() {
-	return iconServer;
+        return iconServer;
     }
 
 
@@ -91,7 +91,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param iconServer the iconServer to set
      */
     public void setIconServer(String iconServer) {
-	this.iconServer = iconServer;
+        this.iconServer = iconServer;
     }
 
 
@@ -99,7 +99,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the tags
      */
     public String getTags() {
-	return tags;
+        return tags;
     }
 
 
@@ -107,7 +107,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param tags the tags to set
      */
     public void setTags(String tags) {
-	this.tags = tags;
+        this.tags = tags;
     }
 
 
@@ -115,7 +115,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the machineTags
      */
     public String getMachineTags() {
-	return machineTags;
+        return machineTags;
     }
 
 
@@ -123,7 +123,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param machineTags the machineTags to set
      */
     public void setMachineTags(String machineTags) {
-	this.machineTags = machineTags;
+        this.machineTags = machineTags;
     }
 
 
@@ -131,7 +131,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the pathAlias
      */
     public String getPathAlias() {
-	return pathAlias;
+        return pathAlias;
     }
 
 
@@ -139,7 +139,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param pathAlias the pathAlias to set
      */
     public void setPathAlias(String pathAlias) {
-	this.pathAlias = pathAlias;
+        this.pathAlias = pathAlias;
     }
 
 
@@ -147,7 +147,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the urlSq
      */
     public String getUrlSq() {
-	return urlSq;
+        return urlSq;
     }
 
 
@@ -155,7 +155,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param urlSq the urlSq to set
      */
     public void setUrlSq(String urlSq) {
-	this.urlSq = urlSq;
+        this.urlSq = urlSq;
     }
 
 
@@ -163,7 +163,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the urlT
      */
     public String getUrlT() {
-	return urlT;
+        return urlT;
     }
 
 
@@ -171,7 +171,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param urlT the urlT to set
      */
     public void setUrlT(String urlT) {
-	this.urlT = urlT;
+        this.urlT = urlT;
     }
 
 
@@ -179,7 +179,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the urlS
      */
     public String getUrlS() {
-	return urlS;
+        return urlS;
     }
 
 
@@ -187,7 +187,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param urlS the urlS to set
      */
     public void setUrlS(String urlS) {
-	this.urlS = urlS;
+        this.urlS = urlS;
     }
 
 
@@ -195,7 +195,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the urlM
      */
     public String getUrlM() {
-	return urlM;
+        return urlM;
     }
 
 
@@ -203,7 +203,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param urlM the urlM to set
      */
     public void setUrlM(String urlM) {
-	this.urlM = urlM;
+        this.urlM = urlM;
     }
 
 
@@ -211,7 +211,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the urlO
      */
     public String getUrlO() {
-	return urlO;
+        return urlO;
     }
 
 
@@ -219,7 +219,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param urlO the urlO to set
      */
     public void setUrlO(String urlO) {
-	this.urlO = urlO;
+        this.urlO = urlO;
     }
 
 
@@ -227,7 +227,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the latitude
      */
     public String getLatitude() {
-	return latitude;
+        return latitude;
     }
 
 
@@ -235,7 +235,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param latitude the latitude to set
      */
     public void setLatitude(String latitude) {
-	this.latitude = latitude;
+        this.latitude = latitude;
     }
 
 
@@ -243,7 +243,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the longitude
      */
     public String getLongitude() {
-	return longitude;
+        return longitude;
     }
 
 
@@ -251,7 +251,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param longitude the longitude to set
      */
     public void setLongitude(String longitude) {
-	this.longitude = longitude;
+        this.longitude = longitude;
     }
 
 
@@ -259,7 +259,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the accuracy
      */
     public String getAccuracy() {
-	return accuracy;
+        return accuracy;
     }
 
 
@@ -267,7 +267,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param accuracy the accuracy to set
      */
     public void setAccuracy(String accuracy) {
-	this.accuracy = accuracy;
+        this.accuracy = accuracy;
     }
 
 
@@ -275,7 +275,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the iconFarm
      */
     public String getIconFarm() {
-	return iconFarm;
+        return iconFarm;
     }
 
 
@@ -283,7 +283,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param iconFarm the iconFarm to set
      */
     public void setIconFarm(String iconFarm) {
-	this.iconFarm = iconFarm;
+        this.iconFarm = iconFarm;
     }
 
 
@@ -291,7 +291,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the mediaStatus
      */
     public String getMediaStatus() {
-	return mediaStatus;
+        return mediaStatus;
     }
 
 
@@ -299,7 +299,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param mediaStatus the mediaStatus to set
      */
     public void setMediaStatus(String mediaStatus) {
-	this.mediaStatus = mediaStatus;
+        this.mediaStatus = mediaStatus;
     }
 
 
@@ -307,7 +307,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the oWidth
      */
     public int getoWidth() {
-	return oWidth;
+        return oWidth;
     }
 
 
@@ -315,7 +315,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param oWidth the oWidth to set
      */
     public void setoWidth(int oWidth) {
-	this.oWidth = oWidth;
+        this.oWidth = oWidth;
     }
 
 
@@ -323,7 +323,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the oHeight
      */
     public int getoHeight() {
-	return oHeight;
+        return oHeight;
     }
 
 
@@ -331,7 +331,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param oHeight the oHeight to set
      */
     public void setoHeight(int oHeight) {
-	this.oHeight = oHeight;
+        this.oHeight = oHeight;
     }
 
 
@@ -339,7 +339,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the heightM
      */
     public int getHeightM() {
-	return heightM;
+        return heightM;
     }
 
 
@@ -347,7 +347,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param heightM the heightM to set
      */
     public void setHeightM(int heightM) {
-	this.heightM = heightM;
+        this.heightM = heightM;
     }
 
 
@@ -355,7 +355,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the widthM
      */
     public int getWidthM() {
-	return widthM;
+        return widthM;
     }
 
 
@@ -363,7 +363,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param widthM the widthM to set
      */
     public void setWidthM(int widthM) {
-	this.widthM = widthM;
+        this.widthM = widthM;
     }
 
 
@@ -371,7 +371,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the heightO
      */
     public int getHeightO() {
-	return heightO;
+        return heightO;
     }
 
 
@@ -379,7 +379,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param heightO the heightO to set
      */
     public void setHeightO(int heightO) {
-	this.heightO = heightO;
+        this.heightO = heightO;
     }
 
 
@@ -387,7 +387,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the widthO
      */
     public int getWidthO() {
-	return widthO;
+        return widthO;
     }
 
 
@@ -395,7 +395,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param widthO the widthO to set
      */
     public void setWidthO(int widthO) {
-	this.widthO = widthO;
+        this.widthO = widthO;
     }
 
 
@@ -403,7 +403,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the heightS
      */
     public int getHeightS() {
-	return heightS;
+        return heightS;
     }
 
 
@@ -411,7 +411,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param heightS the heightS to set
      */
     public void setHeightS(int heightS) {
-	this.heightS = heightS;
+        this.heightS = heightS;
     }
 
 
@@ -419,7 +419,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the widthS
      */
     public int getWidthS() {
-	return widthS;
+        return widthS;
     }
 
 
@@ -427,7 +427,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param widthS the widthS to set
      */
     public void setWidthS(int widthS) {
-	this.widthS = widthS;
+        this.widthS = widthS;
     }
 
 
@@ -435,7 +435,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the heightSq
      */
     public int getHeightSq() {
-	return heightSq;
+        return heightSq;
     }
 
 
@@ -443,7 +443,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param heightSq the heightSq to set
      */
     public void setHeightSq(int heightSq) {
-	this.heightSq = heightSq;
+        this.heightSq = heightSq;
     }
 
 
@@ -451,7 +451,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the widthSq
      */
     public int getWidthSq() {
-	return widthSq;
+        return widthSq;
     }
 
 
@@ -459,7 +459,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param widthSq the widthSq to set
      */
     public void setWidthSq(int widthSq) {
-	this.widthSq = widthSq;
+        this.widthSq = widthSq;
     }
 
 
@@ -467,7 +467,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the heightT
      */
     public int getHeightT() {
-	return heightT;
+        return heightT;
     }
 
 
@@ -475,7 +475,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the widthT
      */
     public int getWidthT() {
-	return widthT;
+        return widthT;
     }
 
 
@@ -483,7 +483,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param heightT the heightT to set
      */
     public void setHeightT(int heightT) {
-	this.heightT = heightT;
+        this.heightT = heightT;
     }
 
 
@@ -491,34 +491,34 @@ public class Photo extends PhotoBase implements Serializable {
      * @param widthT the widthT to set
      */
     public void setWidthT(int widthT) {
-	this.widthT = widthT;
+        this.widthT = widthT;
     }
 
 
     /**
      * Get the photo page URL for this photo.
-     *
+     * <p/>
      * Photo URL's are in the format
      * http://www.flickr.com/photos/{user-id}/{photo-id}
-     *
+     * <p/>
      * If the URL is not set, it will be built.
      *
      * @return the url
      */
     public String getUrl() {
-	if (JinxUtils.isEmpty(this.url)) {
-	    StringBuilder sb = new StringBuilder("http://www.flickr.com/photos/");
-	    if (JinxUtils.isEmpty(super.getOwnerNsid())) {
-		sb.append(Jinx.getInstance().getToken().getNsid());
-	    } else {
-		sb.append(super.getOwnerNsid());
-	    }
-	    sb.append('/').append(super.getId());
+        if (JinxUtils.isEmpty(this.url)) {
+            StringBuilder sb = new StringBuilder("http://www.flickr.com/photos/");
+            if (JinxUtils.isEmpty(super.getOwnerNsid())) {
+                sb.append(Jinx.getInstance().getToken().getNsid());
+            } else {
+                sb.append(super.getOwnerNsid());
+            }
+            sb.append('/').append(super.getId());
 
-	    this.url = sb.toString();
-	}
-	
-	return url;
+            this.url = sb.toString();
+        }
+
+        return url;
     }
 
 
@@ -526,7 +526,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param url the url to set
      */
     public void setUrl(String url) {
-	this.url = url;
+        this.url = url;
     }
 
 
@@ -534,7 +534,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the thumb
      */
     public String getThumb() {
-	return thumb;
+        return thumb;
     }
 
 
@@ -542,71 +542,71 @@ public class Photo extends PhotoBase implements Serializable {
      * @param thumb the thumb to set
      */
     public void setThumb(String thumb) {
-	this.thumb = thumb;
+        this.thumb = thumb;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Photo [ ");
-	sb.append("id=").append(super.getId()).append(" | ");
-	sb.append("ownerNsid=").append(super.getOwnerNsid()).append(" | ");
-	sb.append("secret=").append(super.getSecret()).append(" | ");
-	sb.append("server=").append(super.getServer()).append(" | ");
-	sb.append("farm=").append(super.getFarm()).append(" | ");
-	sb.append("title=").append(super.getTitle()).append(" | ");
-	sb.append("isPublic=").append(super.isIsPublic()).append(" | ");
-	sb.append("isFriend=").append(super.isIsFriend()).append(" | ");
-	sb.append("isFamily=").append(super.isIsFamily()).append(" | ");
-	sb.append("dateTaken=").append(super.getDateTaken()).append(" | ");
-	sb.append("dateTakenGranularity=").append(super.getDateTakenGranularity()).append(" | ");
-	sb.append("dateUpload=").append(super.getDateUploaded()).append(" | ");
-	sb.append("latitude=").append(this.latitude).append(" | ");
-	sb.append("longitude=").append(this.longitude).append(" | ");
-	sb.append("accuracy=").append(this.accuracy).append(" | ");
-	sb.append("iconServer=").append(this.iconServer).append(" | ");
-	sb.append("iconFarm=").append(this.iconFarm).append(" | ");
-	sb.append("lastUpdate=").append(super.getDateLastUpdate()).append(" | ");
-	sb.append("license=").append(super.getLicense()).append(" | ");
-	sb.append("machineTags=").append(this.machineTags).append(" | ");
-	sb.append("media=").append(super.getMedia()).append(" | ");
-	sb.append("mediaStatus=").append(this.mediaStatus).append(" | ");
-	sb.append("originalSecret=").append(super.getOriginalSecret()).append(" | ");
-	sb.append("originalFormat=").append(super.getOriginalFormat()).append(" | ");
-	sb.append("ownerUsername=").append(super.getOwnerUsername()).append(" | ");
-	sb.append("oWidth=").append(this.oWidth).append(" | ");
-	sb.append("oHeight=").append(this.oHeight).append(" | ");
-	sb.append("pathAlias=").append(this.pathAlias).append(" | ");
-	sb.append("tags=").append(this.tags).append(" | ");
-	sb.append("urlM=").append(this.urlM).append(" | ");
-	sb.append("heightM=").append(this.heightM).append(" | ");
-	sb.append("widthM=").append(this.widthM).append(" | ");
-	sb.append("urlO=").append(this.urlO).append(" | ");
-	sb.append("heightO=").append(this.heightO).append(" | ");
-	sb.append("widthO=").append(this.widthO).append(" | ");
-	sb.append("urlS=").append(this.urlS).append(" | ");
-	sb.append("heightS=").append(this.heightS).append(" | ");
-	sb.append("widthS=").append(this.widthS).append(" | ");
-	sb.append("urlSq=").append(this.urlSq).append(" | ");
-	sb.append("heightSq=").append(this.heightSq).append(" | ");
-	sb.append("widthSq=").append(this.widthSq).append(" | ");
-	sb.append("urlT=").append(this.urlT).append(" | ");
-	sb.append("heightT=").append(this.heightT).append(" | ");
-	sb.append("widthT=").append(this.widthT).append(" | ");
-	sb.append("urlZ=").append(this.urlZ).append(" | ");
-	sb.append("heightZ=").append(this.heightZ).append(" | ");
-	sb.append("widthZ=").append(this.widthZ).append(" | ");
-	sb.append("views=").append(super.getViews()).append(" | ");
-	sb.append("description=").append(super.getDescription()).append(" | ");
-	sb.append("url=").append(this.url).append(" | ");
-	sb.append("thumb=").append(this.thumb).append(" | ");
-	sb.append("faved=").append(this.isFaved()).append(" | ");
-	sb.append("hasComment=").append(this.hasComment).append(" | ");
-	sb.append("comment=").append(this.comment);
+        StringBuilder sb = new StringBuilder("Photo [ ");
+        sb.append("id=").append(super.getId()).append(" | ");
+        sb.append("ownerNsid=").append(super.getOwnerNsid()).append(" | ");
+        sb.append("secret=").append(super.getSecret()).append(" | ");
+        sb.append("server=").append(super.getServer()).append(" | ");
+        sb.append("farm=").append(super.getFarm()).append(" | ");
+        sb.append("title=").append(super.getTitle()).append(" | ");
+        sb.append("isPublic=").append(super.isIsPublic()).append(" | ");
+        sb.append("isFriend=").append(super.isIsFriend()).append(" | ");
+        sb.append("isFamily=").append(super.isIsFamily()).append(" | ");
+        sb.append("dateTaken=").append(super.getDateTaken()).append(" | ");
+        sb.append("dateTakenGranularity=").append(super.getDateTakenGranularity()).append(" | ");
+        sb.append("dateUpload=").append(super.getDateUploaded()).append(" | ");
+        sb.append("latitude=").append(this.latitude).append(" | ");
+        sb.append("longitude=").append(this.longitude).append(" | ");
+        sb.append("accuracy=").append(this.accuracy).append(" | ");
+        sb.append("iconServer=").append(this.iconServer).append(" | ");
+        sb.append("iconFarm=").append(this.iconFarm).append(" | ");
+        sb.append("lastUpdate=").append(super.getDateLastUpdate()).append(" | ");
+        sb.append("license=").append(super.getLicense()).append(" | ");
+        sb.append("machineTags=").append(this.machineTags).append(" | ");
+        sb.append("media=").append(super.getMedia()).append(" | ");
+        sb.append("mediaStatus=").append(this.mediaStatus).append(" | ");
+        sb.append("originalSecret=").append(super.getOriginalSecret()).append(" | ");
+        sb.append("originalFormat=").append(super.getOriginalFormat()).append(" | ");
+        sb.append("ownerUsername=").append(super.getOwnerUsername()).append(" | ");
+        sb.append("oWidth=").append(this.oWidth).append(" | ");
+        sb.append("oHeight=").append(this.oHeight).append(" | ");
+        sb.append("pathAlias=").append(this.pathAlias).append(" | ");
+        sb.append("tags=").append(this.tags).append(" | ");
+        sb.append("urlM=").append(this.urlM).append(" | ");
+        sb.append("heightM=").append(this.heightM).append(" | ");
+        sb.append("widthM=").append(this.widthM).append(" | ");
+        sb.append("urlO=").append(this.urlO).append(" | ");
+        sb.append("heightO=").append(this.heightO).append(" | ");
+        sb.append("widthO=").append(this.widthO).append(" | ");
+        sb.append("urlS=").append(this.urlS).append(" | ");
+        sb.append("heightS=").append(this.heightS).append(" | ");
+        sb.append("widthS=").append(this.widthS).append(" | ");
+        sb.append("urlSq=").append(this.urlSq).append(" | ");
+        sb.append("heightSq=").append(this.heightSq).append(" | ");
+        sb.append("widthSq=").append(this.widthSq).append(" | ");
+        sb.append("urlT=").append(this.urlT).append(" | ");
+        sb.append("heightT=").append(this.heightT).append(" | ");
+        sb.append("widthT=").append(this.widthT).append(" | ");
+        sb.append("urlZ=").append(this.urlZ).append(" | ");
+        sb.append("heightZ=").append(this.heightZ).append(" | ");
+        sb.append("widthZ=").append(this.widthZ).append(" | ");
+        sb.append("views=").append(super.getViews()).append(" | ");
+        sb.append("description=").append(super.getDescription()).append(" | ");
+        sb.append("url=").append(this.url).append(" | ");
+        sb.append("thumb=").append(this.thumb).append(" | ");
+        sb.append("faved=").append(this.isFaved()).append(" | ");
+        sb.append("hasComment=").append(this.hasComment).append(" | ");
+        sb.append("comment=").append(this.comment);
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 
 
@@ -614,7 +614,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the urlZ
      */
     public String getUrlZ() {
-	return urlZ;
+        return urlZ;
     }
 
 
@@ -622,7 +622,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param urlZ the urlZ to set
      */
     public void setUrlZ(String urlZ) {
-	this.urlZ = urlZ;
+        this.urlZ = urlZ;
     }
 
 
@@ -630,7 +630,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the heightZ
      */
     public int getHeightZ() {
-	return heightZ;
+        return heightZ;
     }
 
 
@@ -638,7 +638,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param heightZ the heightZ to set
      */
     public void setHeightZ(int heightZ) {
-	this.heightZ = heightZ;
+        this.heightZ = heightZ;
     }
 
 
@@ -646,7 +646,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the widthZ
      */
     public int getWidthZ() {
-	return widthZ;
+        return widthZ;
     }
 
 
@@ -654,18 +654,18 @@ public class Photo extends PhotoBase implements Serializable {
      * @param widthZ the widthZ to set
      */
     public void setWidthZ(int widthZ) {
-	this.widthZ = widthZ;
+        this.widthZ = widthZ;
     }
 
 
     /**
      * Note: This refers to the comment left on a photo that is in a gallery,
-     *       not comments left on the photo in a user's photostream.
-     * 
+     * not comments left on the photo in a user's photostream.
+     *
      * @return the hasComment
      */
     public boolean isHasComment() {
-	return hasComment;
+        return hasComment;
     }
 
 
@@ -673,18 +673,18 @@ public class Photo extends PhotoBase implements Serializable {
      * @param hasComment the hasComment to set
      */
     public void setHasComment(boolean hasComment) {
-	this.hasComment = hasComment;
+        this.hasComment = hasComment;
     }
 
 
     /**
      * Note: This refers to the comment left on a photo that is in a gallery,
-     *       not comments left on the photo in a user's photostream.
-     * 
+     * not comments left on the photo in a user's photostream.
+     *
      * @return the comment
      */
     public String getComment() {
-	return comment;
+        return comment;
     }
 
 
@@ -692,7 +692,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @param comment the comment to set
      */
     public void setComment(String comment) {
-	this.comment = comment;
+        this.comment = comment;
     }
 
 
@@ -700,7 +700,7 @@ public class Photo extends PhotoBase implements Serializable {
      * @return the faved
      */
     public boolean isFaved() {
-	return faved;
+        return faved;
     }
 
 
@@ -708,6 +708,6 @@ public class Photo extends PhotoBase implements Serializable {
      * @param faved the faved to set
      */
     public void setFaved(boolean faved) {
-	this.faved = faved;
+        this.faved = faved;
     }
 }

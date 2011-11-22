@@ -22,7 +22,7 @@ import java.io.Serializable;
 
 /**
  * Data representing a note.
- * 
+ *
  * @author jeremyb
  */
 public class Note implements Serializable {
@@ -41,7 +41,7 @@ public class Note implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -49,7 +49,7 @@ public class Note implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -57,7 +57,7 @@ public class Note implements Serializable {
      * @return the author
      */
     public String getAuthor() {
-	return author;
+        return author;
     }
 
 
@@ -65,7 +65,7 @@ public class Note implements Serializable {
      * @param author the author to set
      */
     public void setAuthor(String author) {
-	this.author = author;
+        this.author = author;
     }
 
 
@@ -73,7 +73,7 @@ public class Note implements Serializable {
      * @return the authorName
      */
     public String getAuthorName() {
-	return authorName;
+        return authorName;
     }
 
 
@@ -81,7 +81,7 @@ public class Note implements Serializable {
      * @param authorName the authorName to set
      */
     public void setAuthorName(String authorName) {
-	this.authorName = authorName;
+        this.authorName = authorName;
     }
 
 
@@ -89,7 +89,7 @@ public class Note implements Serializable {
      * @return the x
      */
     public int getX() {
-	return x;
+        return x;
     }
 
 
@@ -97,7 +97,7 @@ public class Note implements Serializable {
      * @param x the x to set
      */
     public void setX(int x) {
-	this.x = x;
+        this.x = x;
     }
 
 
@@ -105,7 +105,7 @@ public class Note implements Serializable {
      * @return the y
      */
     public int getY() {
-	return y;
+        return y;
     }
 
 
@@ -113,7 +113,7 @@ public class Note implements Serializable {
      * @param y the y to set
      */
     public void setY(int y) {
-	this.y = y;
+        this.y = y;
     }
 
 
@@ -121,7 +121,7 @@ public class Note implements Serializable {
      * @return the w
      */
     public int getW() {
-	return w;
+        return w;
     }
 
 
@@ -129,7 +129,7 @@ public class Note implements Serializable {
      * @param w the w to set
      */
     public void setW(int w) {
-	this.w = w;
+        this.w = w;
     }
 
 
@@ -137,7 +137,7 @@ public class Note implements Serializable {
      * @return the h
      */
     public int getH() {
-	return h;
+        return h;
     }
 
 
@@ -145,7 +145,7 @@ public class Note implements Serializable {
      * @param h the h to set
      */
     public void setH(int h) {
-	this.h = h;
+        this.h = h;
     }
 
 
@@ -153,7 +153,7 @@ public class Note implements Serializable {
      * @return the text
      */
     public String getText() {
-	return text;
+        return text;
     }
 
 
@@ -161,7 +161,7 @@ public class Note implements Serializable {
      * @param text the text to set
      */
     public void setText(String text) {
-	this.text = text;
+        this.text = text;
     }
 
 }

@@ -18,26 +18,27 @@
 */
 package net.jeremybrooks.jinx.api;
 
-import java.util.Map;
-import java.util.TreeMap;
+import net.jeremybrooks.jinx.Jinx;
 import net.jeremybrooks.jinx.JinxConstants;
 import net.jeremybrooks.jinx.JinxException;
-import net.jeremybrooks.jinx.Jinx;
 import net.jeremybrooks.jinx.JinxUtils;
 import net.jeremybrooks.jinx.dto.Frob;
 import net.jeremybrooks.jinx.dto.Token;
 import org.w3c.dom.Document;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  * Access the Jinx Auth API methods.
- *
- *
  *
  * @author jeremyb
  */
 public class AuthApi {
 
-    /** Reference to the instance of AuthApi. */
+    /**
+     * Reference to the instance of AuthApi.
+     */
     private static AuthApi instance = null;
 
     /**
@@ -53,14 +54,14 @@ public class AuthApi {
      * @return reference to the only instance of AuthApi.
      */
     public static AuthApi getInstance() {
-	if (AuthApi.instance == null) {
-	    AuthApi.instance = new AuthApi();
-	}
-	
-	return AuthApi.instance;
+        if (AuthApi.instance == null) {
+            AuthApi.instance = new AuthApi();
+        }
+
+        return AuthApi.instance;
     }
 
-    
+
     /**
      * Returns a frob to be used during authentication.
      *
@@ -69,38 +70,38 @@ public class AuthApi {
      * @throws JinxException if there are any errors.
      */
     public Frob getFrob(String perms) throws JinxException {
-	Map<String, String> params = new TreeMap<String, String>();
-	params.put("method", "flickr.auth.getFrob");
-	params.put("perms", perms);
-	params.put("api_key", Jinx.getInstance().getApiKey());
+        Map<String, String> params = new TreeMap<String, String>();
+        params.put("method", "flickr.auth.getFrob");
+        params.put("perms", perms);
+        params.put("api_key", Jinx.getInstance().getApiKey());
 
-	Document doc = Jinx.getInstance().callFlickr(params, true);
-	
-	Frob frob = new Frob();
-	
-	frob.setFrob(JinxUtils.getValueByXPath(doc, "/rsp/frob"));
+        Document doc = Jinx.getInstance().callFlickr(params, true);
 
-	// build the login URL
-	// looks like this:
-	// http://flickr.com/services/auth/?api_key=apikey&api_sig=apisig&perms=perms&frob=frob
+        Frob frob = new Frob();
 
-	params.clear();
-	params.put("api_key", Jinx.getInstance().getApiKey());
-	params.put("perms", perms.toString());
-	params.put("frob", frob.getFrob());
+        frob.setFrob(JinxUtils.getValueByXPath(doc, "/rsp/frob"));
 
-	String apiSig = Jinx.getInstance().sign(params);
+        // build the login URL
+        // looks like this:
+        // http://flickr.com/services/auth/?api_key=apikey&api_sig=apisig&perms=perms&frob=frob
 
-	StringBuilder sb = new StringBuilder(JinxConstants.AUTH_ENDPOINT);
-	sb.append('?');
-	for (String key : params.keySet()) {
-	    sb.append(key).append('=').append(params.get(key)).append('&');
-	}
+        params.clear();
+        params.put("api_key", Jinx.getInstance().getApiKey());
+        params.put("perms", perms.toString());
+        params.put("frob", frob.getFrob());
 
-	sb.append("api_sig=").append(apiSig);
-	frob.setLoginUrl(sb.toString());
-	
-	return frob;
+        String apiSig = Jinx.getInstance().sign(params);
+
+        StringBuilder sb = new StringBuilder(JinxConstants.AUTH_ENDPOINT);
+        sb.append('?');
+        for (String key : params.keySet()) {
+            sb.append(key).append('=').append(params.get(key)).append('&');
+        }
+
+        sb.append("api_sig=").append(apiSig);
+        frob.setLoginUrl(sb.toString());
+
+        return frob;
     }
 
 
@@ -112,17 +113,17 @@ public class AuthApi {
      * @throws JinxException if there are any errors.
      */
     public Token getToken(Frob frob) throws JinxException {
-	Map<String, String> params = new TreeMap<String, String>();
-	params.put("method", "flickr.auth.getToken");
-	params.put("api_key", Jinx.getInstance().getApiKey());
-	params.put("frob", frob.getFrob());
-	
-	Document doc = Jinx.getInstance().callFlickr(params, true);
+        Map<String, String> params = new TreeMap<String, String>();
+        params.put("method", "flickr.auth.getToken");
+        params.put("api_key", Jinx.getInstance().getApiKey());
+        params.put("frob", frob.getFrob());
 
-	Token token = new Token();
-	this.parseToken(doc, token);
+        Document doc = Jinx.getInstance().callFlickr(params, true);
 
-	return token;
+        Token token = new Token();
+        this.parseToken(doc, token);
+
+        return token;
     }
 
 
@@ -133,14 +134,14 @@ public class AuthApi {
      * @throws JinxException if there are any errors.
      */
     public void checkToken(Token token) throws JinxException {
-	Map<String, String> params = new TreeMap<String, String>();
-	params.put("method", "flickr.auth.checkToken");
-	params.put("api_key", Jinx.getInstance().getApiKey());
-	params.put("auth_token", token.getToken());
+        Map<String, String> params = new TreeMap<String, String>();
+        params.put("method", "flickr.auth.checkToken");
+        params.put("api_key", Jinx.getInstance().getApiKey());
+        params.put("auth_token", token.getToken());
 
-	Document doc = Jinx.getInstance().callFlickr(params, true);
+        Document doc = Jinx.getInstance().callFlickr(params, true);
 
-	this.parseToken(doc, token);
+        this.parseToken(doc, token);
     }
 
 
@@ -152,43 +153,41 @@ public class AuthApi {
      * @throws JinxException if there are any errors.
      */
     public Token getFullToken(String miniToken) throws JinxException {
-	Map<String, String> params = new TreeMap<String, String>();
-	params.put("method", "flickr.auth.getFullToken");
-	params.put("api_key", Jinx.getInstance().getApiKey());
-	params.put("mini_token", miniToken);
+        Map<String, String> params = new TreeMap<String, String>();
+        params.put("method", "flickr.auth.getFullToken");
+        params.put("api_key", Jinx.getInstance().getApiKey());
+        params.put("mini_token", miniToken);
 
-	Document doc = Jinx.getInstance().callFlickr(params, true);
+        Document doc = Jinx.getInstance().callFlickr(params, true);
 
-	Token token = new Token();
-	this.parseToken(doc, token);
+        Token token = new Token();
+        this.parseToken(doc, token);
 
-	return token;
+        return token;
     }
 
 
     /**
      * Parse the auth XML element and update the token object.
-     *
+     * <p/>
      * Auth xml document looks like this:
-     *
+     * <p/>
      * <rsp stat=\"ok\">
-     * 	    <auth>
-     *		<token>976598454353455</token>
-     * 		<perms>write</perms>
-     * 		<user nsid="12037949754@N01" username="Bees" fullname="Cal H" />
-     * 	    </auth>
+     * <auth>
+     * <token>976598454353455</token>
+     * <perms>write</perms>
+     * <user nsid="12037949754@N01" username="Bees" fullname="Cal H" />
+     * </auth>
      * </rsp>
      *
-     * @param authXml the XML document containing the auth element.
-     * @param t the token object to update with contents of the XML document.
      * @throws JinxException if there are any errors.
      */
     private void parseToken(Document doc, Token token) throws JinxException {
-	token.setToken(JinxUtils.getValueByXPath(doc, "/rsp/auth/token"));
-	token.setPerms(JinxUtils.getValueByXPath(doc, "/rsp/auth/perms"));
-	token.setNsid(JinxUtils.getValueByXPath(doc, "/rsp/auth/user/@nsid"));
-	token.setUsername(JinxUtils.getValueByXPath(doc, "/rsp/auth/user/@username"));
-	token.setFullname(JinxUtils.getValueByXPath(doc, "/rsp/auth/user/@fullname"));
+        token.setToken(JinxUtils.getValueByXPath(doc, "/rsp/auth/token"));
+        token.setPerms(JinxUtils.getValueByXPath(doc, "/rsp/auth/perms"));
+        token.setNsid(JinxUtils.getValueByXPath(doc, "/rsp/auth/user/@nsid"));
+        token.setUsername(JinxUtils.getValueByXPath(doc, "/rsp/auth/user/@username"));
+        token.setFullname(JinxUtils.getValueByXPath(doc, "/rsp/auth/user/@fullname"));
     }
 
 }

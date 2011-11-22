@@ -19,7 +19,6 @@
 package net.jeremybrooks.jinx.dto;
 
 /**
- *
  * @author jeremyb
  */
 public class Throttle {
@@ -32,7 +31,7 @@ public class Throttle {
      * @return the count
      */
     public int getCount() {
-	return count;
+        return count;
     }
 
 
@@ -40,7 +39,7 @@ public class Throttle {
      * @param count the count to set
      */
     public void setCount(int count) {
-	this.count = count;
+        this.count = count;
     }
 
 
@@ -48,7 +47,7 @@ public class Throttle {
      * @return the mode
      */
     public String getMode() {
-	return mode;
+        return mode;
     }
 
 
@@ -56,7 +55,7 @@ public class Throttle {
      * @param mode the mode to set
      */
     public void setMode(String mode) {
-	this.mode = mode;
+        this.mode = mode;
     }
 
 
@@ -64,7 +63,7 @@ public class Throttle {
      * @return the remaining
      */
     public int getRemaining() {
-	return remaining;
+        return remaining;
     }
 
 
@@ -72,19 +71,19 @@ public class Throttle {
      * @param remaining the remaining to set
      */
     public void setRemaining(int remaining) {
-	this.remaining = remaining;
+        this.remaining = remaining;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("count=").append(this.getCount()).append(" | ");
-	sb.append("mode=").append(this.getMode()).append(" | ");
-	sb.append("remaining=").append(this.getRemaining());
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" [ ");
+        sb.append("count=").append(this.getCount()).append(" | ");
+        sb.append("mode=").append(this.getMode()).append(" | ");
+        sb.append("remaining=").append(this.getRemaining());
+        sb.append(" ]");
+        return sb.toString();
     }
 }

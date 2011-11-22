@@ -23,8 +23,8 @@ import java.util.List;
 
 /**
  * NOTE: This class name may be changed in the future if other API's can use
- *       it.
- * 
+ * it.
+ *
  * @author jeremyb
  */
 public class ActivityItems implements Serializable {
@@ -35,13 +35,12 @@ public class ActivityItems implements Serializable {
 
     private List<ActivityItem> itemList;
 
-   
 
     /**
      * @return the page
      */
     public int getPage() {
-	return page;
+        return page;
     }
 
 
@@ -49,7 +48,7 @@ public class ActivityItems implements Serializable {
      * @param page the page to set
      */
     public void setPage(int page) {
-	this.page = page;
+        this.page = page;
     }
 
 
@@ -57,7 +56,7 @@ public class ActivityItems implements Serializable {
      * @return the pages
      */
     public int getPages() {
-	return pages;
+        return pages;
     }
 
 
@@ -65,7 +64,7 @@ public class ActivityItems implements Serializable {
      * @param pages the pages to set
      */
     public void setPages(int pages) {
-	this.pages = pages;
+        this.pages = pages;
     }
 
 
@@ -73,7 +72,7 @@ public class ActivityItems implements Serializable {
      * @return the perPage
      */
     public int getPerPage() {
-	return perPage;
+        return perPage;
     }
 
 
@@ -81,7 +80,7 @@ public class ActivityItems implements Serializable {
      * @param perPage the perPage to set
      */
     public void setPerPage(int perPage) {
-	this.perPage = perPage;
+        this.perPage = perPage;
     }
 
 
@@ -89,7 +88,7 @@ public class ActivityItems implements Serializable {
      * @return the total
      */
     public int getTotal() {
-	return total;
+        return total;
     }
 
 
@@ -97,7 +96,7 @@ public class ActivityItems implements Serializable {
      * @param total the total to set
      */
     public void setTotal(int total) {
-	this.total = total;
+        this.total = total;
     }
 
 
@@ -105,7 +104,7 @@ public class ActivityItems implements Serializable {
      * @return the itemList
      */
     public List<ActivityItem> getItemList() {
-	return itemList;
+        return itemList;
     }
 
 
@@ -113,29 +112,28 @@ public class ActivityItems implements Serializable {
      * @param itemList the itemList to set
      */
     public void setItemList(List<ActivityItem> itemList) {
-	this.itemList = itemList;
+        this.itemList = itemList;
     }
 
 
-    
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
-	sb.append(":[ ");
-	sb.append("page=").append(this.page).append(" | ");
-	sb.append("pages=").append(this.pages).append(" | ");
-	sb.append("perPage=").append(this.perPage).append(" | ");
-	sb.append("total=").append(this.total).append(" | ");
-	sb.append("itemList=");
-	if (this.itemList == null) {
-	    sb.append("null");
-	} else {
-	    for (ActivityItem item : this.itemList) {
-		sb.append("<");
-		sb.append(item.toString()).append(">");
-	    }
-	}
-	sb.append(" ]");
-	return sb.toString();
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
+        sb.append(":[ ");
+        sb.append("page=").append(this.page).append(" | ");
+        sb.append("pages=").append(this.pages).append(" | ");
+        sb.append("perPage=").append(this.perPage).append(" | ");
+        sb.append("total=").append(this.total).append(" | ");
+        sb.append("itemList=");
+        if (this.itemList == null) {
+            sb.append("null");
+        } else {
+            for (ActivityItem item : this.itemList) {
+                sb.append("<");
+                sb.append(item.toString()).append(">");
+            }
+        }
+        sb.append(" ]");
+        return sb.toString();
     }
 }

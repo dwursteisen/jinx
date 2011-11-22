@@ -19,7 +19,6 @@
 package net.jeremybrooks.jinx.dto;
 
 /**
- *
  * @author jeremyb
  */
 public class Restrictions {
@@ -39,7 +38,7 @@ public class Restrictions {
      * @return the photosOk
      */
     public boolean isPhotosOk() {
-	return photosOk;
+        return photosOk;
     }
 
 
@@ -47,7 +46,7 @@ public class Restrictions {
      * @param photosOk the photosOk to set
      */
     public void setPhotosOk(boolean photosOk) {
-	this.photosOk = photosOk;
+        this.photosOk = photosOk;
     }
 
 
@@ -55,7 +54,7 @@ public class Restrictions {
      * @return the videosOk
      */
     public boolean isVideosOk() {
-	return videosOk;
+        return videosOk;
     }
 
 
@@ -63,7 +62,7 @@ public class Restrictions {
      * @param videosOk the videosOk to set
      */
     public void setVideosOk(boolean videosOk) {
-	this.videosOk = videosOk;
+        this.videosOk = videosOk;
     }
 
 
@@ -71,7 +70,7 @@ public class Restrictions {
      * @return the imagesOk
      */
     public boolean isImagesOk() {
-	return imagesOk;
+        return imagesOk;
     }
 
 
@@ -79,14 +78,14 @@ public class Restrictions {
      * @param imagesOk the imagesOk to set
      */
     public void setImagesOk(boolean imagesOk) {
-	this.imagesOk = imagesOk;
+        this.imagesOk = imagesOk;
     }
 
     /**
      * @return the screensOk
      */
     public boolean isScreensOk() {
-	return screensOk;
+        return screensOk;
     }
 
 
@@ -94,14 +93,14 @@ public class Restrictions {
      * @param screensOk the screensOk to set
      */
     public void setScreensOk(boolean screensOk) {
-	this.screensOk = screensOk;
+        this.screensOk = screensOk;
     }
 
     /**
      * @return the artOk
      */
     public boolean isArtOk() {
-	return artOk;
+        return artOk;
     }
 
 
@@ -109,7 +108,7 @@ public class Restrictions {
      * @param artOk the artOk to set
      */
     public void setArtOk(boolean artOk) {
-	this.artOk = artOk;
+        this.artOk = artOk;
     }
 
 
@@ -117,7 +116,7 @@ public class Restrictions {
      * @return the safeOk
      */
     public boolean isSafeOk() {
-	return safeOk;
+        return safeOk;
     }
 
 
@@ -125,7 +124,7 @@ public class Restrictions {
      * @param safeOk the safeOk to set
      */
     public void setSafeOk(boolean safeOk) {
-	this.safeOk = safeOk;
+        this.safeOk = safeOk;
     }
 
 
@@ -133,7 +132,7 @@ public class Restrictions {
      * @return the moderateOk
      */
     public boolean isModerateOk() {
-	return moderateOk;
+        return moderateOk;
     }
 
 
@@ -141,7 +140,7 @@ public class Restrictions {
      * @param moderateOk the moderateOk to set
      */
     public void setModerateOk(boolean moderateOk) {
-	this.moderateOk = moderateOk;
+        this.moderateOk = moderateOk;
     }
 
 
@@ -149,7 +148,7 @@ public class Restrictions {
      * @return the restrictedOk
      */
     public boolean isRestrictedOk() {
-	return restrictedOk;
+        return restrictedOk;
     }
 
 
@@ -157,7 +156,7 @@ public class Restrictions {
      * @param restrictedOk the restrictedOk to set
      */
     public void setRestrictedOk(boolean restrictedOk) {
-	this.restrictedOk = restrictedOk;
+        this.restrictedOk = restrictedOk;
     }
 
 
@@ -165,7 +164,7 @@ public class Restrictions {
      * @return the hasGeo
      */
     public boolean isHasGeo() {
-	return hasGeo;
+        return hasGeo;
     }
 
 
@@ -173,30 +172,28 @@ public class Restrictions {
      * @param hasGeo the hasGeo to set
      */
     public void setHasGeo(boolean hasGeo) {
-	this.hasGeo = hasGeo;
+        this.hasGeo = hasGeo;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("photosOk=").append(this.isPhotosOk()).append(" | ");
-	sb.append("videosOk=").append(this.isVideosOk()).append(" | ");
-	sb.append("imagesOk=").append(this.isImagesOk()).append(" | ");
-	sb.append("screensOk=").append(this.isScreensOk()).append(" | ");
-	sb.append("artOk=").append(this.isArtOk()).append(" | ");
-	sb.append("safeOk=").append(this.isSafeOk()).append(" | ");
-	sb.append("moderatedOk=").append(this.isModerateOk()).append(" | ");
-	sb.append("restrictedOk=").append(this.isRestrictedOk()).append(" | ");
-	sb.append("hasGeo=").append(this.isHasGeo());
+        sb.append(" [ ");
+        sb.append("photosOk=").append(this.isPhotosOk()).append(" | ");
+        sb.append("videosOk=").append(this.isVideosOk()).append(" | ");
+        sb.append("imagesOk=").append(this.isImagesOk()).append(" | ");
+        sb.append("screensOk=").append(this.isScreensOk()).append(" | ");
+        sb.append("artOk=").append(this.isArtOk()).append(" | ");
+        sb.append("safeOk=").append(this.isSafeOk()).append(" | ");
+        sb.append("moderatedOk=").append(this.isModerateOk()).append(" | ");
+        sb.append("restrictedOk=").append(this.isRestrictedOk()).append(" | ");
+        sb.append("hasGeo=").append(this.isHasGeo());
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 
 
-    
-    
 }

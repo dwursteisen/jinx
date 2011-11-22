@@ -22,7 +22,7 @@ import java.io.Serializable;
 
 /**
  * Information about a photo pool.
- * 
+ *
  * @author jeremyb
  */
 public class Pool implements Serializable {
@@ -35,7 +35,7 @@ public class Pool implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -43,7 +43,7 @@ public class Pool implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -51,7 +51,7 @@ public class Pool implements Serializable {
      * @return the title
      */
     public String getTitle() {
-	return title;
+        return title;
     }
 
 
@@ -59,20 +59,20 @@ public class Pool implements Serializable {
      * @param title the title to set
      */
     public void setTitle(String title) {
-	this.title = title;
+        this.title = title;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Pool [ ");
+        StringBuilder sb = new StringBuilder("Pool [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("title=").append(this.title);
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("title=").append(this.title);
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 
 }

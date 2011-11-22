@@ -24,7 +24,7 @@ import java.util.List;
 
 /**
  * This class represents an element returned by the Flickr Commons API.
- * 
+ *
  * @author jeremyb
  */
 public class Institution implements Serializable {
@@ -39,7 +39,7 @@ public class Institution implements Serializable {
      * @return the nsid
      */
     public String getNsid() {
-	return nsid;
+        return nsid;
     }
 
 
@@ -47,7 +47,7 @@ public class Institution implements Serializable {
      * @param nsid the nsid to set
      */
     public void setNsid(String nsid) {
-	this.nsid = nsid;
+        this.nsid = nsid;
     }
 
 
@@ -55,7 +55,7 @@ public class Institution implements Serializable {
      * @return the dateLaunch
      */
     public Date getDateLaunch() {
-	return dateLaunch;
+        return dateLaunch;
     }
 
 
@@ -63,7 +63,7 @@ public class Institution implements Serializable {
      * @param dateLaunch the dateLaunch to set
      */
     public void setDateLaunch(Date dateLaunch) {
-	this.dateLaunch = dateLaunch;
+        this.dateLaunch = dateLaunch;
     }
 
 
@@ -71,7 +71,7 @@ public class Institution implements Serializable {
      * @return the name
      */
     public String getName() {
-	return name;
+        return name;
     }
 
 
@@ -79,7 +79,7 @@ public class Institution implements Serializable {
      * @param name the name to set
      */
     public void setName(String name) {
-	this.name = name;
+        this.name = name;
     }
 
 
@@ -87,7 +87,7 @@ public class Institution implements Serializable {
      * @return the urlList
      */
     public List<Url> getUrlList() {
-	return urlList;
+        return urlList;
     }
 
 
@@ -95,28 +95,27 @@ public class Institution implements Serializable {
      * @param urlList the urlList to set
      */
     public void setUrlList(List<Url> urlList) {
-	this.urlList = urlList;
+        this.urlList = urlList;
     }
 
 
-    
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
-	sb.append("[ ");
-	sb.append("nsid=").append(this.nsid).append(" | ");
-	sb.append("dateLaunch=").append(this.dateLaunch).append(" | ");
-	sb.append("name=").append(this.name).append(" | ");
-	sb.append("urlList=");
-	if (this.urlList == null) {
-	    sb.append("null");
-	} else {
-	    for (Url url : this.urlList) {
-		sb.append("<");
-		sb.append(url.toString()).append(">");
-	    }
-	}
-	sb.append(" ]");
-	return sb.toString();
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
+        sb.append("[ ");
+        sb.append("nsid=").append(this.nsid).append(" | ");
+        sb.append("dateLaunch=").append(this.dateLaunch).append(" | ");
+        sb.append("name=").append(this.name).append(" | ");
+        sb.append("urlList=");
+        if (this.urlList == null) {
+            sb.append("null");
+        } else {
+            for (Url url : this.urlList) {
+                sb.append("<");
+                sb.append(url.toString()).append(">");
+            }
+        }
+        sb.append(" ]");
+        return sb.toString();
     }
 }

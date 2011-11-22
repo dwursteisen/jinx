@@ -23,11 +23,11 @@ import java.util.List;
 
 /**
  * This class is returned by many of the API methods.
- *
+ * <p/>
  * Instances of this class are returned by many of the API methods. This class
  * represents a "page" of images in a given result set. The number of Photo
  * objects in the list will be less than or equal to the value of perPage.
- *
+ * <p/>
  * Some fields may or may not be set, depending on how the photos were returend.
  * For example, getting photos via PhotosetsApi.getPhotos will cause the
  * photosetId field to be populated, while getting photos via PhotosApi.search
@@ -36,7 +36,6 @@ import java.util.List;
  * @author jeremyb
  */
 public class Photos implements Serializable {
-
 
 
     private String photosetId;
@@ -58,7 +57,7 @@ public class Photos implements Serializable {
      * @return the page
      */
     public int getPage() {
-	return page;
+        return page;
     }
 
 
@@ -66,14 +65,14 @@ public class Photos implements Serializable {
      * @param page the page to set
      */
     public void setPage(int page) {
-	this.page = page;
+        this.page = page;
     }
 
     /**
      * @return the pages
      */
     public int getPages() {
-	return pages;
+        return pages;
     }
 
 
@@ -81,14 +80,14 @@ public class Photos implements Serializable {
      * @param pages the pages to set
      */
     public void setPages(int pages) {
-	this.pages = pages;
+        this.pages = pages;
     }
 
     /**
      * @return the perPage
      */
     public int getPerPage() {
-	return perPage;
+        return perPage;
     }
 
 
@@ -96,7 +95,7 @@ public class Photos implements Serializable {
      * @param perPage the perPage to set
      */
     public void setPerPage(int perPage) {
-	this.perPage = perPage;
+        this.perPage = perPage;
     }
 
 
@@ -104,7 +103,7 @@ public class Photos implements Serializable {
      * @return the total
      */
     public int getTotal() {
-	return total;
+        return total;
     }
 
 
@@ -112,7 +111,7 @@ public class Photos implements Serializable {
      * @param total the total to set
      */
     public void setTotal(int total) {
-	this.total = total;
+        this.total = total;
     }
 
 
@@ -120,7 +119,7 @@ public class Photos implements Serializable {
      * @return the photos
      */
     public List<Photo> getPhotos() {
-	return photos;
+        return photos;
     }
 
 
@@ -128,7 +127,7 @@ public class Photos implements Serializable {
      * @param photos the photos to set
      */
     public void setPhotos(List<Photo> photos) {
-	this.photos = photos;
+        this.photos = photos;
     }
 
 
@@ -136,7 +135,7 @@ public class Photos implements Serializable {
      * @return the photosetId
      */
     public String getPhotosetId() {
-	return photosetId;
+        return photosetId;
     }
 
 
@@ -144,7 +143,7 @@ public class Photos implements Serializable {
      * @param photosetId the photosetId to set
      */
     public void setPhotosetId(String photosetId) {
-	this.photosetId = photosetId;
+        this.photosetId = photosetId;
     }
 
 
@@ -152,7 +151,7 @@ public class Photos implements Serializable {
      * @return the primaryPhotoId
      */
     public String getPrimaryPhotoId() {
-	return primaryPhotoId;
+        return primaryPhotoId;
     }
 
 
@@ -160,7 +159,7 @@ public class Photos implements Serializable {
      * @param primaryPhotoId the primaryPhotoId to set
      */
     public void setPrimaryPhotoId(String primaryPhotoId) {
-	this.primaryPhotoId = primaryPhotoId;
+        this.primaryPhotoId = primaryPhotoId;
     }
 
 
@@ -168,7 +167,7 @@ public class Photos implements Serializable {
      * @return the owner
      */
     public String getOwner() {
-	return owner;
+        return owner;
     }
 
 
@@ -176,7 +175,7 @@ public class Photos implements Serializable {
      * @param owner the owner to set
      */
     public void setOwner(String owner) {
-	this.owner = owner;
+        this.owner = owner;
     }
 
 
@@ -184,7 +183,7 @@ public class Photos implements Serializable {
      * @return the ownerName
      */
     public String getOwnerName() {
-	return ownerName;
+        return ownerName;
     }
 
 
@@ -192,33 +191,33 @@ public class Photos implements Serializable {
      * @param ownerName the ownerName to set
      */
     public void setOwnerName(String ownerName) {
-	this.ownerName = ownerName;
+        this.ownerName = ownerName;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Photos [ ");
+        StringBuilder sb = new StringBuilder("Photos [ ");
 
-	sb.append("photosetId=").append(this.photosetId).append(" | ");
-	sb.append("primaryPhotoId=").append(this.primaryPhotoId).append(" | ");
-	sb.append("owner=").append(this.owner).append(" | ");
-	sb.append("ownerName=").append(this.ownerName).append(" | ");
-	sb.append("page=").append(this.page).append(" | ");
-	sb.append("pages=").append(this.pages).append(" | ");
-	sb.append("perPage=").append(this.perPage).append(" | ");
-	sb.append("total=").append(this.total).append(" | ");
-	sb.append("hasNextPage=").append(this.hasNextPage).append(" | ");
+        sb.append("photosetId=").append(this.photosetId).append(" | ");
+        sb.append("primaryPhotoId=").append(this.primaryPhotoId).append(" | ");
+        sb.append("owner=").append(this.owner).append(" | ");
+        sb.append("ownerName=").append(this.ownerName).append(" | ");
+        sb.append("page=").append(this.page).append(" | ");
+        sb.append("pages=").append(this.pages).append(" | ");
+        sb.append("perPage=").append(this.perPage).append(" | ");
+        sb.append("total=").append(this.total).append(" | ");
+        sb.append("hasNextPage=").append(this.hasNextPage).append(" | ");
 
-	if (this.photos == null) {
-	    sb.append("photos=null");
-	} else {
-	    sb.append("photos=").append(this.photos.size()).append(" elements");
-	}
+        if (this.photos == null) {
+            sb.append("photos=null");
+        } else {
+            sb.append("photos=").append(this.photos.size()).append(" elements");
+        }
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 
 
@@ -227,11 +226,11 @@ public class Photos implements Serializable {
      * information. Check the Flickr API documentation to determine if
      * this value can be used. Most of the time, you should use the total and pages
      * values instead of this flag.
-     * 
+     *
      * @return the hasNextPage
      */
     public boolean isHasNextPage() {
-	return hasNextPage;
+        return hasNextPage;
     }
 
 
@@ -239,7 +238,7 @@ public class Photos implements Serializable {
      * @param hasNextPage the hasNextPage to set
      */
     public void setHasNextPage(boolean hasNextPage) {
-	this.hasNextPage = hasNextPage;
+        this.hasNextPage = hasNextPage;
     }
 
 }

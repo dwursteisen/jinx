@@ -20,7 +20,6 @@ package net.jeremybrooks.jinx;
 
 
 /**
- *
  * @author jeremyb
  */
 public class JinxException extends java.lang.Exception {
@@ -37,32 +36,34 @@ public class JinxException extends java.lang.Exception {
 
     /**
      * Constructs an instance of <code>JinxException</code> with the specified detail message.
+     *
      * @param msg the detail message.
      */
     public JinxException(String msg) {
-	super(msg);
+        super(msg);
     }
 
 
     /**
      * Constructs an instance of <code>JinxException</code> with the specified detail message.
+     *
      * @param msg the detail message.
      */
     public JinxException(String msg, Throwable cause) {
-	super(msg, cause);
+        super(msg, cause);
     }
 
     public JinxException(String msg, Throwable cause, int errorCode, String errorMessage) {
-	super(msg, cause);
-	this.errorCode = errorCode;
-	this.errorMessage = errorMessage;
+        super(msg, cause);
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
     }
 
     /**
      * @return the errorCode
      */
     public int getErrorCode() {
-	return errorCode;
+        return errorCode;
     }
 
 
@@ -70,7 +71,7 @@ public class JinxException extends java.lang.Exception {
      * @param errorCode the errorCode to set
      */
     public void setErrorCode(int errorCode) {
-	this.errorCode = errorCode;
+        this.errorCode = errorCode;
     }
 
 
@@ -78,7 +79,7 @@ public class JinxException extends java.lang.Exception {
      * @return the errorMessage
      */
     public String getErrorMessage() {
-	return errorMessage;
+        return errorMessage;
     }
 
 
@@ -86,7 +87,7 @@ public class JinxException extends java.lang.Exception {
      * @param errorMessage the errorMessage to set
      */
     public void setErrorMessage(String errorMessage) {
-	this.errorMessage = errorMessage;
+        this.errorMessage = errorMessage;
     }
 
 }

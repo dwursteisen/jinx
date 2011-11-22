@@ -57,14 +57,11 @@ public class PhotoInfo extends PhotoBase implements Serializable {
     private List<Url> urlList;
 
 
-    
-
-
     /**
      * @return the isFavorite
      */
     public boolean isIsFavorite() {
-	return isFavorite;
+        return isFavorite;
     }
 
 
@@ -72,7 +69,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param isFavorite the isFavorite to set
      */
     public void setIsFavorite(boolean isFavorite) {
-	this.isFavorite = isFavorite;
+        this.isFavorite = isFavorite;
     }
 
 
@@ -80,7 +77,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the rotation
      */
     public int getRotation() {
-	return rotation;
+        return rotation;
     }
 
 
@@ -88,18 +85,15 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param rotation the rotation to set
      */
     public void setRotation(int rotation) {
-	this.rotation = rotation;
+        this.rotation = rotation;
     }
-
-
-   
 
 
     /**
      * @return the ownerRealname
      */
     public String getOwnerRealname() {
-	return ownerRealname;
+        return ownerRealname;
     }
 
 
@@ -107,7 +101,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param ownerRealname the ownerRealname to set
      */
     public void setOwnerRealname(String ownerRealname) {
-	this.ownerRealname = ownerRealname;
+        this.ownerRealname = ownerRealname;
     }
 
 
@@ -115,7 +109,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the ownerLocation
      */
     public String getOwnerLocation() {
-	return ownerLocation;
+        return ownerLocation;
     }
 
 
@@ -123,20 +117,15 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param ownerLocation the ownerLocation to set
      */
     public void setOwnerLocation(String ownerLocation) {
-	this.ownerLocation = ownerLocation;
+        this.ownerLocation = ownerLocation;
     }
-
-
-    
-
-    
 
 
     /**
      * @return the datePosted
      */
     public Date getDatePosted() {
-	return datePosted;
+        return datePosted;
     }
 
 
@@ -144,18 +133,15 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param datePosted the datePosted to set
      */
     public void setDatePosted(Date datePosted) {
-	this.datePosted = datePosted;
+        this.datePosted = datePosted;
     }
-
-
-    
 
 
     /**
      * @return the permComment
      */
     public String getPermComment() {
-	return permComment;
+        return permComment;
     }
 
 
@@ -163,7 +149,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param permComment the permComment to set
      */
     public void setPermComment(String permComment) {
-	this.permComment = permComment;
+        this.permComment = permComment;
     }
 
 
@@ -171,7 +157,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the permAddMeta
      */
     public String getPermAddMeta() {
-	return permAddMeta;
+        return permAddMeta;
     }
 
 
@@ -179,7 +165,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param permAddMeta the permAddMeta to set
      */
     public void setPermAddMeta(String permAddMeta) {
-	this.permAddMeta = permAddMeta;
+        this.permAddMeta = permAddMeta;
     }
 
 
@@ -187,7 +173,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the canComment
      */
     public boolean isCanComment() {
-	return canComment;
+        return canComment;
     }
 
 
@@ -195,7 +181,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param canComment the canComment to set
      */
     public void setCanComment(boolean canComment) {
-	this.canComment = canComment;
+        this.canComment = canComment;
     }
 
 
@@ -203,7 +189,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the canAddMeta
      */
     public boolean isCanAddMeta() {
-	return canAddMeta;
+        return canAddMeta;
     }
 
 
@@ -211,7 +197,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param canAddMeta the canAddMeta to set
      */
     public void setCanAddMeta(boolean canAddMeta) {
-	this.canAddMeta = canAddMeta;
+        this.canAddMeta = canAddMeta;
     }
 
 
@@ -219,7 +205,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the canDownload
      */
     public boolean isCanDownload() {
-	return canDownload;
+        return canDownload;
     }
 
 
@@ -227,7 +213,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param canDownload the canDownload to set
      */
     public void setCanDownload(boolean canDownload) {
-	this.canDownload = canDownload;
+        this.canDownload = canDownload;
     }
 
 
@@ -235,7 +221,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the canBlog
      */
     public boolean isCanBlog() {
-	return canBlog;
+        return canBlog;
     }
 
 
@@ -243,7 +229,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param canBlog the canBlog to set
      */
     public void setCanBlog(boolean canBlog) {
-	this.canBlog = canBlog;
+        this.canBlog = canBlog;
     }
 
 
@@ -251,7 +237,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the canPrint
      */
     public boolean isCanPrint() {
-	return canPrint;
+        return canPrint;
     }
 
 
@@ -259,7 +245,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param canPrint the canPrint to set
      */
     public void setCanPrint(boolean canPrint) {
-	this.canPrint = canPrint;
+        this.canPrint = canPrint;
     }
 
 
@@ -267,7 +253,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the canShare
      */
     public boolean isCanShare() {
-	return canShare;
+        return canShare;
     }
 
 
@@ -275,7 +261,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param canShare the canShare to set
      */
     public void setCanShare(boolean canShare) {
-	this.canShare = canShare;
+        this.canShare = canShare;
     }
 
 
@@ -283,7 +269,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the comments
      */
     public int getComments() {
-	return comments;
+        return comments;
     }
 
 
@@ -291,7 +277,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param comments the comments to set
      */
     public void setComments(int comments) {
-	this.comments = comments;
+        this.comments = comments;
     }
 
 
@@ -299,7 +285,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the noteList
      */
     public List<Note> getNoteList() {
-	return noteList;
+        return noteList;
     }
 
 
@@ -307,7 +293,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param noteList the noteList to set
      */
     public void setNoteList(List<Note> noteList) {
-	this.noteList = noteList;
+        this.noteList = noteList;
     }
 
 
@@ -315,7 +301,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the tagList
      */
     public List<Tag> getTagList() {
-	return tagList;
+        return tagList;
     }
 
 
@@ -323,7 +309,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param tagList the tagList to set
      */
     public void setTagList(List<Tag> tagList) {
-	this.tagList = tagList;
+        this.tagList = tagList;
     }
 
 
@@ -331,7 +317,7 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @return the urlList
      */
     public List<Url> getUrlList() {
-	return urlList;
+        return urlList;
     }
 
 
@@ -339,66 +325,66 @@ public class PhotoInfo extends PhotoBase implements Serializable {
      * @param urlList the urlList to set
      */
     public void setUrlList(List<Url> urlList) {
-	this.urlList = urlList;
+        this.urlList = urlList;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("PhotoInfo [ ");
+        StringBuilder sb = new StringBuilder("PhotoInfo [ ");
 
-	sb.append("id=").append(super.getId()).append(" | ");
-	sb.append("secret=").append(super.getSecret()).append(" | ");
-	sb.append("server=").append(super.getServer()).append(" | ");
-	sb.append("farm=").append(super.getFarm()).append(" | ");
-	sb.append("dateUploaded=").append(super.getDateUploaded()).append(" | ");
-	sb.append("isFavorite=").append(this.isFavorite).append(" | ");
-	sb.append("license=").append(super.getLicense()).append(" | ");
-	sb.append("rotation=").append(this.rotation).append(" | ");
-	sb.append("originalSecret=").append(super.getOriginalSecret()).append(" | ");
-	sb.append("originalFormat=").append(super.getOriginalFormat()).append(" | ");
-	sb.append("views=").append(super.getViews()).append(" | ");
-	sb.append("media=").append(super.getMedia()).append(" | ");
-	sb.append("ownerNsid=").append(super.getOwnerNsid()).append(" | ");
-	sb.append("ownerUsername=").append(super.getOwnerUsername()).append(" | ");
-	sb.append("ownerRealname=").append(this.ownerRealname).append(" | ");
-	sb.append("ownerLocation=").append(this.ownerLocation).append(" | ");
-	sb.append("title=").append(super.getTitle()).append(" | ");
-	sb.append("description=").append(super.getDescription()).append(" | ");
-	sb.append("isPublic=").append(super.isIsPublic()).append(" | ");
-	sb.append("isFriend=").append(super.isIsFriend()).append(" | ");
-	sb.append("isFamily=").append(super.isIsFamily()).append(" | ");
-	sb.append("datePosted=").append(this.datePosted).append(" | ");
-	sb.append("dateTaken=").append(super.getDateTaken()).append(" | ");
-	sb.append("dateTakenGranularity=").append(super.getDateTakenGranularity()).append(" | ");
-	sb.append("dateLastUpdate=").append(super.getDateLastUpdate()).append(" | ");
-	sb.append("permComment=").append(this.permComment).append(" | ");
-	sb.append("permAddMeta=").append(this.permAddMeta).append(" | ");
-	sb.append("canComment=").append(this.canComment).append(" | ");
-	sb.append("canAddMeta=").append(this.canAddMeta).append(" | ");
-	sb.append("canDownload=").append(this.canDownload).append(" | ");
-	sb.append("canBlog=").append(this.canBlog).append(" | ");
-	sb.append("canPrint=").append(this.canPrint).append(" | ");
-	sb.append("canShare=").append(this.canShare).append(" | ");
-	sb.append("comments=").append(this.comments).append(" | ");
-	if (this.noteList == null) {
-	    sb.append("noteList=null");
-	} else {
-	    sb.append("noteList=").append(this.noteList.size()).append(" items | ");
-	}
-	if (this.tagList == null) {
-	    sb.append("tagList=null");
-	} else {
-	    sb.append("tagList=").append(this.tagList.size()).append(" items | ");
-	}
-	if (this.urlList == null) {
-	    sb.append("urlList=null");
-	} else {
-	    sb.append("urlList=").append(this.urlList.size()).append(" items");
-	}
+        sb.append("id=").append(super.getId()).append(" | ");
+        sb.append("secret=").append(super.getSecret()).append(" | ");
+        sb.append("server=").append(super.getServer()).append(" | ");
+        sb.append("farm=").append(super.getFarm()).append(" | ");
+        sb.append("dateUploaded=").append(super.getDateUploaded()).append(" | ");
+        sb.append("isFavorite=").append(this.isFavorite).append(" | ");
+        sb.append("license=").append(super.getLicense()).append(" | ");
+        sb.append("rotation=").append(this.rotation).append(" | ");
+        sb.append("originalSecret=").append(super.getOriginalSecret()).append(" | ");
+        sb.append("originalFormat=").append(super.getOriginalFormat()).append(" | ");
+        sb.append("views=").append(super.getViews()).append(" | ");
+        sb.append("media=").append(super.getMedia()).append(" | ");
+        sb.append("ownerNsid=").append(super.getOwnerNsid()).append(" | ");
+        sb.append("ownerUsername=").append(super.getOwnerUsername()).append(" | ");
+        sb.append("ownerRealname=").append(this.ownerRealname).append(" | ");
+        sb.append("ownerLocation=").append(this.ownerLocation).append(" | ");
+        sb.append("title=").append(super.getTitle()).append(" | ");
+        sb.append("description=").append(super.getDescription()).append(" | ");
+        sb.append("isPublic=").append(super.isIsPublic()).append(" | ");
+        sb.append("isFriend=").append(super.isIsFriend()).append(" | ");
+        sb.append("isFamily=").append(super.isIsFamily()).append(" | ");
+        sb.append("datePosted=").append(this.datePosted).append(" | ");
+        sb.append("dateTaken=").append(super.getDateTaken()).append(" | ");
+        sb.append("dateTakenGranularity=").append(super.getDateTakenGranularity()).append(" | ");
+        sb.append("dateLastUpdate=").append(super.getDateLastUpdate()).append(" | ");
+        sb.append("permComment=").append(this.permComment).append(" | ");
+        sb.append("permAddMeta=").append(this.permAddMeta).append(" | ");
+        sb.append("canComment=").append(this.canComment).append(" | ");
+        sb.append("canAddMeta=").append(this.canAddMeta).append(" | ");
+        sb.append("canDownload=").append(this.canDownload).append(" | ");
+        sb.append("canBlog=").append(this.canBlog).append(" | ");
+        sb.append("canPrint=").append(this.canPrint).append(" | ");
+        sb.append("canShare=").append(this.canShare).append(" | ");
+        sb.append("comments=").append(this.comments).append(" | ");
+        if (this.noteList == null) {
+            sb.append("noteList=null");
+        } else {
+            sb.append("noteList=").append(this.noteList.size()).append(" items | ");
+        }
+        if (this.tagList == null) {
+            sb.append("tagList=null");
+        } else {
+            sb.append("tagList=").append(this.tagList.size()).append(" items | ");
+        }
+        if (this.urlList == null) {
+            sb.append("urlList=null");
+        } else {
+            sb.append("urlList=").append(this.urlList.size()).append(" items");
+        }
 
-	sb.append(" ]");
+        sb.append(" ]");
 
-	return sb.toString();
+        return sb.toString();
     }
 }

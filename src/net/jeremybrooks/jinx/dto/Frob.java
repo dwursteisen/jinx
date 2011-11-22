@@ -21,10 +21,9 @@ package net.jeremybrooks.jinx.dto;
 import java.io.Serializable;
 
 
-
 /**
  * The frob to be used during authentication.
- * 
+ *
  * @author jeremyb
  */
 public class Frob implements Serializable {
@@ -35,13 +34,13 @@ public class Frob implements Serializable {
 
     private String frob;
 
-    
+
     public void setLoginUrl(String loginUrl) {
-	this.loginUrl = loginUrl;
+        this.loginUrl = loginUrl;
     }
-    
+
     public String getLoginUrl() {
-	return this.loginUrl;
+        return this.loginUrl;
     }
 
 
@@ -49,7 +48,7 @@ public class Frob implements Serializable {
      * @return the perms
      */
     public String getPerms() {
-	return perms;
+        return perms;
     }
 
 
@@ -57,7 +56,7 @@ public class Frob implements Serializable {
      * @param perms the perms to set
      */
     public void setPerms(String perms) {
-	this.perms = perms;
+        this.perms = perms;
     }
 
 
@@ -65,7 +64,7 @@ public class Frob implements Serializable {
      * @return the frob
      */
     public String getFrob() {
-	return frob;
+        return frob;
     }
 
 
@@ -73,7 +72,7 @@ public class Frob implements Serializable {
      * @param frob the frob to set
      */
     public void setFrob(String frob) {
-	this.frob = frob;
+        this.frob = frob;
     }
 
 }

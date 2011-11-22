@@ -26,11 +26,11 @@ package net.jeremybrooks.jinx.logger;
 public class DefaultLogger implements LogInterface {
 
     public void log(String message) {
-	// Does nothing
+        // Does nothing
     }
 
     public void log(String message, Throwable exception) {
-	// Does nothing
+        // Does nothing
     }
 
 }

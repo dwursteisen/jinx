@@ -24,14 +24,14 @@ import java.util.List;
 
 /**
  * This class represents the data returned by the Contacts API.
- *
+ * <p/>
  * Some of the
  * fields may or may not be populated, depending on the method that was called.
  *
  * @author jeremyb
  */
 public class Contacts implements Serializable {
-    
+
     private int page;
     private int pages;
     private int perPage;
@@ -39,7 +39,7 @@ public class Contacts implements Serializable {
     private List<Contact> contactList;
 
     public Contacts() {
-	this.contactList = new ArrayList<Contact>();
+        this.contactList = new ArrayList<Contact>();
     }
 
 
@@ -47,7 +47,7 @@ public class Contacts implements Serializable {
      * @return the page
      */
     public int getPage() {
-	return page;
+        return page;
     }
 
 
@@ -55,7 +55,7 @@ public class Contacts implements Serializable {
      * @param page the page to set
      */
     public void setPage(int page) {
-	this.page = page;
+        this.page = page;
     }
 
 
@@ -63,7 +63,7 @@ public class Contacts implements Serializable {
      * @return the pages
      */
     public int getPages() {
-	return pages;
+        return pages;
     }
 
 
@@ -71,7 +71,7 @@ public class Contacts implements Serializable {
      * @param pages the pages to set
      */
     public void setPages(int pages) {
-	this.pages = pages;
+        this.pages = pages;
     }
 
 
@@ -79,7 +79,7 @@ public class Contacts implements Serializable {
      * @return the perPage
      */
     public int getPerPage() {
-	return perPage;
+        return perPage;
     }
 
 
@@ -87,7 +87,7 @@ public class Contacts implements Serializable {
      * @param perPage the perPage to set
      */
     public void setPerPage(int perPage) {
-	this.perPage = perPage;
+        this.perPage = perPage;
     }
 
 
@@ -95,7 +95,7 @@ public class Contacts implements Serializable {
      * @return the total
      */
     public int getTotal() {
-	return total;
+        return total;
     }
 
 
@@ -103,7 +103,7 @@ public class Contacts implements Serializable {
      * @param total the total to set
      */
     public void setTotal(int total) {
-	this.total = total;
+        this.total = total;
     }
 
 
@@ -111,7 +111,7 @@ public class Contacts implements Serializable {
      * @return the contactList
      */
     public List<Contact> getContactList() {
-	return contactList;
+        return contactList;
     }
 
 
@@ -119,36 +119,37 @@ public class Contacts implements Serializable {
      * @param contactList the contactList to set
      */
     public void setContactList(List<Contact> contactList) {
-	this.contactList = contactList;
+        this.contactList = contactList;
     }
 
     /**
      * Add a contact object to the list.
+     *
      * @param contact the contact to add to the list.
      */
     public void addContact(Contact contact) {
-	this.contactList.add(contact);
+        this.contactList.add(contact);
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("page=").append(this.page).append(" | ");
-	sb.append("pages=").append(this.pages).append(" | ");
-	sb.append("perPage=").append(this.perPage).append(" | ");
-	sb.append("total=").append(this.total).append(" | ");
-	sb.append("contactList=");
-	if (this.contactList != null) {
-	    for (Contact c : this.contactList) {
-		sb.append('<').append(c.toString()).append('>');
-	    }
-	}
+        sb.append(" [ ");
+        sb.append("page=").append(this.page).append(" | ");
+        sb.append("pages=").append(this.pages).append(" | ");
+        sb.append("perPage=").append(this.perPage).append(" | ");
+        sb.append("total=").append(this.total).append(" | ");
+        sb.append("contactList=");
+        if (this.contactList != null) {
+            for (Contact c : this.contactList) {
+                sb.append('<').append(c.toString()).append('>');
+            }
+        }
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 
 }

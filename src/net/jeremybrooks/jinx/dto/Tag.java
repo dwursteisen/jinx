@@ -22,7 +22,7 @@ import java.io.Serializable;
 
 /**
  * Representation of a tag.
- * 
+ *
  * @author jeremyb
  */
 public class Tag implements Serializable {
@@ -38,7 +38,7 @@ public class Tag implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -46,7 +46,7 @@ public class Tag implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -54,7 +54,7 @@ public class Tag implements Serializable {
      * @return the author
      */
     public String getAuthor() {
-	return author;
+        return author;
     }
 
 
@@ -62,7 +62,7 @@ public class Tag implements Serializable {
      * @param author the author to set
      */
     public void setAuthor(String author) {
-	this.author = author;
+        this.author = author;
     }
 
 
@@ -70,7 +70,7 @@ public class Tag implements Serializable {
      * @return the raw
      */
     public String getRaw() {
-	return raw;
+        return raw;
     }
 
 
@@ -78,7 +78,7 @@ public class Tag implements Serializable {
      * @param raw the raw to set
      */
     public void setRaw(String raw) {
-	this.raw = raw;
+        this.raw = raw;
     }
 
 
@@ -86,7 +86,7 @@ public class Tag implements Serializable {
      * @return the text
      */
     public String getText() {
-	return text;
+        return text;
     }
 
 
@@ -94,22 +94,22 @@ public class Tag implements Serializable {
      * @param text the text to set
      */
     public void setText(String text) {
-	this.text = text;
+        this.text = text;
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Tag [ ");
+        StringBuilder sb = new StringBuilder("Tag [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("author=").append(this.author).append(" | ");
-	sb.append("raw=").append(this.raw).append(" | ");
-	sb.append("text=").append(this.text).append(" | ");
-	sb.append("machineTag=").append(this.isMachineTag());
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("author=").append(this.author).append(" | ");
+        sb.append("raw=").append(this.raw).append(" | ");
+        sb.append("text=").append(this.text).append(" | ");
+        sb.append("machineTag=").append(this.isMachineTag());
 
-	sb.append(" ]");
-	
-	return sb.toString();
+        sb.append(" ]");
+
+        return sb.toString();
     }
 
 
@@ -117,7 +117,7 @@ public class Tag implements Serializable {
      * @return the machineTag
      */
     public boolean isMachineTag() {
-	return machineTag;
+        return machineTag;
     }
 
 
@@ -125,6 +125,6 @@ public class Tag implements Serializable {
      * @param machineTag the machineTag to set
      */
     public void setMachineTag(boolean machineTag) {
-	this.machineTag = machineTag;
+        this.machineTag = machineTag;
     }
 }

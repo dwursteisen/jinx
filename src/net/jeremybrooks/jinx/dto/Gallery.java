@@ -37,7 +37,7 @@ import java.util.Date;
  </rsp>
  */
 
-public class Gallery implements	Serializable {
+public class Gallery implements Serializable {
 
     private String id;
     private String url;
@@ -53,13 +53,12 @@ public class Gallery implements	Serializable {
     private String title;
     private String description;
 
-    
 
     /**
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -67,7 +66,7 @@ public class Gallery implements	Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -75,7 +74,7 @@ public class Gallery implements	Serializable {
      * @return the url
      */
     public String getUrl() {
-	return url;
+        return url;
     }
 
 
@@ -83,7 +82,7 @@ public class Gallery implements	Serializable {
      * @param url the url to set
      */
     public void setUrl(String url) {
-	this.url = url;
+        this.url = url;
     }
 
 
@@ -91,7 +90,7 @@ public class Gallery implements	Serializable {
      * @return the owner
      */
     public String getOwner() {
-	return owner;
+        return owner;
     }
 
 
@@ -99,7 +98,7 @@ public class Gallery implements	Serializable {
      * @param owner the owner to set
      */
     public void setOwner(String owner) {
-	this.owner = owner;
+        this.owner = owner;
     }
 
 
@@ -107,7 +106,7 @@ public class Gallery implements	Serializable {
      * @return the primaryPhotoId
      */
     public String getPrimaryPhotoId() {
-	return primaryPhotoId;
+        return primaryPhotoId;
     }
 
 
@@ -115,7 +114,7 @@ public class Gallery implements	Serializable {
      * @param primaryPhotoId the primaryPhotoId to set
      */
     public void setPrimaryPhotoId(String primaryPhotoId) {
-	this.primaryPhotoId = primaryPhotoId;
+        this.primaryPhotoId = primaryPhotoId;
     }
 
 
@@ -123,7 +122,7 @@ public class Gallery implements	Serializable {
      * @return the dateCreate
      */
     public Date getDateCreate() {
-	return dateCreate;
+        return dateCreate;
     }
 
 
@@ -131,7 +130,7 @@ public class Gallery implements	Serializable {
      * @param dateCreate the dateCreate to set
      */
     public void setDateCreate(Date dateCreate) {
-	this.dateCreate = dateCreate;
+        this.dateCreate = dateCreate;
     }
 
 
@@ -139,7 +138,7 @@ public class Gallery implements	Serializable {
      * @return the dateUpdate
      */
     public Date getDateUpdate() {
-	return dateUpdate;
+        return dateUpdate;
     }
 
 
@@ -147,7 +146,7 @@ public class Gallery implements	Serializable {
      * @param dateUpdate the dateUpdate to set
      */
     public void setDateUpdate(Date dateUpdate) {
-	this.dateUpdate = dateUpdate;
+        this.dateUpdate = dateUpdate;
     }
 
 
@@ -155,7 +154,7 @@ public class Gallery implements	Serializable {
      * @return the countPhotos
      */
     public int getCountPhotos() {
-	return countPhotos;
+        return countPhotos;
     }
 
 
@@ -163,7 +162,7 @@ public class Gallery implements	Serializable {
      * @param countPhotos the countPhotos to set
      */
     public void setCountPhotos(int countPhotos) {
-	this.countPhotos = countPhotos;
+        this.countPhotos = countPhotos;
     }
 
 
@@ -171,7 +170,7 @@ public class Gallery implements	Serializable {
      * @return the countVideos
      */
     public int getCountVideos() {
-	return countVideos;
+        return countVideos;
     }
 
 
@@ -179,7 +178,7 @@ public class Gallery implements	Serializable {
      * @param countVideos the countVideos to set
      */
     public void setCountVideos(int countVideos) {
-	this.countVideos = countVideos;
+        this.countVideos = countVideos;
     }
 
 
@@ -187,7 +186,7 @@ public class Gallery implements	Serializable {
      * @return the primaryPhotoServer
      */
     public String getPrimaryPhotoServer() {
-	return primaryPhotoServer;
+        return primaryPhotoServer;
     }
 
 
@@ -195,7 +194,7 @@ public class Gallery implements	Serializable {
      * @param primaryPhotoServer the primaryPhotoServer to set
      */
     public void setPrimaryPhotoServer(String primaryPhotoServer) {
-	this.primaryPhotoServer = primaryPhotoServer;
+        this.primaryPhotoServer = primaryPhotoServer;
     }
 
 
@@ -203,7 +202,7 @@ public class Gallery implements	Serializable {
      * @return the primaryPhotoFarm
      */
     public String getPrimaryPhotoFarm() {
-	return primaryPhotoFarm;
+        return primaryPhotoFarm;
     }
 
 
@@ -211,7 +210,7 @@ public class Gallery implements	Serializable {
      * @param primaryPhotoFarm the primaryPhotoFarm to set
      */
     public void setPrimaryPhotoFarm(String primaryPhotoFarm) {
-	this.primaryPhotoFarm = primaryPhotoFarm;
+        this.primaryPhotoFarm = primaryPhotoFarm;
     }
 
 
@@ -219,7 +218,7 @@ public class Gallery implements	Serializable {
      * @return the primaryPhotoSecret
      */
     public String getPrimaryPhotoSecret() {
-	return primaryPhotoSecret;
+        return primaryPhotoSecret;
     }
 
 
@@ -227,7 +226,7 @@ public class Gallery implements	Serializable {
      * @param primaryPhotoSecret the primaryPhotoSecret to set
      */
     public void setPrimaryPhotoSecret(String primaryPhotoSecret) {
-	this.primaryPhotoSecret = primaryPhotoSecret;
+        this.primaryPhotoSecret = primaryPhotoSecret;
     }
 
 
@@ -235,7 +234,7 @@ public class Gallery implements	Serializable {
      * @return the title
      */
     public String getTitle() {
-	return title;
+        return title;
     }
 
 
@@ -243,7 +242,7 @@ public class Gallery implements	Serializable {
      * @param title the title to set
      */
     public void setTitle(String title) {
-	this.title = title;
+        this.title = title;
     }
 
 
@@ -251,7 +250,7 @@ public class Gallery implements	Serializable {
      * @return the description
      */
     public String getDescription() {
-	return description;
+        return description;
     }
 
 
@@ -259,33 +258,32 @@ public class Gallery implements	Serializable {
      * @param description the description to set
      */
     public void setDescription(String description) {
-	this.description = description;
+        this.description = description;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder(this.getClass().getName());
+        StringBuilder sb = new StringBuilder(this.getClass().getName());
 
-	sb.append(" [ ");
-	sb.append("id=").append(this.getId()).append(" | ");
-	sb.append("url=").append(this.getUrl()).append(" | ");
-	sb.append("owner=").append(this.getOwner()).append(" | ");
-	sb.append("primaryPhotoId=").append(this.getPrimaryPhotoId()).append(" | ");
-	sb.append("dateCreate=").append(this.getDateCreate()).append(" | ");
-	sb.append("dateUpdate=").append(this.getDateUpdate()).append(" | ");
-	sb.append("countPhotos=").append(this.getCountPhotos()).append(" | ");
-	sb.append("countVideos=").append(this.getCountVideos()).append(" | ");
-	sb.append("primaryPhotoServer=").append(this.getPrimaryPhotoServer()).append(" | ");
-	sb.append("primaryPhotoFarm=").append(this.getPrimaryPhotoFarm()).append(" | ");
-	sb.append("primaryPhotoSecret=").append(this.getPrimaryPhotoSecret()).append(" | ");
-	sb.append("title=").append(this.getTitle()).append(" | ");
-	sb.append("description=").append(this.getDescription());
+        sb.append(" [ ");
+        sb.append("id=").append(this.getId()).append(" | ");
+        sb.append("url=").append(this.getUrl()).append(" | ");
+        sb.append("owner=").append(this.getOwner()).append(" | ");
+        sb.append("primaryPhotoId=").append(this.getPrimaryPhotoId()).append(" | ");
+        sb.append("dateCreate=").append(this.getDateCreate()).append(" | ");
+        sb.append("dateUpdate=").append(this.getDateUpdate()).append(" | ");
+        sb.append("countPhotos=").append(this.getCountPhotos()).append(" | ");
+        sb.append("countVideos=").append(this.getCountVideos()).append(" | ");
+        sb.append("primaryPhotoServer=").append(this.getPrimaryPhotoServer()).append(" | ");
+        sb.append("primaryPhotoFarm=").append(this.getPrimaryPhotoFarm()).append(" | ");
+        sb.append("primaryPhotoSecret=").append(this.getPrimaryPhotoSecret()).append(" | ");
+        sb.append("title=").append(this.getTitle()).append(" | ");
+        sb.append("description=").append(this.getDescription());
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 
 
-    
 }

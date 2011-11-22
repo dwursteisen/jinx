@@ -22,10 +22,10 @@ import java.io.Serializable;
 
 /**
  * Data representing the perms for a given photo.
- *
+ * <p/>
  * Values for permComment and permAddMeta can be found in the JinxConstants
  * class.
- * 
+ *
  * @author jeremyb
  */
 public class Perms implements Serializable {
@@ -42,11 +42,11 @@ public class Perms implements Serializable {
 
     /**
      * Get the id of the photo.
-     * 
+     *
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -54,7 +54,7 @@ public class Perms implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -62,7 +62,7 @@ public class Perms implements Serializable {
      * @return the isPublic
      */
     public boolean isIsPublic() {
-	return isPublic;
+        return isPublic;
     }
 
 
@@ -70,7 +70,7 @@ public class Perms implements Serializable {
      * @param isPublic the isPublic to set
      */
     public void setIsPublic(boolean isPublic) {
-	this.isPublic = isPublic;
+        this.isPublic = isPublic;
     }
 
 
@@ -78,7 +78,7 @@ public class Perms implements Serializable {
      * @return the isFriend
      */
     public boolean isIsFriend() {
-	return isFriend;
+        return isFriend;
     }
 
 
@@ -86,7 +86,7 @@ public class Perms implements Serializable {
      * @param isFriend the isFriend to set
      */
     public void setIsFriend(boolean isFriend) {
-	this.isFriend = isFriend;
+        this.isFriend = isFriend;
     }
 
 
@@ -94,7 +94,7 @@ public class Perms implements Serializable {
      * @return the isFamily
      */
     public boolean isIsFamily() {
-	return isFamily;
+        return isFamily;
     }
 
 
@@ -102,7 +102,7 @@ public class Perms implements Serializable {
      * @param isFamily the isFamily to set
      */
     public void setIsFamily(boolean isFamily) {
-	this.isFamily = isFamily;
+        this.isFamily = isFamily;
     }
 
 
@@ -110,7 +110,7 @@ public class Perms implements Serializable {
      * @return the permComment
      */
     public String getPermComment() {
-	return permComment;
+        return permComment;
     }
 
 
@@ -122,10 +122,11 @@ public class Perms implements Serializable {
      * <li>PERM_COMMENT_CONTACTS</li>
      * <li>PERM_COMMENT_EVERYBODY</li>
      * </ul>
+     *
      * @param permComment the permComment to set
      */
     public void setPermComment(String permComment) {
-	this.permComment = permComment;
+        this.permComment = permComment;
     }
 
 
@@ -133,23 +134,24 @@ public class Perms implements Serializable {
      * @return the permAddMeta
      */
     public String getPermAddMeta() {
-	return permAddMeta;
+        return permAddMeta;
     }
 
 
     /**
      * Who can add notes and tags to the photo. One of:
-     *
+     * <p/>
      * <ul>
      * <li>PERM_ADD_META_NOBODY</li>
      * <li>PERM_ADD_META_FRIENDS_AND_FAMILY</li>
      * <li>PERM_ADD_META_CONTACTS</li>
      * <li>PERM_ADD_META_EVERYBODY</li>
      * </ul>
+     *
      * @param permAddMeta the permAddMeta to set
      */
     public void setPermAddMeta(String permAddMeta) {
-	this.permAddMeta = permAddMeta;
+        this.permAddMeta = permAddMeta;
     }
 
 
@@ -157,7 +159,7 @@ public class Perms implements Serializable {
      * @return the isContact
      */
     public boolean isIsContact() {
-	return isContact;
+        return isContact;
     }
 
 
@@ -165,26 +167,25 @@ public class Perms implements Serializable {
      * @param isContact the isContact to set
      */
     public void setIsContact(boolean isContact) {
-	this.isContact = isContact;
+        this.isContact = isContact;
     }
 
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Perms [ ");
+        StringBuilder sb = new StringBuilder("Perms [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("isPublic=").append(this.isPublic).append(" | ");
-	sb.append("isFriend=").append(this.isFriend).append(" | ");
-	sb.append("isFamily=").append(this.isFamily).append(" | ");
-	sb.append("isContact=").append(this.isContact).append(" | ");
-	sb.append("permComment=").append(this.permComment).append(" | ");
-	sb.append("permAddMeta=").append(this.permAddMeta);
-	
-	sb.append(" ]");
-	return sb.toString();
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("isPublic=").append(this.isPublic).append(" | ");
+        sb.append("isFriend=").append(this.isFriend).append(" | ");
+        sb.append("isFamily=").append(this.isFamily).append(" | ");
+        sb.append("isContact=").append(this.isContact).append(" | ");
+        sb.append("permComment=").append(this.permComment).append(" | ");
+        sb.append("permAddMeta=").append(this.permAddMeta);
+
+        sb.append(" ]");
+        return sb.toString();
     }
 
 
-    
 }

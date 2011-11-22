@@ -23,10 +23,10 @@ import java.io.StringWriter;
 
 /**
  * Log to <code>System.out</code>.
- *
+ * <p/>
  * By default, Jinx will not log anything. If you want to see Jinx log output
  * on stdout, call <code>JinxLogger.setLogger(new StdoutLogger());</code>.
- * 
+ *
  * @author jeremyb
  */
 public class StdoutLogger implements LogInterface {
@@ -38,7 +38,7 @@ public class StdoutLogger implements LogInterface {
      * @param message the message to log.
      */
     public void log(String message) {
-	System.out.println(message);
+        System.out.println(message);
     }
 
 
@@ -46,11 +46,11 @@ public class StdoutLogger implements LogInterface {
      * Log message to stdout, along with exception information.
      *
      * @param message the message to log.
-     * @param t the Throwable to log.
+     * @param t       the Throwable to log.
      */
     public void log(String message, Throwable t) {
-	System.out.println(message);
-	System.out.println(getStackTrace(t));
+        System.out.println(message);
+        System.out.println(getStackTrace(t));
     }
 
 
@@ -62,9 +62,9 @@ public class StdoutLogger implements LogInterface {
      *         was null.
      */
     private String getStackTrace(Throwable t) {
-	if (t == null) {
-	    return "";
-	}
+        if (t == null) {
+            return "";
+        }
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw, true);
         t.printStackTrace(pw);

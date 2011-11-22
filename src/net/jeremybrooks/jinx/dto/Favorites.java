@@ -23,7 +23,7 @@ import java.util.List;
 
 /**
  * A list of people who have favorited a given photo.
- * 
+ *
  * @author jeremyb
  */
 public class Favorites implements Serializable {
@@ -44,7 +44,7 @@ public class Favorites implements Serializable {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
 
@@ -52,7 +52,7 @@ public class Favorites implements Serializable {
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
 
@@ -60,7 +60,7 @@ public class Favorites implements Serializable {
      * @return the secret
      */
     public String getSecret() {
-	return secret;
+        return secret;
     }
 
 
@@ -68,7 +68,7 @@ public class Favorites implements Serializable {
      * @param secret the secret to set
      */
     public void setSecret(String secret) {
-	this.secret = secret;
+        this.secret = secret;
     }
 
 
@@ -76,7 +76,7 @@ public class Favorites implements Serializable {
      * @return the server
      */
     public String getServer() {
-	return server;
+        return server;
     }
 
 
@@ -84,7 +84,7 @@ public class Favorites implements Serializable {
      * @param server the server to set
      */
     public void setServer(String server) {
-	this.server = server;
+        this.server = server;
     }
 
 
@@ -92,7 +92,7 @@ public class Favorites implements Serializable {
      * @return the farm
      */
     public String getFarm() {
-	return farm;
+        return farm;
     }
 
 
@@ -100,7 +100,7 @@ public class Favorites implements Serializable {
      * @param farm the farm to set
      */
     public void setFarm(String farm) {
-	this.farm = farm;
+        this.farm = farm;
     }
 
 
@@ -108,7 +108,7 @@ public class Favorites implements Serializable {
      * @return the page
      */
     public int getPage() {
-	return page;
+        return page;
     }
 
 
@@ -116,7 +116,7 @@ public class Favorites implements Serializable {
      * @param page the page to set
      */
     public void setPage(int page) {
-	this.page = page;
+        this.page = page;
     }
 
 
@@ -124,7 +124,7 @@ public class Favorites implements Serializable {
      * @return the pages
      */
     public int getPages() {
-	return pages;
+        return pages;
     }
 
 
@@ -132,7 +132,7 @@ public class Favorites implements Serializable {
      * @param pages the pages to set
      */
     public void setPages(int pages) {
-	this.pages = pages;
+        this.pages = pages;
     }
 
 
@@ -140,7 +140,7 @@ public class Favorites implements Serializable {
      * @return the perPage
      */
     public int getPerPage() {
-	return perPage;
+        return perPage;
     }
 
 
@@ -148,7 +148,7 @@ public class Favorites implements Serializable {
      * @param perPage the perPage to set
      */
     public void setPerPage(int perPage) {
-	this.perPage = perPage;
+        this.perPage = perPage;
     }
 
 
@@ -156,7 +156,7 @@ public class Favorites implements Serializable {
      * @return the total
      */
     public int getTotal() {
-	return total;
+        return total;
     }
 
 
@@ -164,7 +164,7 @@ public class Favorites implements Serializable {
      * @param total the total to set
      */
     public void setTotal(int total) {
-	this.total = total;
+        this.total = total;
     }
 
 
@@ -172,7 +172,7 @@ public class Favorites implements Serializable {
      * @return the personList
      */
     public List<Person> getPersonList() {
-	return personList;
+        return personList;
     }
 
 
@@ -180,31 +180,31 @@ public class Favorites implements Serializable {
      * @param personList the personList to set
      */
     public void setPersonList(List<Person> personList) {
-	this.personList = personList;
+        this.personList = personList;
     }
 
     @Override
     public String toString() {
-	StringBuilder sb = new StringBuilder("Favorites [ ");
+        StringBuilder sb = new StringBuilder("Favorites [ ");
 
-	sb.append("id=").append(this.id).append(" | ");
-	sb.append("secret=").append(this.secret).append(" | ");
-	sb.append("server=").append(this.server).append(" | ");
-	sb.append("farm=").append(this.farm).append(" | ");
-	sb.append("page=").append(this.page).append(" | ");
-	sb.append("pages=").append(this.pages).append(" | ");
-	sb.append("perPage=").append(this.perPage).append(" | ");
-	sb.append("total=").append(this.total).append(" | ");
-	sb.append("personList=");
-	if (this.personList == null) {
-	    sb.append("null");
-	} else {
-	    for (Person p : this.personList) {
-		sb.append('<').append(p.toString()).append('>');
-	    }
-	}
+        sb.append("id=").append(this.id).append(" | ");
+        sb.append("secret=").append(this.secret).append(" | ");
+        sb.append("server=").append(this.server).append(" | ");
+        sb.append("farm=").append(this.farm).append(" | ");
+        sb.append("page=").append(this.page).append(" | ");
+        sb.append("pages=").append(this.pages).append(" | ");
+        sb.append("perPage=").append(this.perPage).append(" | ");
+        sb.append("total=").append(this.total).append(" | ");
+        sb.append("personList=");
+        if (this.personList == null) {
+            sb.append("null");
+        } else {
+            for (Person p : this.personList) {
+                sb.append('<').append(p.toString()).append('>');
+            }
+        }
 
-	sb.append(" ]");
-	return sb.toString();
+        sb.append(" ]");
+        return sb.toString();
     }
 }
