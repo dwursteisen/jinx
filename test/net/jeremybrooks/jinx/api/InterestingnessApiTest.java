@@ -2,6 +2,8 @@ package net.jeremybrooks.jinx.api;
 
 import net.jeremybrooks.jinx.JinxUtils;
 import net.jeremybrooks.jinx.Setup;
+
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import net.jeremybrooks.jinx.dto.Photos;
@@ -17,6 +19,8 @@ import static org.junit.Assert.*;
  * @author jeremyb
  */
 public class InterestingnessApiTest {
+
+    private InterestingnessApi instance;
 
     public InterestingnessApiTest() {
     }
@@ -34,6 +38,7 @@ public class InterestingnessApiTest {
 
     @Before
     public void setUp() {
+        instance = InterestingnessApi.getInstance();
     }
 
     @After
@@ -58,7 +63,6 @@ public class InterestingnessApiTest {
     @Test
     public void testGetList_0args() throws Exception {
 	System.out.println("getList");
-	InterestingnessApi instance = InterestingnessApi.getInstance();
 	Photos result = instance.getList();
 	assertNotNull(result);
 	assertTrue(result.getPhotos().size() > 0);
@@ -75,7 +79,6 @@ public class InterestingnessApiTest {
 	List<String> extras = null;
 	int page = 0;
 	int perPage = 10;
-	InterestingnessApi instance = InterestingnessApi.getInstance();
 	Photos result = instance.getList(date, extras, page, perPage);
 	assertNotNull(result);
 	assertEquals(10, result.getPhotos().size());
@@ -84,6 +87,22 @@ public class InterestingnessApiTest {
 	result = instance.getList(date, extras, page, perPage);
 	assertNotNull(result);
 	assertEquals(10, result.getPhotos().size());
+    }
+
+
+    @Test
+    public void testGetList_withEnumsAsArgs() throws Exception {
+        Photos photos = instance.getList(null, 0, 4, FlickrExtra.URL_M, FlickrExtra.DATE_TAKEN);
+        assertNotNull(photos);
+        assertEquals(4, photos.getPhotos().size());
+    }
+
+
+    @Test
+    public void testGetList_withListAsArgs() throws Exception {
+        Photos photos = instance.getList(null, 0, 4, Arrays.asList(FlickrExtra.URL_M, FlickrExtra.DATE_TAKEN));
+        assertNotNull(photos);
+        assertEquals(4, photos.getPhotos().size());
     }
 
 }

@@ -22,8 +22,8 @@ public class Setup {
 	InputStream in = Setup.class.getResourceAsStream("/net/jeremybrooks/jinx/secret.properties");
 	p.load(in);
 
-	String pathToTokenFile = p.getProperty("path.to.token");
-	String key = p.getProperty("flickr.key");
+	String pathToTokenFile = p.getProperty("flickr.tokenfile");
+	String key = p.getProperty("flickr.api_key");
 	String secret = p.getProperty("flickr.secret");
 	Token t = new Token();
 	File file = new File(pathToTokenFile);

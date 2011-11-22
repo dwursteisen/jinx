@@ -34,15 +34,6 @@ public class InterestingnessApi {
 
     private static InterestingnessApi instance = null;
 
-    // TODO: should be final !
-    private Jinx provider;
-
-    public InterestingnessApi(final Jinx provider) {
-        this.provider = provider;
-    }
-
-
-    @Deprecated
     private InterestingnessApi() {
     }
 
@@ -52,8 +43,7 @@ public class InterestingnessApi {
      *
      * @return instance of this class.
      */
-    @Deprecated
-    public static InterestingnessApi getInstance() {
+   public static InterestingnessApi getInstance() {
         if (InterestingnessApi.instance == null) {
             InterestingnessApi.instance = new InterestingnessApi();
         }
@@ -121,6 +111,7 @@ public class InterestingnessApi {
      * @return data about the interesting photos.
      * @throws JinxException if there are any errors.
      * @see http://www.flickr.com/services/api/flickr.interestingness.getList.html
+     *
      */
     @Deprecated
     public Photos getList(Date date, List<String> extras, int page, int perPage) throws JinxException {
